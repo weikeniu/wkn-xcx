@@ -1,0 +1,135 @@
+<view class="body">
+  <view class="order-d-top y-grid y-alignc">
+    <view class="y-flex1 y-cw">
+      <view class="y-f40">已付款</view>
+      <view class="y-f26">等待商家处理订单</view>
+    </view>
+    <image src="../../../images/tkcgb_03.jpg" class="state-ico"></image>
+  </view>
+
+
+  <view class="y-bgw">
+    <view class="y-grid y-alignc y-lrpad20 y-tbpad30 y-bor bbor">
+      <view class="y-flex1 y-f30">
+        <text class="iconfont icon-songdashijian y-blue y-rmar25 y-f24"></text>送达时间
+      </view>
+      <view class="y-blue y-f26">预计15：30后到达</view>
+    </view>
+    <view class="y-bor bbor y-grid y-h80 y-bgf9 y-textc">
+      <view class="y-flex1">
+        <view class="y-grid y-alignc y-h80 y-f24 y-bor rbor">
+          <text class="y-c99 y-flex1">派送人</text>
+          <text class="y-flex1">李星海</text>
+        </view>
+      </view>
+      <view class="y-flex2">
+        <view class="y-grid y-alignc y-h80 y-f24">
+          <text class="y-c99  y-flex1">联系电话</text>
+          <text class="y-flex1 y-rmar20">151515451454</text>
+          <text class="iconfont icon-lianxidianhua y-flex1 y-c40 y-textl"></text>
+        </view>
+      </view>
+      
+    </view>
+    
+     <view class="y-grid y-alignc pay-top y-lrpad20 y-tbpad30 y-bgw">
+    <view url="#" class="iconfont icon-shoujianren y-blue y-rmar25"></view>
+    <view url="#" class="y-flex1 ">
+      <view class="y-f36 y-bmar10">
+        <text class="y-rmar10">李青秋</text>
+        <text class="y-f30">女士 13570555489</text>
+      </view>
+      <view class="y-f26 y-c99">
+        <view class="add-type">酒店</view>
+        <text class="y-l28">广州桃花江豪生酒店201A房</text>
+      </view>
+    </view>
+  </view>
+  <view class="border-copy y-bmar20" style="background-image:url('../../../images/border_03.jpg')"></view>
+
+    
+  </view>
+
+  <view class="y-bgw y-bmar20">
+  	<view class="y-grid y-alignc y-bor bbor y-h100 y-arr y-lrpad20">
+      <navigator class="y-f30 y-c66 y-rmar10">广州桃花江豪生酒店</navigator>
+      <navigator class="iconfont icon-lianxidianhua y-c40 y-f36"></navigator>
+    </view>
+  	<view class="y-bor bbor y-lrpad20 y-tbpad30 y-bgf9">
+        <view class="y-grid y-alignc y-h40">
+          <view class="y-flex1 y-f24">干炒牛河</view>
+          <view class="y-c99 y-f22">X3</view>
+          <view class="y-f26 y-w135 y-textr">￥30</view>
+        </view>
+         <view class="y-grid y-alignc y-h40">
+          <view class="y-flex1 y-f24">干炒牛河</view>
+          <view class="y-c99 y-f22">X3</view>
+          <view class="y-f26 y-w135 y-textr">￥30</view>
+        </view>
+         <view class="y-grid y-alignc y-h40">
+          <view class="y-flex1 y-f24">干炒牛河</view>
+          <view class="y-c99 y-f22">X3</view>
+          <view class="y-f26 y-w135 y-textr">￥30</view>
+        </view>
+        <view class="y-grid y-alignc y-h40">
+          <view class="y-flex1 y-f24">打包费</view>
+          <view class="y-f26 y-w135 y-textr">￥5</view>
+        </view>
+        <view class="y-grid y-alignc y-h40">
+          <view class="y-flex1 y-f24">备注</view>
+          <view class="y-f26 y-w135 y-textr">不要葱</view>
+        </view>
+        <view class="y-overflow y-tpad30">
+          <button class="y-btn1 fr">确认收货</button>
+        </view>
+    </view>
+    <view class="y-grid y-alignc y-h120 y-lrpad20">
+    	<view class="y-f30 y-rmar30">总价</view>
+      <view class="y-flex1">
+        <view class="y-c40"><text class="y-f30">￥</text><text class="y-f36">256</text></view>
+        <view class="y-f22 y-c99">已优惠5元，可获<text class="y-blue">268</text>积分</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="y-bgw y-bmar20 y-lrpad20">
+  	<view class="y-bor bbor y-h80 y-l80 y-f30">订单信息</view>
+    <view class="y-tbpad30 y-f24 y-c99">
+      <view class="y-grid y-bmar10">
+        <view class="y-w115">支付方式</view>
+        <view class="y-flex1">货到付款</view>
+       </view>
+       <view class="y-grid y-bmar10">
+        <view class="y-w115">订单编号</view>
+        <view class="y-flex1">14121545454</view>
+       </view>
+       <view class="y-grid y-bmar10">
+        <view class="y-w115">下单时间</view>
+        <view class="y-flex1"> 2017-05-10 12：16：29</view>
+       </view>
+       <view class="y-grid y-bmar10">
+        <view class="y-w115">付款方式</view>
+        <view class="y-flex1"> 2017-05-10 12：16：29</view>
+       </view>
+       <view class="y-grid y-bmar10">
+        <view class="y-w115">发货时间</view>
+        <view class="y-flex1"> 2017-05-10 12：16：29</view>
+       </view>
+    </view>
+  </view>
+
+   <view class="y-bgw y-bmar20 y-lrpad20">
+  	<view class="y-bor bbor y-h80 y-l80 y-f30">发票信息</view>
+    <view class="y-tbpad30 y-f24 y-c99">
+      <view class="y-grid y-bmar10">
+        <view>发票金额：</view>
+        <view class="y-flex1">￥267（票面金额）</view>
+       </view>
+       <view class="y-grid y-bmar10">
+        <view>发票抬头：</view>
+        <view class="y-flex1">张晓梅</view>
+       </view>
+    </view>
+  </view>
+
+</view>

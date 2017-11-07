@@ -1,0 +1,6 @@
+/* pages/member/edit-paypwd/edit-paypwd.wxss */
+@import "../member-info/member-info.wxss";
+
+/* __ 修改密码 */
+.mem-info .form .lbl{min-width: 150rpx;}
+.mem-info .forgetpwd{color: #12b7f5; font-size: 28rpx; padding: 20rpx 20rpx 10rpx; text-align: right;}

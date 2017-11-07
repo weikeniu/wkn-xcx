@@ -1,0 +1,430 @@
+<view class="body">
+  <!--选项卡1-->
+    <view class="tab-con y-bgw">
+      <!--选项卡1导航-->
+      <view class="tab-nav y-grid y-alignc y-textc y-h85 y-f30 type1 y-bor bbor">
+        <view class="y-flex1 {{curNum1==0?'cur':' '}}"  data-id="0"  bindtap="switchTab1">酒店餐饮</view>
+        <view class="y-flex1 {{curNum1==1?'cur':' '}}"  data-id="1"  bindtap="switchTab1">餐厅订位</view>        
+        <view class="y-flex1 {{curNum1==2?'cur':' '}}"  data-id="2"  bindtap="switchTab1">周边餐饮</view>
+      </view>
+      <!--选项卡1导航end-->
+      <!--选项卡1内容-->
+      <view class="tab-inner">
+        <view class="{{curNum1==0?'cur':' '}}">
+          <swiper class="y-h360 y-pos-r"  bindchange="txtChange" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" current="0">
+            <block wx:for="{{imgUrls}}">
+              <swiper-item>
+                <image src="{{item}}" class="slide-image" />
+               
+              </swiper-item>
+             </block>
+               <view class="swiper-txt-bar">
+                    <text class="iconfont icon-gonggao y-f40 y-c40 y-rmar10"></text>{{imgTxts[currentNum]}}
+                  </view>
+                <view class="swiper-num"><text>{{currentNum+1}}</text>/{{imgUrls.length}}</view>
+             
+          </swiper>
+          
+          <!--选项卡2-->
+          <view class="tab-con">
+            <view class="tab-nav type2 y-grid y-alignc y-h85 y-bor bbor y-textc y-f30 ">
+              <view class="y-flex1 {{curNum2==0?'cur':' '}}"  data-id="0" bindtap="switchTab2"><text>点餐</text></view>
+              <view class="y-flex1 {{curNum2==1?'cur':' '}}"  data-id="1" bindtap="switchTab2"><text>相册</text></view>
+            </view>
+            <view class="tab-inner">
+              <view class="{{curNum2==0?'cur':' '}}">
+                 <view class="y-grid">
+                    <scroll-view class="l-scroll" scroll-y >
+                      <view class="y-grid y-alignc li {{curNum3==0?'cur':' '}}" data-id="0" bindtap="switchTab3" ><text class="iconfont icon-rexiao y-fe3f20 y-f24 y-rmar10"></text><text>热销榜</text></view>
+                      <view class="y-grid y-alignc li {{curNum3==1?'cur':' '}}" data-id="1" bindtap="switchTab3" ><text class="iconfont icon-zhekou y-c40 y-f24 y-rmar10"></text><text>优惠</text></view>
+                      <view class="y-grid y-alignc li {{curNum3==2?'cur':' '}}" data-id="2" bindtap="switchTab3" ><text>新品推荐</text></view>
+                      <view class="y-grid y-alignc li {{curNum3==3?'cur':' '}}" data-id="3" bindtap="switchTab3" ><text>人气双拼</text></view>
+                      <view class="y-grid y-alignc li {{curNum3==4?'cur':' '}}" data-id="4" bindtap="switchTab3" ><text>经典套餐</text></view>
+                      <view class="y-grid y-alignc li {{curNum3==5?'cur':' '}}" data-id="5" bindtap="switchTab3" ><text>营养炖品</text></view>
+                      <view class="y-grid y-alignc li {{curNum3==6?'cur':' '}}" data-id="6" bindtap="switchTab3" ><text>蒸蒸日上</text></view>
+                    </scroll-view>
+                    <scroll-view class="r-scroll y-flex1 food-list" scroll-y scroll-into-view="dl{{curNum3}}" scroll-with-animation="true">
+                      <view class="dl" id="dl0">
+                        <view class="dt">
+                            热销榜
+                        </view>
+                        <view class="dd y-lpad20">
+                          <view class="y-grid y-alignc y-bor bbor y-h175">
+                            <image src="../../images/nopic.png" class="food-img y-rmar20" bindtap="maskTap" data-id="0"></image>
+                            <view class="y-flex1 y-rpad20">
+                              <view class="y-f30 y-mh70">四季豆炒五花肉</view>
+                              <view class="y-grid">
+                                <view class="y-flex1 y-c60"><text class="y-f24">￥</text><text class="y-f36">31</text></view>
+                                <view class="y-grid ar">
+                                  <view class="iconfont icon-jianhao y-f50 y-blue {{totalNum[0]==undefined||totalNum[0]==0?'':'cur'}}" data-id="0" bindtap="reduce"></view>
+                                  <view class="food-num {{totalNum[0]==undefined||totalNum[0]==0?'':'cur'}}">{{totalNum[0]}}</view>
+                                  <view class="iconfont icon-jiahao y-f50 y-blue" data-id="0" bindtap="add"></view>
+                                 </view>
+                               </view>
+                              </view>
+                          </view>
+
+
+                          <view class="y-grid y-alignc y-bor bbor y-h175">
+                            <image src="../../images/nopic.png" class="food-img y-rmar20"></image>
+                            <view class="y-flex1 y-rpad20">
+                              <view class="y-f30 y-mh70">四季豆炒五花肉</view>
+                              <view class="y-grid">
+                                <view class="y-flex1 y-c60"><text class="y-f24">￥</text><text class="y-f36">31</text></view>
+                                <view class="y-grid ar">
+                                    <view class="iconfont icon-jianhao y-f50 y-blue {{totalNum[1]==undefined||totalNum[1]==0?'':'cur'}}" data-id="1" bindtap="reduce"></view>
+                                  <view class="food-num {{totalNum[1]==undefined||totalNum[1]==0?'':'cur'}}">{{totalNum[1]}}</view>
+                                  <view class="iconfont icon-jiahao y-f50 y-blue" data-id="1" bindtap="add"></view>
+                                 </view>
+                               </view>
+                              </view>
+                          </view>
+                          <view class="y-grid y-alignc y-bor bbor y-h175">
+                            <image src="../../images/nopic.png" class="food-img y-rmar20"></image>
+                            <view class="y-flex1 y-rpad20">
+                              <view class="y-f30 y-mh70">四季豆炒五花肉</view>
+                              <view class="y-grid">
+                                <view class="y-flex1 y-c60"><text class="y-f24">￥</text><text class="y-f36">31</text></view>
+                                <view class="y-grid ar">
+                                   <view class="iconfont icon-jianhao y-f50 y-blue }"></view>
+                                  <view class="food-num"></view>
+                                  <view class="iconfont icon-jiahao y-f50 y-blue"></view>
+                                 </view>
+                               </view>
+                              </view>
+                          </view>
+                        </view>
+                      </view>
+
+                      <view class="dl" id="dl1">
+                        <view class="dt">
+                           优惠
+                        </view>
+                        <view class="dd y-lpad20">
+                          <view class="y-grid y-alignc y-bor bbor y-h175">
+                            <image src="../../images/nopic.png" class="food-img y-rmar20"></image>
+                            <view class="y-flex1 y-rpad20">
+                              <view class="y-f30 y-mh70">四季豆炒五花肉</view>
+                              <view class="y-grid">
+                                <view class="y-flex1 y-c60"><text class="y-f24">￥</text><text class="y-f36">31</text></view>
+                                <view class="y-grid ar">
+                                   <view class="iconfont icon-jianhao y-f50 y-blue }"></view>
+                                  <view class="food-num"></view>
+                                  <view class="iconfont icon-jiahao y-f50 y-blue"></view>
+                                 </view>
+                               </view>
+                              </view>
+                          </view>
+                        </view>
+                      </view>
+                      <view class="dl"  id="dl2">
+                        <view class="dt">
+                            新品推荐
+                        </view>
+                        <view class="dd y-lpad20">
+                          <view class="y-grid y-alignc y-bor bbor y-h175">
+                            <image src="../../images/nopic.png" class="food-img y-rmar20"></image>
+                            <view class="y-flex1 y-rpad20">
+                              <view class="y-f30 y-mh70">四季豆炒五花肉</view>
+                              <view class="y-grid">
+                                <view class="y-flex1 y-c60"><text class="y-f24">￥</text><text class="y-f36">31</text></view>
+                                <view class="y-grid ar">
+                                   <view class="iconfont icon-jianhao y-f50 y-blue }"></view>
+                                  <view class="food-num"></view>
+                                  <view class="iconfont icon-jiahao y-f50 y-blue"></view>
+                                 </view>
+                               </view>
+                              </view>
+                          </view>
+                        </view>
+                      </view>
+                      <view class="dl"  id="dl3">
+                        <view class="dt">
+                            人气双拼
+                        </view>
+                        <view class="dd y-lpad20">
+                          <view class="y-grid y-alignc y-bor bbor y-h175">
+                            <image src="../../images/nopic.png" class="food-img y-rmar20"></image>
+                            <view class="y-flex1 y-rpad20">
+                              <view class="y-f30 y-mh70">四季豆炒五花肉</view>
+                              <view class="y-grid">
+                                <view class="y-flex1 y-c60"><text class="y-f24">￥</text><text class="y-f36">31</text></view>
+                                <view class="y-grid ar">
+                                   <view class="iconfont icon-jianhao y-f50 y-blue }"></view>
+                                  <view class="food-num"></view>
+                                  <view class="iconfont icon-jiahao y-f50 y-blue"></view>
+                                 </view>
+                               </view>
+                              </view>
+                          </view>
+                        </view>
+                      </view>
+                      <view class="dl"  id="dl4">
+                        <view class="dt">
+                          经典套餐
+                        </view>
+                        <view class="dd y-lpad20">
+                          <view class="y-grid y-alignc y-bor bbor y-h175">
+                            <image src="../../images/nopic.png" class="food-img y-rmar20"></image>
+                            <view class="y-flex1 y-rpad20">
+                              <view class="y-f30 y-mh70">四季豆炒五花肉</view>
+                              <view class="y-grid">
+                                <view class="y-flex1 y-c60"><text class="y-f24">￥</text><text class="y-f36">31</text></view>
+                                <view class="y-grid ar">
+                                   <view class="iconfont icon-jianhao y-f50 y-blue }"></view>
+                                  <view class="food-num"></view>
+                                  <view class="iconfont icon-jiahao y-f50 y-blue"></view>
+                                 </view>
+                               </view>
+                              </view>
+                          </view>
+                        </view>
+                      </view>
+                      <view class="dl"  id="dl5">
+                        <view class="dt">
+                          营养炖品
+                        </view>
+                        <view class="dd y-lpad20">
+                          <view class="y-grid y-alignc y-bor bbor y-h175">
+                            <image src="../../images/nopic.png" class="food-img y-rmar20"></image>
+                            <view class="y-flex1 y-rpad20">
+                              <view class="y-f30 y-mh70">四季豆炒五花肉</view>
+                              <view class="y-grid">
+                                <view class="y-flex1 y-c60"><text class="y-f24">￥</text><text class="y-f36">31</text></view>
+                                <view class="y-grid ar">
+                                   <view class="iconfont icon-jianhao y-f50 y-blue }"></view>
+                                  <view class="food-num"></view>
+                                  <view class="iconfont icon-jiahao y-f50 y-blue"></view>
+                                 </view>
+                               </view>
+                              </view>
+                          </view>
+                        </view>
+                      </view>
+                      <view class="dl"  id="dl6">
+                        <view class="dt">
+                          蒸蒸日上
+                        </view>
+                        <view class="dd y-lpad20">
+                          <view class="y-grid y-alignc y-bor bbor y-h175">
+                            <image src="../../images/nopic.png" class="food-img y-rmar20"></image>
+                            <view class="y-flex1 y-rpad20">
+                              <view class="y-f30 y-mh70">四季豆炒五花肉</view>
+                              <view class="y-grid">
+                                <view class="y-flex1 y-c60"><text class="y-f24">￥</text><text class="y-f36">31</text></view>
+                                <view class="y-grid ar">
+                                   <view class="iconfont icon-jianhao y-f50 y-blue }"></view>
+                                  <view class="food-num"></view>
+                                  <view class="iconfont icon-jiahao y-f50 y-blue"></view>
+                                 </view>
+                               </view>
+                              </view>
+                          </view>
+                        </view>
+                      </view>
+                    </scroll-view>
+                 </view>
+
+                 <view class="fix-bottom">
+                    <view class="fix-bottom-show y-grid y-alignc y-lpad20">
+                      <view class="gwc iconfont icon-gouwuche y-rmar10"><view class="gwc-num">11</view></view>
+                      <view class="y-flex1 y-c60">
+                        <text class="y-f34">共</text>
+                        <text class="y-f26">￥</text>
+                        <text class="y-f34">0</text>
+                       </view>
+                       <view class="y-arr y-c99 y-f26 y-w80 y-rmar30 {{detailNum==0?'type-up':'type-down'}}" bindtap="detailTap">明细</view>
+                       <button class="fix-bottom-btn y-f34">请选择</button>
+                    </view>
+                    <view class="mask {{detailNum==0?'':'cur'}}">
+                      <view class="mask-inner">
+                        <view class="y-grid y-alignc y-h80 y-bor bbor y-lrpad20">
+                          <view class="y-flex1">
+                            <text class="iconfont icon-fanghao y-f30 y-c60 y-rmar10"></text>
+                            <text class="y-f26 y-rmar10">201A</text>
+                            <text class="y-c99 y-f22">餐饮将送到此房间</text>
+                          </view>
+                          <view class="y-c99">
+                            <text class="iconfont icon-qingkong y-c99 y-f28 y-rmar10"></text>
+                            <text class="y-f22">清空</text>
+                          </view>
+                        </view>
+                        <view class="select-food-list">
+                          <view class="y-grid y-alignc y-bor bbor y-h110 y-lrpad20">
+                            <view class="y-flex1 y-f30">干炒牛河</view>
+                            <view class="y-f30 y-c99">会员9.5折</view>
+                            <view class="y-w90 y-c60 y-textr y-rmar30"><text class="y-f24">￥</text><text class="y-f36">22</text></view>
+                            <view class="y-grid ar">
+                                  <view class="iconfont icon-jianhao y-f50 y-blue {{totalNum[0]==undefined||totalNum[0]==0?'':'cur'}}" data-id="0" bindtap="reduce"></view>
+                                  <view class="food-num {{totalNum[0]==undefined||totalNum[0]==0?'':'cur'}}">{{totalNum[0]}}</view>
+                                  <view class="iconfont icon-jiahao y-f50 y-blue" data-id="0" bindtap="add"></view>
+                                 </view>
+                            </view>
+                           <view class="y-grid y-alignc y-bor bbor y-h110 y-lrpad20">
+                            <view class="y-flex1 y-f30">干炒牛河</view>
+                            <view class="y-f30 y-c99">会员9.5折</view>
+                            <view class="y-w90 y-c60 y-textr y-rmar30"><text class="y-f24">￥</text><text class="y-f36">22</text></view>
+                            <view class="y-grid ar">
+                                  <view class="iconfont icon-jianhao y-f50 y-blue {{totalNum[0]==undefined||totalNum[0]==0?'':'cur'}}" data-id="0" bindtap="reduce"></view>
+                                  <view class="food-num {{totalNum[0]==undefined||totalNum[0]==0?'':'cur'}}">{{totalNum[0]}}</view>
+                                  <view class="iconfont icon-jiahao y-f50 y-blue" data-id="0" bindtap="add"></view>
+                                 </view>
+                            </view>
+                        </view>
+                        <view class="y-grid y-alignc y-bor bbor y-h80 y-lrpad20">
+                          <text class="iconfont icon-fanghao y-f30 y-rmar10 y-ccc"></text>
+                          <text class="y-flex1 y-f26">306B</text>
+                          <view>
+                            <view class="tip-ico">!</view>
+                            <text class="y-f22 y-c99">若需要分装长按商品拖入此房间</text>
+                          </view>
+                        </view>
+                        <view class="y-lrpad20 y-grid y-alignc y-h110">
+                           <text class="y-f30 y-rmar10">包装费</text>
+                            <view class="y-c60">
+                              <text class="y-f24">￥</text>
+                              <text class="y-f36">5</text>
+                            </view>
+                        </view>
+                         
+                      </view>
+                    </view>
+                 </view>
+              </view>
+             
+             
+             
+              <view class="{{curNum2==1?'cur':' '}}">
+                <view class=" y-fw-w y-tpad20">
+                  <navigator url="#" class="photo-link y-bmar20">
+                    <image src="../../images/defaultRoomImg.jpg"></image>
+                    <view class="y-f24 y-h45">餐厅一角</view>
+                  </navigator>
+                   <navigator url="#" class="photo-link y-bmar20">
+                    <image src="../../images/defaultRoomImg.jpg"></image>
+                    <view class="y-f24 y-h45">餐厅一角</view>
+                  </navigator>
+                   <navigator url="#" class="photo-link y-bmar20">
+                    <image src="../../images/defaultRoomImg.jpg"></image>
+                    <view class="y-f24 y-h45">餐厅一角</view>
+                  </navigator>
+                   <!--<navigator url="#" class="photo-link y-bmar20">
+                    <image src="../../images/defaultRoomImg.jpg"></image>
+                    <view class="y-f24 y-h45">餐厅一角</view>
+                  </navigator>-->
+                </view>
+                
+              </view>
+              
+            </view>
+          </view>
+          <!--选项卡2end-->
+          
+        </view>
+
+        <view class="{{curNum1==1?'cur':' '}}">
+          <navigator url="../order-restaurant/order-restaurant">
+            <image src="../../images/114.png" class="y-w-full y-h360"></image>
+            <view class="y-lrpad20 y-h100 y-bor bbor y-arr y-f30 y-l100">浪漫观海酒廊</view>
+          </navigator>
+        </view>
+        
+        <view class="{{curNum1==2?'cur':' '}}">
+          <navigator url="#" class="y-grid y-tbpad30 y-bor bbor y-lrpad20">
+            <image src="../../images/nopic.png" class="food-img y-rmar20"></image>
+            <view class="y-flex1">
+              <view class="y-grid y-alignc">
+                <view class="y-flex1">
+                  <view class="y-f30 y-bmar10">竹风台湾风味餐厅<view class="zy-ico">自营</view></view>
+                  <view class="y-f20 y-c99 y-bmar10"><text class="y-c99">距离0.5km</text> | <text class="y-blue">25分钟</text> | <text class="y-c60">货到付款</text></view>
+                </view>
+                <view><text class="y-c60 y-f24">￥</text><text class="y-c60 y-f36">36</text><text class="y-f24 y-ccc">起</text></view>
+              </view>
+              <view class="y-grid y-alignc">
+                <view class="copyico type1">惠</view>
+                <view class="y-c99 y-f24">本店会员全场9.8折</view>
+              </view>
+            </view>
+          </navigator>
+
+           <navigator url="#" class="y-grid y-tbpad30 y-bor bbor y-lrpad20">
+            <image src="../../images/nopic.png" class="food-img y-rmar20"></image>
+            <view class="y-flex1">
+              <view class="y-grid y-alignc">
+                <view class="y-flex1">
+                  <view class="y-f30 y-bmar10">竹风台湾风味餐厅</view>
+                  <view class="y-f20 y-c99 y-bmar10"><text class="y-c99">距离0.5km</text> | <text class="y-blue">25分钟</text> | <text class="y-c08be14">在线支付</text></view>
+                </view>
+                <view><text class="y-c60 y-f24">￥</text><text class="y-c60 y-f36">36</text><text class="y-f24 y-ccc">起</text></view>
+              </view>
+              <view class="y-grid y-alignc">
+                <view class="copyico type1">惠</view>
+                <view class="y-c99 y-f24">本店会员全场9.8折</view>
+              </view>
+              <view class="y-grid y-alignc">
+                <view class="copyico type2">减</view>
+                <view class="y-c99 y-f24">全场满100减30，满50减10</view>
+              </view>
+            </view>
+          </navigator>
+        
+        </view>
+      </view>
+      <!--选项卡1内容end-->
+      
+    </view>
+  <!--选项卡1end-->
+  
+</view>
+
+<!--mask-->
+<view class="mask {{maskState==0?'':'cur'}}">
+<view class="mask-middle"  bindtap="maskTap" data-id="0">
+  <view class="mask-inner alert-box">
+
+
+
+    <swiper indicator-dots="{{indicatorDots}}"  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{imgUrls}}">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image"/>
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class="y-bgw y-pad30 alert-box-inner1">
+      <view class="y-f36 y-bmar20">农家乐四人套餐</view>
+      <view class="y-grid y-c99 y-f24 y-bmar20">
+        <view class="y-w210">菜单明细：</view>
+        <view class="y-fle1">剁椒鱼头大份  腊肉炒华彩一份  西红柿炒 蛋一份  上汤青菜一份   水果一份</view>
+      </view>
+      <view class="y-h32 y-bmar30">
+        <view class="fl peppery-lv lv1 {{pepperyNum==1?'cur':''}}" bindtap="pepperySelect" data-id="1">
+          <view class="fl iconfont icon-lajiao"  data-id="1"></view>
+          <view class="fl"  data-id="1">小辣</view>
+        </view>
+        <view class="fl peppery-lv lv2 {{pepperyNum==2?'cur':''}}" bindtap="pepperySelect" data-id="2">
+          <view class="fl iconfont icon-lajiao" data-id="2"></view>
+          <view class="fl" data-id="2">中辣</view>
+        </view>
+        <view class="fl peppery-lv lv3 {{pepperyNum==3?'cur':''}}" bindtap="pepperySelect" data-id="3">
+          <view class="fl iconfont icon-lajiao" data-id="3"></view>
+          <view class="fl" data-id="3">大辣</view>
+        </view>
+      </view>
+      <view class="y-grid y-alignc y-h90">
+          <view class="y-flex1 y-c60">
+            <text class="y-f24">￥</text>
+            <text class="y-f36">168</text>
+          </view>
+          <view class="y-grid ar">
+            <view class="iconfont icon-jianhao y-f50 y-blue }"></view>
+            <view class="food-num"></view>
+            <view class="iconfont icon-jiahao y-f50 y-blue"></view>
+          </view>
+        </view>
+    </view>
+
+    </view>
+  </view>
+</view>
+<!--mask-->

@@ -1,0 +1,66 @@
+<!--pages/member/card-recharge/card-recharge.wxml-->
+<!-- 【会员中心-储值卡充值】页面 -->
+
+<view class="body">
+  <view class="pg__recharge"> <!-- 蓝色版本：<view class="pg__recharge version__blue">-->
+    
+    <!-- <>储值卡余额信息 -->
+    <view class="uc__rechargeInfo flexbox">
+      <view class="money flex1">
+        <view class="txt"><label class="iconfont icon-chuzhikayuer"></label><text class="ml10">储值卡余额 (元)</text></view>
+        <view class="num mt15">￥<text class="ff-ar">10.00</text></view>
+      </view>
+      <navigator class="detail" url="../card-details/card-details"><label class="iconfont icon-mingxi"></label><text class="ml10">明细</text></navigator>
+    </view>
+
+    <!-- <>储值卡/卡密充值 -->
+    <view class="uc__tab-recharge">
+      <view class="tab-nav flexbox">
+        <text class="flex1 {{tabIndex == 0 ? 'cur' : ''}}" bindtap="bindTabSwitch" data-index="0">储值卡充值</text>
+        <text class="flex1 {{tabIndex == 1 ? 'cur' : ''}}" bindtap="bindTabSwitch" data-index="1">卡密充值</text>
+      </view>
+      <view class="tab-cnt">
+        <view class="item {{tabIndex == 0 ? 'cur' : ''}}">
+          <view class="card-cnt">
+            <view class="tit">会员权益</view>
+            <view class="list clearfix">
+              <block wx:for="{{rechargeList}}">
+                <view class="li {{item.selected ? 'selected' : ''}}" bindtap="bindRecharge" data-index="{{item.index}}">
+                  <view class="inner">
+                    <view class="price"><label class="ff-ar">{{item.price}}</label>元</view>
+                    <view class="min">售价：<label class="ff-ar">{{item.salePrice}}</label>元</view>
+                  </view>
+                </view>
+              </block>
+            </view>
+          </view>
+        </view>
+        <view class="item {{tabIndex == 1 ? 'cur' : ''}}">
+          <view class="kami-form">
+            <view class="ipt-box flexbox flex-alignc"><label>输入卡密</label><input class="flex1" type="text" name="kami" placeholder="请输入卡密" /></view>
+            <view class="btn"><button type="default" hover-class="button-hover">提交</button></view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <!-- <>使用说明 -->
+    <view class="uc__card-summary mt20">
+      <view class="item">
+        <view class="hd">储值卡使用说明</view>
+        <view class="tips ff-hv">余额500以上免押金，免担保，免排队，快速入住</view>
+      </view>
+      <view class="item">
+        <view class="hd">使用范围</view>
+        <view class="list flexbox">
+          <view class="li flex1"><label class="iconfont icon-jiudiandingfang"></label><text class="ff-hv">酒店订房</text></view>
+          <view class="li flex1"><label class="iconfont icon-zhizhucan"></label><text class="ff-hv">自营餐饮</text></view>
+          <view class="li flex1"><label class="iconfont icon-tuangou"></label><text class="ff-hv">特惠优选</text></view>
+          <view class="li flex1"><label class="iconfont icon-shangcheng"></label><text class="ff-hv">酒店超市</text></view>
+          <view class="li flex1"><label class="iconfont icon-jiudian"></label><text class="ff-hv">周边商家</text></view>
+        </view>
+      </view>
+    </view>
+
+  </view>
+</view>

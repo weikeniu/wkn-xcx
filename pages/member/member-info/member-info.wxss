@@ -1,0 +1,16 @@
+/* pages/member/member-info/member-info.wxss */
+
+/* …… 会员中心页(用户信息)(by hison 20170829) {{{ …… */
+/* __ 用户信息 */
+.mem-info .hdTxt{font-size: 28rpx; padding: 20rpx;}
+.mem-info .form{border-bottom: 1rpx solid #ddd; padding-left: 20rpx;}
+.mem-info .form .ipt-box{border-bottom: 1rpx solid #eee; height: 100rpx;}
+.mem-info .form .ipt-box:last-child{border-bottom: 0;}
+.mem-info .form .lbl{display:inline-block; font-size: 28rpx; padding: 0 20rpx; min-width: 120rpx;}
+.mem-info .form .ipt-text{color: #333; font-size: 28rpx;}
+.mem-info .form .sex text{background: #fff; border: 1rpx solid #ddd; border-radius: 30rpx; display: inline-block; font-size: 28rpx; margin-right: 10rpx; text-align: center; padding: 5px 10rpx; width: 100rpx;}
+.mem-info .form .sex text.cur{background: #12b7f5;border-color: #12b7f5;color: #fff;}
+.mem-info .btn{padding: 20rpx;}
+.mem-info .btn button{background: #12b7f5; color: #fff; font-size: 30rpx; line-height: 90rpx;}
+
+/* }}} */

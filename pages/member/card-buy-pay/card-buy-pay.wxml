@@ -1,0 +1,61 @@
+<!--pages/member/card-buy-pay/card-buy-pay.wxml-->
+<!-- 【会员中心-购买会员卡】页面 -->
+
+<view class="body">
+
+  <!-- <>会员卡支付 -->
+  <view class="mem__card-buy">
+    <view class="card-item">
+      <view class="card-box">
+        <image class="card-bg" src="../../../images/cards/cards-green.png"></image>
+        <view class="card-info">
+          <view class="hd-info flexbox">
+            <view class="flex1 name">微可牛旅行社<text class="type">普通卡</text></view>
+            <view class="tag">终身卡</view>
+          </view>
+          <view class="ct-info flexbox flex-alignc">
+            <view class="discount">立减<text>20</text>元</view>
+            <view class="tips flex1">
+              <text>开卡即享预订酒店现金立减</text>
+              <text>超值会员价</text>
+            </view>
+          </view>
+          <view class="ft-info">有效期：长期有效</view>
+        </view>
+      </view>
+      <view class="card-tips flexbox flex-alignc">
+        <image src="../../../images/icon-notice.png" style="height:28rpx;width:28rpx;"></image><text class="flex1 ml10 ff-st">说明：会员卡为优惠折扣卡，不可储值，不可退换</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- <>用户信息 -->
+  <view class="mem-info bg--fff">
+    <view class="ipt-box flexbox flex-alignc">
+      <label class="lbl">微信名称</label>
+      <view class="flex1"><text class="text">Matter</text></view>
+      <!-- 文本框的话，使用下面这个 <view class="flex1"><input class="ipt-text" type="text" name="wxName" placeholder="请输入微信名" placeholder-style='color: #aaa;' /></view> -->
+    </view>
+    <view class="ipt-box flexbox flex-alignc">
+      <label class="lbl">用户名称</label>
+      <view class="flex1"><text class="text">马特涩</text></view>
+    </view>
+    <view class="ipt-box flexbox flex-alignc">
+      <label class="lbl">手机号码</label>
+      <view class="flex1"><text class="text">18820152451</text></view>
+    </view>
+  </view>
+  <view class="c--999 y-f24 mt30 align-c ff-st">会员卡开通后，不可退卡</view>
+
+  <!-- <>底部按钮 -->
+  <view class="sec_footer">
+    <view class="bottomfixed">
+      <view class="inner">
+        <view class="total flex1"><text class="c--333">合计：￥450</text></view>
+        <button type="default" disabled='true'>立即支付</button>
+      </view>
+    </view>
+  </view>
+
+</view>
+

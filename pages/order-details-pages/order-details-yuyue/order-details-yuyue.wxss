@@ -1,0 +1,69 @@
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+}
+
+.textStyle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.textContainer {
+  margin-top: 200px;
+}
+.order-d-top{
+  background: #12b7f5;
+  padding: 40rpx 20rpx;
+}
+.state-ico{
+  width: 154rpx;
+  height: 143rpx;
+}
+.border-copy{
+  width: 100%;
+  height: 5rpx;
+  background-position: 0 0;
+  background-repeat: repeat-x;
+}
+.y-btn1{
+  width: 160rpx;
+  height: 54rpx;
+  background: #f40;
+  color: #fff;
+  border-radius: 54rpx;
+  font-size: 24rpx;
+  text-align:center;
+line-height:54rpx;
+
+}
+.add-type{
+  display: inline-block;
+  width: 54rpx;
+  height: 28rpx;
+  color: #fff;
+  border-radius: 3rpx;
+  text-align: center;
+  line-height: 28rpx;
+  background: #12b7f5;
+  font-size: 22rpx;
+  margin-right: 10rpx;
+}
+.pro-img{
+  width: 162rpx;
+  height: 162rpx;
+  overflow: hidden;
+  border-radius: 4rpx;
+}
+.pro-img image{
+  width: 100%;
+  height: 100%;
+}
+
+.yuyue-wrap{display: none;}
+.yuyue-wrap.cur{display: block;}

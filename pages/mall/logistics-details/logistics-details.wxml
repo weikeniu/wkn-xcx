@@ -1,0 +1,94 @@
+<!--pages/mall/logistics-details/logistics-details.wxml-->
+<!-- 【旅行社-物流详情】页面 -->
+
+<view class="body">
+  <!-- <>物流信息 -->
+  <view class="sec__logistics-info bg--fff">
+    <view class="flexbox flex-alignc pad20">
+      <view class="pro-img">
+        <image src="http://admin.weikeniu.com/img/28291/20170419161640_4672.jpg" mode="aspectFit"></image>
+        <text class="total ff-hv">2个商品</text>
+      </view>
+      <view class="logistics-info flex1">
+        <view class="row ff-hv"><text class="c--999">物流公司</text><text class="ml20">申通快递</text></view>
+        <view class="row ff-hv"><text class="c--999">快递单号</text><text class="ml20">20170811122553</text></view>
+      </view>
+    </view>
+  </view>
+
+  <!-- <>物流进度列表 -->
+  <view class="sec__logistics-list bg--fff mt20">
+    <view class="item finish">
+      <view class="icon"><label class="line"></label><label class="dot"></label></view>
+      <view class="status flex1 pad20">
+        <text class="text">邮件签收章，已签收</text>
+        <text class="time">2017-03-07 12:26:40</text>
+      </view>
+    </view>
+    <view class="item">
+      <view class="icon"><label class="line"></label><label class="dot"></label></view>
+      <view class="status flex1 pad20">
+        <text class="text">广东广州黄埔公司-岑进威-派件中</text>
+        <text class="time">2017-03-07 08:46:24</text>
+      </view>
+    </view>
+    <view class="item">
+      <view class="icon"><label class="line"></label><label class="dot"></label></view>
+      <view class="status flex1 pad20">
+        <text class="text">已到达-广东广州黄埔公司</text>
+        <text class="time">2017-03-07 07:12:03</text>
+      </view>
+    </view>
+    <view class="item">
+      <view class="icon"><label class="line"></label><label class="dot"></label></view>
+      <view class="status flex1 pad20">
+        <text class="text">广东广州中转部-已发往-广东广州黄埔公司</text>
+        <text class="time">2017-03-06 21:33:23</text>
+      </view>
+    </view>
+    <view class="item">
+      <view class="icon"><label class="line"></label><label class="dot"></label></view>
+      <view class="status flex1 pad20">
+        <text class="text">已到达-广东广州中转部</text>
+        <text class="time">2017-03-06 20:54:11</text>
+      </view>
+    </view>
+    <view class="item">
+      <view class="icon"><label class="line"></label><label class="dot"></label></view>
+      <view class="status flex1 pad20">
+        <text class="text">上海航空部-已发往-广东广州中转部</text>
+        <text class="time">2017-03-05 22:05:06</text>
+      </view>
+    </view>
+    <view class="item">
+      <view class="icon"><label class="line"></label><label class="dot"></label></view>
+      <view class="status flex1 pad20">
+        <text class="text">上海奉贤公司-已装袋发往-上海航空部</text>
+        <text class="time">2017-03-05 20:31:04</text>
+      </view>
+    </view>
+    <view class="item">
+      <view class="icon"><label class="line"></label><label class="dot"></label></view>
+      <view class="status flex1 pad20">
+        <text class="text">上海奉贤公司-市场部-已收件</text>
+        <text class="time">2017-03-05 18:16:57</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- <>底部按钮 -->
+  <view class="fix-bottom-outer">
+    <view class="fix-bottom">
+      <view class="fix-bottom-show y-grid y-alignc y-lpad20">
+        <!-- 确定延长收货-联系酒店-确定收货-->
+        <view class="ft-btn y-flex1">
+          <view class="btn1 y-f30 bg--f3f3f3">确定延长收货</view>
+        </view>
+        <view class="ft-btn y-flex1">
+          <view class="btn1 y-f30 c--12b7f5">确定收货</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+</view>

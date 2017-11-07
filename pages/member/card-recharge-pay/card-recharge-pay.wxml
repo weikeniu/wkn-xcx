@@ -1,0 +1,25 @@
+<!--pages/member/card-recharge-pay/card-recharge-pay.wxml-->
+<!-- 【会员中心-储值卡充值】页面 -->
+
+<view class="body">
+  <view class="pg__recharge-pay"> <!-- 蓝色版本：<view class="pg__recharge version__blue">-->
+    
+    <!-- <>储值卡支付余额信息 -->
+    <view class="uc__rechargeInfo flexbox flex-alignc">
+      <view class="flex1">
+        <view class="amount ff-ar">￥<text class="ff-ar">1200.00</text></view>
+        <view class="shengyu ff-ar"><text>卡内余额：￥265.00</text></view>
+      </view>
+    </view>
+
+    <!-- <>储值卡支付 -->
+    <view class="uc__form-recharge">
+      <view class="ipt-box flexbox flex-alignc">
+        <input class="flex1" type="text" password="true" name="pwd" placeholder="请输入储值卡交易密码" bindinput="bindKeyInput" />
+        <button class="btn-pay {{btnDisabled ? '' : 'on'}}" type="default" hover-class="button-hover" disabled="{{btnDisabled}}">付款</button>
+      </view>
+      <view class="align-r pt20"><navigator class="forget-pwd" url="#">忘记密码？</navigator></view>
+    </view>
+
+  </view>
+</view>

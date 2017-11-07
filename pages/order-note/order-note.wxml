@@ -1,0 +1,25 @@
+<!--pages/order-note/order-note.wxml-->
+<!-- 【订单-订单备注】页面 -->
+
+<view class="body">
+  <!-- <>联系客服(遇到问题) -->
+  <view class="sec-orderNote">
+    <view class="note-list pad20">
+      <view class="tit">快速备注</view>
+      <view class="list ff-hv">
+        <block wx:for="{{orderNote}}">
+          <text class="{{item.selected ? 'cur' : ''}}" bindtap="bindOrderNote" data-index="{{item.index}}">{{item.text}}</text>
+        </block>
+      </view>
+      <view class="area-box">
+        <textarea placeholder="请输入备注内容" maxlength="{{noteMaxLen}}" bindinput="bindWordLimit" />
+        <text class="wordLimit ff-hv">{{currentNoteLen|0}}/{{noteMaxLen}}个字</text>
+      </view>
+    </view>
+    <view class="ft-btns">
+      <view class="ok">确定</view>
+    </view>
+  </view>
+
+</view>
+

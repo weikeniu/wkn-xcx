@@ -1,0 +1,46 @@
+<!--pages/member/register/register.wxml-->
+<!-- 【会员中心-注册】页面 -->
+
+<view class="body">
+
+  <!-- <>基本信息 -->
+  <view class="mem-info">
+    <view class="hdTxt">基本信息</view>
+    <view class="form bg--fff">
+      <view class="ipt-box flexbox flex-alignc">
+        <label class="lbl">微信昵称</label>
+        <view class="flex1"><text class="text">周小黑</text></view>
+        <label class="iconfont icon-shoujianren y-rmar20 c--999"></label>
+      </view>
+      <view class="ipt-box flexbox flex-alignc">
+        <label class="lbl">姓名</label>
+        <view class="bor flex1"><input class="ipt-text" type="text" name="username" placeholder="您的姓名" placeholder-style='color: #aaa;' /></view>
+      </view>
+      <view class="ipt-box flexbox flex-alignc">
+        <label class="lbl">手机</label>
+        <view class="bor flex1"><input class="ipt-text" type="number" name="telphone" placeholder="手机号码" placeholder-style='color: #aaa;' /></view>
+        <view class="btn-getCode">获取验证码</view>
+      </view>
+      <view class="ipt-box flexbox flex-alignc">
+        <label class="lbl">验证码</label>
+        <view class="flex1"><input class="ipt-text" type="text" name="vcode" placeholder="短信验证码" placeholder-style='color: #aaa;' /></view>
+      </view>
+    </view>
+    <view class="btn"><button type="default" hover-class="button-hover" bindtap="bindSubmit">提交</button></view>
+
+  </view>
+
+  <!-- <>没有数据提示 -->
+  <view class="red__packets-nodata" style="display: none;">
+    <image src="../../../images/no-resoult.png"></image>
+    <view class="txt mt30">暂无可使用会员卡 请联系酒店新增名额</view>
+  </view>
+
+</view>
+
+
+
+<!-- <>弹窗模板.Start -->
+<import src="../../../utils/component/toast/modal-tmpl.wxml" />
+<template is="dialog" data="{{dialogCfg}}" />
+<!-- <>弹窗模板.End -->

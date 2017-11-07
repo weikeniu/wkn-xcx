@@ -1,0 +1,102 @@
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+}
+
+.textStyle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.textContainer {
+  margin-top: 200px;
+}
+.booking-list{
+  padding: 20rpx 15rpx 0 15rpx;
+}
+.img-box{
+  position: relative;
+  height: 360rpx;
+  width: 720rpx;
+  overflow: hidden;
+  border-top-left-radius: 10rpx;
+  border-top-right-radius: 10rpx;
+  
+}
+.img-box>image{
+  width: 100%;
+  height: 100%;
+}
+.txt-bar{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: rgba(0,0,0,0.7);
+  width:100%;
+  height: 70rpx;
+}
+.iconfont-bg{
+  width: 70rpx;
+  height: 70rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 70rpx;
+  font-size: 45rpx;
+  background: rgba(255,68,0,0.7)
+}
+.txt-box{
+  padding: 10rpx 20rpx 25rpx 20rpx;
+  background: #fff;
+}
+.th-mark{
+  width: 131rpx;
+height: 46rpx;
+border-style: solid;
+border-width: 2rpx;
+border-radius: 46rpx;
+text-align: center;
+line-height: 46rpx;
+font-size: 24rpx;
+margin-right: 10rpx;
+}
+.th-mark.type1 {
+    border-color: #49aee4;
+    color: #49aee4;
+}
+.th-mark.type2 {
+    border-color: #ff5e5e;
+    color: #ff5e5e;
+}
+.th-mark.type3 {
+    border-color: #2ece90;
+    color: #2ece90;
+}
+.y-btn{
+  width: 160rpx;
+  height: 65rpx;
+  color: #fff;
+  border-radius: 65rpx;
+  background: #f40;
+  text-align: center;
+  line-height: 65rpx;
+  font-size: 30rpx;
+}
+.ms-ico{
+  width: 117rpx !important;
+  height: 110rpx !important;
+  position: absolute;
+  top: -9rpx;
+  left: -9rpx;
+}
+.no-more{
+  text-align: center;
+  color: #aaa;
+  font-size: 32rpx;
+ padding-bottom: 20rpx;
+}

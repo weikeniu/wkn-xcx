@@ -1,0 +1,66 @@
+<view class="body">
+  <view class="booking-list">
+    <view class="y-bmar20">
+      <navigator url="#">
+        <view class="img-box">
+          <image src="../../../images/ms-ico.png" class="ms-ico"></image>
+          <image src="../../../images/114.png"></image>
+          <view class="txt-bar y-grid y-alignc">
+              <view class="iconfont icon-qianggou4 iconfont-bg y-rmar10"></view>
+              <text class="flex1 y-cw y-f30">2017-04-19  11:00开抢</text>
+          </view>
+        </view>
+        <view class="txt-box">
+          <view class="y-f30 y-bmar20">欢乐亲子时间【欢乐君澜3天2晚】套餐原价2688元，火爆促销仅需1658元！立即抢购</view>
+          <view class="y-grid y-alignc y-h65">
+            <view class="th-mark type1">限量购</view>
+            <text class="y-flex1 y-c66 y-f24 y-l0">剩余30份</text>
+            <text class="y-c66 y-f26 y-l-t y-rmar10">￥520</text>
+            <view class="y-btn">￥480</view>
+          </view>
+        </view>
+      </navigator>
+    </view>
+    <view class="y-bmar20">
+      <navigator url="#">
+        <view class="img-box">
+          <image src="../../../images/114.png"></image>
+          <view class="txt-bar y-grid y-alignc">
+              <view class="iconfont icon-qianggou4 iconfont-bg y-rmar10"></view>
+              <text class="flex1 y-cw y-f30">2017-04-19  11:00开抢</text>
+          </view>
+        </view>
+        <view class="txt-box">
+          <view class="y-f30 y-bmar20">欢乐亲子时间【欢乐君澜3天2晚】套餐原价2688元，火爆促销仅需1658元！立即抢购</view>
+          <view class="y-grid y-alignc y-h65">
+            <view class="th-mark type2">限时购</view>
+            <text class="y-flex1 y-c66 y-f24  y-l0">剩余30份</text>
+            <text class="y-c66 y-f26 y-l-t y-rmar10">￥520</text>
+            <view class="y-btn">￥480</view>
+          </view>
+        </view>
+      </navigator>
+    </view>
+    <view class="y-bmar20">
+      <navigator url="#">
+        <view class="img-box">
+          <image src="../../../images/114.png"></image>
+          <view class="txt-bar y-grid y-alignc">
+              <view class="iconfont icon-qianggou4 iconfont-bg y-rmar10"></view>
+              <text class="flex1 y-cw y-f30">2017-04-19  11:00开抢</text>
+          </view>
+        </view>
+        <view class="txt-box">
+          <view class="y-f30 y-bmar20">欢乐亲子时间【欢乐君澜3天2晚】套餐原价2688元，火爆促销仅需1658元！立即抢购</view>
+          <view class="y-grid y-alignc y-h65">
+            <view class="th-mark type3">特惠价</view>
+            <text class="y-flex1 y-c66 y-f24  y-l0">剩余30份</text>
+            <text class="y-c66 y-f26 y-l-t y-rmar10">￥520</text>
+            <view class="y-btn">￥480</view>
+          </view>
+        </view>
+      </navigator>
+    </view>
+    <view class="no-more">没有更多了……</view> 
+  </view>
+</view>

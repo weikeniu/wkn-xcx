@@ -1,0 +1,56 @@
+/* pages/member/card-recharge/card-recharge.wxss */
+
+/* …… 会员中心页(by hison 20170828) {{{ …… */
+/* __ 储值卡余额信息(顶部) */
+.uc__rechargeInfo{background: #353840; height: 270rpx; width: 100%;}
+.uc__rechargeInfo .money{padding: 70rpx 0 0 40rpx;}
+.uc__rechargeInfo .money .txt{color: #fff; font-size: 32rpx;}
+.uc__rechargeInfo .money .num{color: #fff; display: block; font-size: 30rpx;}
+.uc__rechargeInfo .money .num text{font-size: 50rpx;}
+.uc__rechargeInfo .detail{color: #fff; font-size: 28rpx; margin: 50rpx 50rpx 0 0; height: 50rpx;}
+.uc__rechargeInfo .detail .icon-mingxi{font-size: 14px;}
+
+/* __ 储值卡/卡密充值(表单) */
+.uc__tab-recharge{background: #fff;}
+.uc__tab-recharge .tab-nav{background: #fff; border-bottom: 1px solid rgba(50,50,50,.2); text-align: center; height: 80rpx; line-height: 80rpx;}
+.uc__tab-recharge .tab-nav text{color: #333; font-size: 28rpx;}
+.uc__tab-recharge .tab-nav text.cur{border-bottom: 4rpx solid #f40; height: 79rpx;}
+.uc__tab-recharge .tab-cnt .item{display: none;}
+.uc__tab-recharge .tab-cnt .item.cur{display: block;}
+.uc__tab-recharge .card-cnt{box-sizing: border-box; padding: 30rpx;}
+.uc__tab-recharge .card-cnt .tit{color: #333; font-size: 30rpx; padding-left: 10rpx;padding-bottom: 30rpx;}
+.uc__tab-recharge .card-cnt .list{box-sizing: border-box;}
+.uc__tab-recharge .card-cnt .list .li{float: left; margin-bottom: 20rpx; width: 33.3%;}
+.uc__tab-recharge .card-cnt .list .li .inner{background: #f8f8f8; border: 1rpx solid rgba(50,50,50,.15) ; border-radius: 5rpx; display: block; text-align: center; margin: 0 10rpx; padding: 20rpx 0;}
+.uc__tab-recharge .card-cnt .list .li .price{color: #f40; font-size: 36rpx;}
+.uc__tab-recharge .card-cnt .list .li .min{color: #666; font-size: 24rpx; margin-top: 5rpx;}
+.uc__tab-recharge .card-cnt .list .li.selected .inner{background: #f40;}
+.uc__tab-recharge .card-cnt .list .li.selected .price{color: #fff;}
+.uc__tab-recharge .card-cnt .list .li.selected .min{color: #fff;}
+/*卡密css*/
+.uc__tab-recharge .kami-form .ipt-box{background: #fff; padding: 40rpx;}
+.uc__tab-recharge .kami-form .ipt-box label{color: #333; font-size: 28rpx; margin-right: 20rpx; line-height: 50rpx;}
+.uc__tab-recharge .kami-form .ipt-box input{background: #fff; border: 0; font-size: 28rpx; padding: 10rpx 0;}
+.uc__tab-recharge .kami-form .btn{padding: 0 40rpx 30rpx;}
+.uc__tab-recharge .kami-form .btn button{background: #f40; color: #fff; font-size: 30rpx; line-height: 90rpx;}
+
+/* __ 使用说明 */
+.uc__card-summary{background: #fff; padding-bottom: 50rpx;}
+.uc__card-summary .item{padding: 50rpx 40rpx 0;}
+.uc__card-summary .item .hd{color: #333; font-size: 30rpx;}
+.uc__card-summary .item .tips{color: #666; font-size: 24rpx; margin-top: 10rpx;}
+.uc__card-summary .item .list .li{background: #f8f8f8; border: 1rpx solid rgba(50,50,50,.1); margin-left: 10rpx; margin-top: 10rpx; padding: 10rpx 0 20rpx; text-align: center;}
+.uc__card-summary .item .list .li:first-child{margin-left: 0;}
+.uc__card-summary .item .list .li text{color: #666; display: block; font-size: 24rpx; margin-top: 10rpx;}
+
+
+/* __ 蓝色版本css */
+.version__blue .uc__rechargeInfo{background: #12b7f5;}
+.version__blue .tab-nav text.cur{border-bottom-color: #12b7f5;}
+.version__blue .card-cnt .list .li .price{color: #12b7f5;}
+.version__blue .card-cnt .list .li.selected .price{color: #fff;}
+.version__blue .card-cnt .list .li.selected .inner{background: #12b7f5;}
+.version__blue .kami-form .btn button{background: #12b7f5;}
+
+/* }}} */
+

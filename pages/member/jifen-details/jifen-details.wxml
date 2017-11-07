@@ -1,0 +1,92 @@
+<!--pages/member/jifen-details/jifen-details.wxml-->
+<!-- 【会员中心-积分明细】页面 -->
+
+<view class="body">
+    
+  <!-- <>顶部导航条 -->
+  <!-- <view class="uc__card-hdNav flexbox flex-alignc">
+    <view class="back"><label class="iconfont icon-zuox"></label></view>
+    <view class="num flex1 ff-hv"><label class="iconfont icon-jifen"></label><text class="ml10">我的积分：168</text></view>
+  </view> -->
+
+  <!-- <>积分明细 (黑色版本) -->
+  <!-- <view class="uc__card-details">
+    <view class="head ff-hv">2017年1月</view>
+    <view class="list">
+      <view class="li flexbox">
+        <view class="type flex1">在线支付<label class="db c--999 ff-hv">---</label><label class="tag c--999 ff-hv">积分换购</label></view>
+        <view class="nums">-168<label class="db c--999 ff-hv">120</label><label class="db c--999 ff-hv">2017-08-22</label></view>
+      </view>
+      <view class="li flexbox">
+        <view class="type flex1">抽奖名称（大转盘/刮刮卡）<label class="db c--999 ff-hv">---</label><label class="tag c--999 ff-hv">活动扣除积分</label></view>
+        <view class="nums">-10<label class="db c--999 ff-hv">8</label><label class="db c--999 ff-hv">2017-08-22</label></view>
+      </view>
+      <view class="li flexbox">
+        <view class="type flex1">20170244512<label class="db c--999 ff-hv">---</label><label class="tag c--999 ff-hv">酒店订房</label></view>
+        <view class="nums">-160<label class="db c--999 ff-hv">120</label><label class="db c--999 ff-hv">2017-08-22</label></view>
+      </view>
+
+      <view class="li flexbox red">
+        <view class="type flex1">银联支付<label class="db c--999 ff-hv">---</label><label class="db c--999 ff-hv">酒店订餐</label></view>
+        <view class="nums">+500<label class="db c--999 ff-hv">1169</label><label class="db c--999 ff-hv">2017-08-30</label></view>
+      </view>
+      <view class="li flexbox red">
+        <view class="type flex1">支付宝支付<label class="db c--999 ff-hv">---</label><label class="db c--999 ff-hv">酒店超市</label></view>
+        <view class="nums">+568<label class="db c--999 ff-hv">1080</label><label class="db c--999 ff-hv">2017-08-31</label></view>
+      </view>
+    </view>
+  </view>
+
+  <!-- <>积分明细(没有数据提示) -->
+  <!-- <view class="uc__cardDetails-nodata" style="display: none;">
+    <image src="../../../images/icon__no-integral.png"></image>
+    <view class="txt mt10">还没有积分明细</view>
+    <label class="c--999 ff-hv">过段时间再来瞧瞧吧</label>
+    <button type="default" hover-class="button-hover">返回</button>
+  </view> -->
+
+
+  <!-- <>积分明细 (蓝色版本) -->
+  <view class="uc__card-details">
+    <view class="list">
+      <view class="li">
+        <view class="type">超市使用积分</view>
+        <view class="c--999 ff-hv"><label>2017/08/22 09:33:35</label></view>
+      </view>
+      <view class="li">
+        <view class="type">活动扣除积分</view>
+        <view class="c--999 ff-hv"><label>2017/08/22 09:33:35</label></view>
+      </view>
+      <view class="li">
+        <view class="type">酒店订房获得积分</view>
+        <view class="c--999 ff-hv"><label>2017/08/22 09:33:35</label></view>
+      </view>
+      <view class="li">
+        <view class="type">酒店超市赠送积分</view>
+        <view class="c--999 ff-hv"><label>2017/08/22 09:33:35</label></view>
+      </view>
+      <view class="li">
+        <view class="type">超市使用积分</view>
+        <view class="c--999 ff-hv"><label>2017/08/22 09:33:35</label></view>
+      </view>
+    </view>
+  </view>
+
+  <!-- <>积分明细(没有数据提示) -->
+  <view class="uc__cardDetails-nodata" style="display: none;">
+    <image src="../../../images/no-resoult.png"></image>
+    <view class="txt mt10">还没有积分明细</view>
+    <label class="c--999 ff-hv">过段时间再来瞧瞧吧</label>
+  </view>
+
+  <!-- //加载提示 -->
+  <block wx:if="{{showLoading}}">
+    <view class="page-loading">
+      <text class="weui-loading" />
+      <text class="loading-text">加载中...</text>
+    </view>
+  </block>
+
+</view>
+
+

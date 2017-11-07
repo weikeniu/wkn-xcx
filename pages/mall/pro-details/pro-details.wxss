@@ -1,0 +1,47 @@
+/* pages/mall/pro-details/pro-details.wxss */
+
+/* …… 商城-门票详情页(by hison 20170718) {{{ …… */
+/* __ 轮播图区域 */
+.sec__swiper{position: relative;}
+.sec__swiper swiper{height: 750rpx;}
+.sec__swiper .slide-image{
+  display: block; height: 100%; width: 100%;
+}
+/*.sec__swiper .wx-swiper-dots.wx-swiper-dots-horizontal{
+  margin-bottom: 40rpx;
+}*/
+
+/*精灵图定位*/
+.ico-hotel{background-size: 500rpx; vertical-align: top; margin-top: 6rpx; margin-right: 2rpx; height: 29rpx; width: 29rpx; display: inline-block;}
+.ico-hotel.i1{background-position: -144rpx -7rpx;}
+.ico-hotel.i1-1{background-position: -11rpx -7rpx;}
+.ico-hotel.i2{background-position: -185rpx -7rpx;}
+.ico-hotel.i2-2{background-position: -50rpx -7rpx;}
+.ico-hotel.i3{background-position: -89rpx -7rpx; height: 34rpx; width: 34rpx;}
+.ico-hotel.i4{background-position: -144rpx -48rpx; height: 62rpx; width: 62rpx;}
+.ico-hotel.i5{background-position: -210rpx -48rpx; height: 62rpx; width: 62rpx;}
+
+.pro-title .name{color: #333; font-size: 28rpx; padding-right: 30rpx;}
+.pro-title .num{font-size: 26rpx;}
+
+.pro-subinfo .item{font-size: 28rpx; margin-right: 20rpx;}
+
+.pro-simliar .tit{color: #333; border-bottom: 1rpx solid #e3e3e3; font-size: 28rpx; padding-bottom: 20rpx;}
+.pro-simliar .cnt{padding-top: 20rpx;}
+.pro-simliar .cnt .row{font-size: 24rpx; margin-bottom: 15rpx;}
+
+.pro-address .addr{color: #333; font-size: 28rpx; padding-right: 30rpx;}
+
+/*底部固定*/
+.pro-footinfo{padding-top: 120rpx;}
+.pro-footinfo .bottomfixed{background: rgba(255,255,255,.95); border-top: 1rpx solid rgba(50,50,50,.3); height: 100rpx; width: 100%; position: fixed; left: 0; bottom: 0; z-index: 1000;}
+.pro-footinfo .inner{padding: 20rpx;}
+.pro-footinfo .inner .ftico{vertical-align: top; display: inline-block; height: 62rpx; width: 62rpx;}
+.pro-footinfo .inner .ico-hotel{margin-top: 0; margin-right: 0;}
+.pro-footinfo .inner .jifen .txt{background: #fff; box-sizing: border-box; border: 1rpx solid #242930; border-radius: 10rpx; color: #242930; font-size: 24rpx; display: block; overflow: hidden; text-align: center; padding: 0 20rpx; line-height: 60rpx; width: 100%;}
+.pro-footinfo .inner .jifen .txt2{border-color: #12b7f5; color: #12b7f5;}
+.pro-footinfo .inner .jifen .disabled{border-color: #999; color: #999;}
+.pro-footinfo .inner .btn-buy{background: #fff; border: 1rpx solid #f40; border-radius: 10rpx; color: #f40; font-size: 24rpx; text-align: center; line-height: 60rpx; width: 100%;}
+
+/* }}} */
+

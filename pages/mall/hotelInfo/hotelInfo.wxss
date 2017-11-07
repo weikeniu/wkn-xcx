@@ -1,0 +1,25 @@
+/* pages/mall/hotelInfo/hotelInfo.wxss */
+
+/* …… 酒店简介(by hison 20171013) {{{ …… */
+.sec__hotel-info .bbor{background:#efeff4; height: 20rpx;}
+.wrap-hdpic{height: 350rpx; width:100%; position: relative;}
+.wrap-hdpic .mask{background: rgba(0,0,0,.3); height: 100%; width: 100%; position: absolute; left: 0; top: 0;}
+.wrap-hdpic .inner{padding: 50rpx 20rpx 30rpx; position: relative;}
+.wrap-hdpic .logo{border-radius:50%; margin-right:20rpx; overflow:hidden; height: 150rpx; width: 150rpx;}
+.wrap-hdpic .logo image{height:100%; width:100%;}
+.wrap-hdpic .txtrow .name{color: #fff; font-size: 32rpx; margin-top: 40rpx; margin-bottom: 50rpx;}
+.wrap-hdpic .txtrow .p{color: rgba(255,255,255,.7); font-size: 24rpx; margin-top: 10rpx;}
+
+.wrap-addr{font-size: 30rpx; padding:0 20rpx; height: 90rpx;}
+.wrap-addr .icon-youx{font-size: 14px;}
+
+.wrap-morePic{font-size: 30rpx; padding:0 20rpx; height: 90rpx;}
+
+.wrap-item{padding: 40rpx 20rpx;}
+.wrap-item .tit{color:#000; font-size: 36rpx;}
+.wrap-item .intro{ padding-top: 30rpx;}
+.wrap-item .intro .text{color: #777; font-size: 26rpx;}
+.wrap-item .intro .text .bold{font-weight: 700;}
+.wrap-item .intro .row{margin-top: 20rpx;}
+
+/* }}} */

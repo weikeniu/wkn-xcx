@@ -1,0 +1,16 @@
+/* pages/mall/hotelService/hotelService.wxss */
+
+/* …… 设施服务(by hison 20170913) {{{ …… */
+/* __ 酒店服务、客房设施、餐饮接待 */
+.sec__hotel-service .bbor{background:#efeff4; height: 10rpx;}
+.wrap-item{padding: 30rpx;}
+.wrap-item .tit{color:#000;font-size: 30rpx;}
+.wrap-item .cnt{box-sizing: border-box;}
+.wrap-item .cnt text{color:#666;float: left; font-size: 26rpx; margin-top: 20rpx; width: 33.3%;}
+.wrap-item .intro{border-top:1rpx solid #ddd; margin-top: 35rpx; padding-top: 30rpx;}
+.wrap-item .intro .text{font-size: 26rpx;}
+.wrap-item .intro .text .bold{font-weight: 700;}
+.wrap-item .intro .row{margin-top: 20rpx;}
+
+.ft-tips{background: #efeff4; font-size: 26rpx;text-align: center; line-height: 90rpx;}
+/* }}} */

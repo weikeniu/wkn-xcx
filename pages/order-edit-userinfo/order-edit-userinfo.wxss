@@ -1,0 +1,26 @@
+/* pages/order-edit-userinfo/order-edit-userinfo.wxss */
+
+/* …… 订单页面-编辑信息(by hison 20170802) {{{ …… */
+/* __ 编辑用户信息 */
+.sec-editUserInfo{background: #fff;}
+.sec-editUserInfo .item{background: #fff; padding-left: 20rpx;}
+.sec-editUserInfo .item .inner{border-top: 1rpx solid #e3e3e3; display: flex; align-items: center; padding: 20rpx 20rpx 20rpx 0;}
+.sec-editUserInfo .item:nth-child(1) .inner{border-top: 0;}
+.sec-editUserInfo .item .inner.no-bor{border-top: 0; padding: 0;}
+.sec-editUserInfo .item .inner .list{border-top: 1rpx solid #e3e3e3;  padding: 10rpx 20rpx 20rpx 0;}
+.sec-editUserInfo .item .inner .list text{
+  border: 1rpx solid #e3e3e3; border-radius: 30rpx; color: #999; display: inline-block; font-size: 30rpx; 
+  margin-top: 10rpx; margin-right: 20rpx; padding: 0 40rpx; text-align: center; line-height: 60rpx;
+  transition: all .3s;
+}
+.sec-editUserInfo .item .inner .list text.cur{border-color: #12b7f5; color: #12b7f5;}
+.sec-editUserInfo .item .lbl{color:#333; font-size: 30rpx; margin-right: 20rpx; min-width: 100rpx;}
+.sec-editUserInfo .item .inner .ipt-text{font-size: 30rpx; height: 60rpx;}
+.sec-editUserInfo .item .inner .btn-code{
+  border: 1rpx solid #12b7f5; border-radius: 30rpx; color: #12b7f5; display: inline-block; font-size: 30rpx; margin-left: 20rpx; padding: 0 30rpx; line-height: 60rpx; text-align: center; min-width: 170rpx;
+}
+/*按钮*/
+.sec-editUserInfo .ft-btns{margin-top: 30rpx; padding: 0 20rpx; text-align: center;}
+.sec-editUserInfo .ft-btns .ok{background: #12b7f5; border-radius: 10rpx; color: #fff; font-size: 32rpx; height: 100rpx; line-height: 100rpx;}
+/* }}} */
+

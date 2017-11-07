@@ -1,0 +1,91 @@
+<!--pages/member/card-buy/card-buy.wxml-->
+<!-- 【会员中心-购买会员卡】页面 -->
+
+<view class="body">
+
+  <image class="max__img" src="../../../images/ad-img002.jpg" mode="widthFix"></image>
+  <!-- <>购买会员卡 -->
+  <view class="mem__card-buy">
+    <!--列表.start-->
+    <view class="card-item">
+      <view class="card-box">
+        <image class="card-bg" src="../../../images/cards/cards-green.png"></image>
+        <!-- 其他类型背景
+        <image class="card-bg" src="../../../images/cards/cards-blue.png"></image>
+        <image class="card-bg" src="../../../images/cards/cards-cyan.png"></image>
+        <image class="card-bg" src="../../../images/cards/cards-green.png"></image>
+        <image class="card-bg" src="../../../images/cards/cards-purple.png"></image>
+        <image class="card-bg" src="../../../images/cards/cards-red.png"></image>
+        <image class="card-bg" src="../../../images/cards/cards-yellow.png"></image>
+        -->
+        <view class="card-info">
+          <view class="hd-info flexbox">
+            <view class="flex1 name">微可牛旅行社<text class="type">普通卡</text></view>
+            <view class="tag">终身卡</view>
+          </view>
+          <view class="ct-info flexbox flex-alignc">
+            <view class="discount">立减<text>30</text>元</view>
+            <view class="tips flex1">
+              <text>开卡即享预订酒店现金立减</text>
+              <text>超值会员价</text>
+            </view>
+          </view>
+          <view class="ft-info">有效期：长期有效</view>
+        </view>
+      </view>
+      <view class="card-btn flexbox flex-alignc">
+        <text class="price flex1">￥450</text>
+        <view class="buy" bindtap="bindBuyCard">购买</view>
+      </view>
+    </view>
+    <view class="card-item">
+      <view class="card-box">
+        <image class="card-bg" src="../../../images/cards/cards-yellow.png"></image>
+        <view class="card-info">
+          <view class="hd-info flexbox">
+            <view class="flex1 name">微可牛旅行社<text class="type">普通卡</text></view>
+            <view class="tag">终身卡</view>
+          </view>
+          <view class="ct-info flexbox flex-alignc">
+            <view class="discount">立减<text>20</text>元</view>
+            <view class="tips flex1">
+              <text>开卡即享预订酒店现金立减</text>
+              <text>超值会员价</text>
+            </view>
+          </view>
+          <view class="ft-info">有效期：长期有效</view>
+        </view>
+      </view>
+      <view class="card-btn flexbox flex-alignc">
+        <text class="price flex1">￥450</text>
+        <view class="buy" bindtap="bindBuyCard">购买</view>
+      </view>
+    </view>
+    <view class="card-item">
+      <view class="card-box">
+        <image class="card-bg" src="../../../images/cards/cards-green.png"></image>
+        <view class="card-info">
+          <view class="hd-info flexbox">
+            <view class="flex1 name">微可牛旅行社<text class="type">普通卡</text></view>
+            <view class="tag">终身卡</view>
+          </view>
+          <view class="ct-info flexbox flex-alignc">
+            <view class="discount">立减<text>8</text>元</view>
+            <view class="tips flex1">
+              <text>开卡即享预订酒店现金立减</text>
+              <text>超值会员价</text>
+            </view>
+          </view>
+          <view class="ft-info">有效期：长期有效</view>
+        </view>
+      </view>
+      <view class="card-btn flexbox flex-alignc">
+        <text class="price flex1">￥450</text>
+        <view class="buy" bindtap="bindBuyCard">购买</view>
+      </view>
+    </view>
+    <!--列表.end-->
+
+  </view>
+
+</view>

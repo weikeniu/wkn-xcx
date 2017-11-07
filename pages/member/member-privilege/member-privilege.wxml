@@ -1,0 +1,77 @@
+<!--pages/member/member-privilege/member-privilege.wxml-->
+<!-- 【会员中心-会员特权】页面 -->
+
+<view class="body">
+  <!-- <>会员名片卡 -->
+  <view class="mem-card">
+    <view class="card-wrap">
+      <view><image class="card-bg" src="../../../images/cards/cards-black.png"></image></view>
+      <!-- 其他类型背景
+      <image class="card-bg" src="../../../images/cards/cards-blue.png"></image>
+      <image class="card-bg" src="../../../images/cards/cards-cyan.png"></image>
+      <image class="card-bg" src="../../../images/cards/cards-green.png"></image>
+      <image class="card-bg" src="../../../images/cards/cards-purple.png"></image>
+      <image class="card-bg" src="../../../images/cards/cards-red.png"></image>
+      <image class="card-bg" src="../../../images/cards/cards-yellow.png"></image>
+      -->
+      <view class="card-info">
+        <view class="hd-logo flexbox flex-alignc">
+          <image src="../../../images/defaultRoomImg.jpg"></image>
+          <view class="flex1 name">微可牛旅行社<text class="type">普通卡</text></view>
+        </view>
+        <view class="ft-info"><text class="fl num">2829100091</text><text class="fr jian">立减￥5</text></view>
+      </view>
+    </view>
+  </view>
+
+  <!-- <>会员特权说明 -->
+  <view class="mem-privilege">
+    <view class="item" bindtap="bindCollapse" data-index="0">
+      <view class="tit flexbox flex-alignc">
+        <view class="flex1"><label class="iconfont icon-huiyuanka1"></label><text class="ml15">会员权益</text></view>
+        <label class="arr-down  {{toggle01 ? 'cur' : ''}} iconfont icon-xiax"></label>
+      </view>
+      <view class="cnt {{toggle01 ? 'cur' : ''}}">
+        <view class="flex-table">
+          <view class="thead"><text>类型</text><text>普通卡</text><text>白银卡</text><text>黄金卡</text></view>
+          <view class="tbody">
+            <view class="tr"><text>订房优惠</text><text>立减￥5</text><text>立减￥20</text><text>立减￥30</text></view>
+            <view class="tr"><text>订餐优惠</text><text>9.5折</text><text>立减￥5</text><text>立减￥8</text></view>
+            <view class="tr"><text>积分加成</text><text>1.1倍</text><text>1.2倍</text><text>1.3倍</text></view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="item" bindtap="bindCollapse" data-index="1">
+      <view class="tit flexbox flex-alignc">
+        <view class="flex1"><label class="iconfont icon-jianjie1"></label><text class="ml15">会员说明</text></view>
+        <label class="arr-down  {{toggle02 ? 'cur' : ''}} iconfont icon-xiax"></label>
+      </view>
+      <view class="cnt {{toggle02 ? 'cur' : ''}}">
+        <view class="flex-table">
+          <view class="thead"><text>等级</text><text>普通卡</text><text>白银卡</text><text>黄金卡</text></view>
+          <view class="tbody">
+            <view class="tr"><text>订餐优惠</text><text>9.5折</text><text>立减￥5</text><text>立减￥8</text></view>
+            <view class="tr"><text>积分加成</text><text>1.1倍</text><text>1.2倍</text><text>1.3倍</text></view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="item" bindtap="bindCollapse" data-index="2">
+      <view class="tit flexbox flex-alignc">
+        <view class="flex1"><label class="iconfont icon-goumaihuiyuan"></label><text class="ml15">会员等级</text></view>
+        <label class="arr-down {{toggle03 ? 'cur' : ''}} iconfont icon-xiax"></label>
+      </view>
+      <view class="cnt {{toggle03 ? 'cur' : ''}}">
+        <view class="flex-table">
+          <view class="thead"><text>等级</text><text>普通卡</text><text>白银卡</text><text>黄金卡</text></view>
+          <view class="tbody">
+            <view class="tr"><text>间夜</text><text>立减￥5</text><text>立减￥20</text><text>立减￥30</text></view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+  </view>
+
+</view>

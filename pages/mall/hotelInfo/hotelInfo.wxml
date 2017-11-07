@@ -1,0 +1,45 @@
+<!--pages/mall/hotelInfo/hotelInfo.wxml-->
+<!-- 【酒店简介】页面 -->
+
+<view class="body">
+  <!-- <>酒店简介 -->
+  <view class="sec__hotel-info bg--fff">
+    <!-- //酒店图片-->
+    <view class="wrap-hdpic" style="background-image:url(http://admin.weikeniu.com/img/28291/20170920113453_1245_b.jpg); background-size:cover;">
+      <view class="mask"></view>
+      <view class="inner flexbox">
+        <view class="logo"><image src="http://admin.weikeniu.com/img/28291/20140113182154_0175.jpg" mode="scaleToFill"></image></view>
+        <view class="txtrow flex1">
+          <view class="name">微可牛酒店</view>
+          <view class="p">开业时间：2013-02</view>
+          <view class="p">最近装修：2017-08</view>
+          <view class="p">联系电话：020-83764270</view>
+        </view>
+      </view>
+    </view>
+    <navigator class="wrap-addr flexbox flex-alignc" url="#">
+      <view class="flex1">寺右新马路108号</view>
+      <view class="c--12b7f5">地图 <label class="iconfont icon-youx c--999"></label></view>
+    </navigator>
+    <view class="bbor"></view>
+
+    <!-- //简介信息-->
+    <view class="wrap-item">
+      <view class="tit">酒店简介</view>
+      <view class="intro">
+        <view class="text">桔子酒店精选（杭州和平会展中心店）位于德胜路与绍兴路交汇处，座落于杭州市北部汽车精品一条街的绍兴路上，毗邻和平国际会展中心，南北上塘高架和东西德胜快速通道在门前交叉而过，可达绕城高速、沪杭甬、杭宁高速、杭金衢高速；距市中心车行15分钟，交通便利,.</view>
+        <view class="row"><image class="max__img" src="../../../images/swiper__mall-img01.jpg" mode="widthFix"></image></view>
+        <view class="row"><image class="max__img" src="../../../images/swiper__mall-img01.jpg" mode="widthFix"></image></view>
+      </view>
+    </view>
+    <view class="bbor"></view>
+
+    <navigator class="wrap-morePic flexbox flex-alignc" url="../hotelPicture/hotelPicture">
+      <view class="flex1"><label class="iconfont icon-tupian2 c--12b7f5"></label> 更多酒店图片</view>
+      <label class="iconfont icon-youx c--999"></label>
+    </navigator>
+    <view class="bbor"></view>
+    
+  </view>
+
+</view>

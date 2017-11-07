@@ -1,0 +1,238 @@
+<view class="body y-bpad140">
+  <view class="y-grid y-alignc pay-top y-lrpad20 y-bgw">
+    <navigator url="#" class="iconfont icon-dingwei y-blue y-rmar25"></navigator>
+    <navigator url="../order-edit-userinfo/order-edit-userinfo" class="y-flex1 y-arr">
+      <view class="y-f36 y-bmar10">
+        <text class="y-rmar10">李青秋</text>
+        <text>13570555489</text>
+      </view>
+      <view class="y-f26 y-c99">广州桃花江豪生酒店   201A房</view>
+    </navigator>
+  </view>
+  <view class="border-copy y-bmar20" style="background-image:url('../../images/border_03.jpg')"></view>
+
+
+
+  <view class="y-bgw y-bmar20">
+    <navigator class="y-bor bbor y-h100 y-l100 y-arr y-lrpad20 y-f30 y-c66">广州桃花江豪生酒店</navigator>
+    <view class="y-bor bbor y-bgf9 y-lrpad20 y-tbpad40">
+      <view class="y-grid y-alignc y-bmar35">
+        <view class="y-flex1">
+          <text class="y-f26">干炒牛河</text>
+          <!--<view class="la-lv lv0" style="background:url(../../images/lajiaolv.png)"></view>-->
+          <view class="la-lv y-f26 y-c99 lv0">
+            <text class="iconfont icon-lajiao"></text>
+            <text class="iconfont icon-lajiao"></text>
+            <text class="iconfont icon-lajiao"></text>
+          </view>
+        </view>
+        <view class="y-f26 y-c99">会员9.5折</view>
+        <view class="y-f22 y-c99 y-w60 y-textr">X2</view>
+        <view class="y-f26 y-w90 y-textr">￥31</view>
+      </view>
+      <view class="y-grid y-alignc y-bmar35">
+        <view class="y-flex1">
+          <text class="y-f26">干炒牛河</text>
+          <!--<view class="la-lv lv0" style="background:url(../../images/lajiaolv.png)"></view>-->
+          <view class="la-lv y-f26 y-c99 lv1">
+            <text class="iconfont icon-lajiao"></text>
+            <text class="iconfont icon-lajiao"></text>
+            <text class="iconfont icon-lajiao"></text>
+          </view>
+        </view>
+        <view class="y-f26 y-c99">会员9.5折</view>
+        <view class="y-f22 y-c99 y-w60 y-textr">X2</view>
+        <view class="y-f26 y-w90 y-textr">￥31</view>
+      </view>
+      <view class="y-grid y-alignc y-bmar35">
+        <view class="y-flex1">
+          <text class="y-f26">干炒牛河</text>
+          <!--<view class="la-lv lv0" style="background:url(../../images/lajiaolv.png)"></view>-->
+          <view class="la-lv y-f26 y-c99 lv2">
+            <text class="iconfont icon-lajiao"></text>
+            <text class="iconfont icon-lajiao"></text>
+            <text class="iconfont icon-lajiao"></text>
+          </view>
+        </view>
+        <view class="y-f26 y-c99">会员9.5折</view>
+        <view class="y-f22 y-c99 y-w60 y-textr">X2</view>
+        <view class="y-f26 y-w90 y-textr">￥31</view>
+      </view>
+      <view class="y-grid y-alignc y-bmar35">
+        <view class="y-flex1">
+          <text class="y-f26">干炒牛河</text>
+          <!--<view class="la-lv lv0" style="background:url(../../images/lajiaolv.png)"></view>-->
+          <view class="la-lv y-f26 y-c99 lv3">
+            <text class="iconfont icon-lajiao"></text>
+            <text class="iconfont icon-lajiao"></text>
+            <text class="iconfont icon-lajiao"></text>
+          </view>
+        </view>
+        <view class="y-f26 y-c99">会员9.5折</view>
+        <view class="y-f22 y-c99 y-w60 y-textr">X2</view>
+        <view class="y-f26 y-w90 y-textr">￥31</view>
+      </view>
+    </view>
+    <view class="y-grid y-alignc y-bor bbor y-arr y-h120 y-lrpad20" bindtap="redpaperSwitch">
+        <view class="y-f30 y-w150">红包</view>
+        <view class="y-flex1">
+          <view class="y-c60"><text class="y-f30">￥</text><text class="y-f36">5</text></view>
+          <view class="y-f22 y-c99">已从订单金额中扣减</view>
+          
+        </view>
+    </view>
+
+     <view class="y-grid y-alignc y-bor bbor y-arr y-h120 y-lrpad20">
+        <view class="y-f30 y-w150">订单</view>
+        <view class="y-flex1">
+          <view class="y-c60"><text class="y-f30">￥</text><text class="y-f36">168</text></view>
+          <view class="y-f22 y-c99">已优惠5元，可获<text class="y-blue">168</text>积分</view>
+          
+        </view>
+    </view>
+
+  </view>
+
+
+
+  <view class="y-bgw">
+       <view class="y-grid y-alignc y-bor bbor y-h100 y-lrpad20">
+          <view class="y-flex1 y-f30">用餐人数</view>
+          <view class="y-grid ar">
+               <view class="iconfont icon-jianhao y-f50 y-blue {{totalNum[0]==undefined||totalNum[0]==0?'':'cur'}}" data-id="0" bindtap="reduce"></view>
+                <view class="food-num {{totalNum[0]==undefined||totalNum[0]==0?'':'cur'}}">{{totalNum[0]}}</view>
+                <view class="iconfont icon-jiahao y-f50 y-blue" data-id="0" bindtap="add"></view>
+              </view>
+       </view>
+       <navigator url="../order-note/order-note" class="y-grid y-alignc y-bor bbor y-h100 y-lrpad20 y-arr">
+          <view class="y-flex1 y-f30">订单备注</view>
+          <view class="y-f24 y-c99 y-rmar30">口味、偏好等</view>          
+       </navigator>
+  </view>
+
+  <view class="fix-bottom">
+                    <view class="fix-bottom-show y-grid y-alignc y-lpad20">
+                      <view class="y-flex1">
+                        <view class="y-f30 y-c40">在线支付￥168</view>
+                        <view class="y-f22 y-c99">为您优惠5元</view>
+                       </view>
+                      <view class="y-arr y-c99 y-f26 y-w80 y-rmar30 {{detailNum==0?'type-up':'type-down'}}" bindtap="detailTap">明细</view>
+                       <navigator url="../order-food-pay2/order-food-pay2" class="fix-bottom-btn y-f34">请选择</navigator>
+                    </view>
+
+                    <view class="mask {{detailNum==0?'':'cur'}}">
+                      <view class="mask-inner">
+                        <view class="y-grid y-alignc y-h80 y-bor bbor y-lrpad20">
+                          <view class="y-flex1">
+                            <text class="iconfont icon-fanghao y-f30 y-c60 y-rmar10"></text>
+                            <text class="y-f26 y-rmar10">201A</text>
+                            <text class="y-c99 y-f22">餐饮将送到此房间</text>
+                          </view>
+                          <view class="y-c99">
+                            <text class="iconfont icon-qingkong y-c99 y-f28 y-rmar10"></text>
+                            <text class="y-f22">清空</text>
+                          </view>
+                        </view>
+                        <view class="select-food-list">
+                          <view class="y-grid y-alignc y-bor bbor y-h110 y-lrpad20">
+                            <view class="y-flex1 y-f30">干炒牛河</view>
+                            <view class="y-f30 y-c99">会员9.5折</view>
+                            <view class="y-w90 y-c60 y-textr y-rmar30"><text class="y-f24">￥</text><text class="y-f36">22</text></view>
+                            <view class="y-grid ar">
+                                  <view class="iconfont icon-jianhao y-f50 y-blue {{totalNum[0]==undefined||totalNum[0]==0?'':'cur'}}" data-id="0" bindtap="reduce"></view>
+                                  <view class="food-num {{totalNum[0]==undefined||totalNum[0]==0?'':'cur'}}">{{totalNum[0]}}</view>
+                                  <view class="iconfont icon-jiahao y-f50 y-blue" data-id="0" bindtap="add"></view>
+                                 </view>
+                            </view>
+                           <view class="y-grid y-alignc y-bor bbor y-h110 y-lrpad20">
+                            <view class="y-flex1 y-f30">干炒牛河</view>
+                            <view class="y-f30 y-c99">会员9.5折</view>
+                            <view class="y-w90 y-c60 y-textr y-rmar30"><text class="y-f24">￥</text><text class="y-f36">22</text></view>
+                            <view class="y-grid ar">
+                                  <view class="iconfont icon-jianhao y-f50 y-blue {{totalNum[0]==undefined||totalNum[0]==0?'':'cur'}}" data-id="0" bindtap="reduce"></view>
+                                  <view class="food-num {{totalNum[0]==undefined||totalNum[0]==0?'':'cur'}}">{{totalNum[0]}}</view>
+                                  <view class="iconfont icon-jiahao y-f50 y-blue" data-id="0" bindtap="add"></view>
+                                 </view>
+                            </view>
+                        </view>
+                        <view class="y-grid y-alignc y-bor bbor y-h80 y-lrpad20">
+                          <text class="iconfont icon-fanghao y-f30 y-rmar10 y-ccc"></text>
+                          <text class="y-flex1 y-f26">306B</text>
+                          <view>
+                            <view class="tip-ico">!</view>
+                            <text class="y-f22 y-c99">若需要分装长按商品拖入此房间</text>
+                          </view>
+                        </view>
+                        <view class="y-lrpad20 y-grid y-alignc y-h110">
+                           <text class="y-f30 y-rmar10">包装费</text>
+                            <view class="y-c60">
+                              <text class="y-f24">￥</text>
+                              <text class="y-f36">5</text>
+                            </view>
+                        </view>
+                         
+                      </view>
+                    </view>
+
+                 </view>
+
+                 <view class="mask {{redpaperS==0?'':'cur'}}">
+                  <view class="mask-inner">
+                      <view class="y-h100 y-bor bbor y-f36 y-l100 y-textc">红包</view>
+                      <scroll-view scroll-y class="redpaper-list y-lrpad20">
+                        <view class="y-grid y-alignc y-bor bbor y-h120" data-id='0' bindtap="redpaperSelect">
+                          <view class="y-flex1 y-blue y-f34">不使用红包</view>
+                          <view class="radio-copy iconfont {{redpaperId==0?'icon-gouxuan cur':''}}"></view>
+                        </view>
+                        <view class="y-grid y-alignc y-bor bbor y-h120" data-id='1' bindtap="redpaperSelect">
+                          <view class="y-blue y-rmar10">
+                            <text class="y-f24">￥</text>
+                            <text class="y-f50 y-fontb">10</text>                            
+                          </view>
+                          <view class="y-flex1 y-blue">
+                            <view class="y-f24">0元起用</view>
+                            <view class="y-f24">有效期2017.01.01-2017.01.15</view>
+                          </view>
+                          <view class="radio-copy iconfont {{redpaperId==1?'icon-gouxuan cur':''}}"></view>
+                        </view>
+
+                        <view class="y-grid y-alignc y-bor bbor y-h120" data-id='2' bindtap="redpaperSelect">
+                          <view class="y-blue y-rmar10">
+                            <text class="y-f24">￥</text>
+                            <text class="y-f50 y-fontb">20</text>                            
+                          </view>
+                          <view class="y-flex1 y-blue">
+                            <view class="y-f24">0元起用</view>
+                            <view class="y-f24">有效期2017.01.01-2017.01.15</view>
+                          </view>
+                          <view class="radio-copy iconfont {{redpaperId==2?'icon-gouxuan cur':''}}"></view>
+                        </view>
+
+                        <view class="y-grid y-alignc y-bor bbor y-h120" data-id='3' bindtap="redpaperSelect">
+                          <view class="y-blue y-rmar10">
+                            <text class="y-f24">￥</text>
+                            <text class="y-f50 y-fontb">30</text>                            
+                          </view>
+                          <view class="y-flex1 y-blue">
+                            <view class="y-f24">0元起用</view>
+                            <view class="y-f24">有效期2017.01.01-2017.01.15</view>
+                          </view>
+                          <view class="radio-copy iconfont {{redpaperId==3?'icon-gouxuan cur':''}}"></view>
+                        </view>
+
+                        <view class="y-grid y-alignc y-bor bbor y-h120" data-id='4' bindtap="redpaperSelect">
+                          <view class="y-blue y-rmar10">
+                            <text class="y-f24">￥</text>
+                            <text class="y-f50 y-fontb">40</text>                            
+                          </view>
+                          <view class="y-flex1 y-blue">
+                            <view class="y-f24">0元起用</view>
+                            <view class="y-f24">有效期2017.01.01-2017.01.15</view>
+                          </view>
+                          <view class="radio-copy iconfont {{redpaperId==4?'icon-gouxuan cur':''}}"></view>
+                        </view>
+                      </scroll-view>
+                      <view class="y-h100 y-l100 y-bg40 y-textc y-cw y-f36" bindtap="redpaperSwitch">关闭</view>
+                  </view>
+                 </view>
+</view>

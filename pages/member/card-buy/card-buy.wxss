@@ -1,0 +1,27 @@
+/* pages/member/card-buy/card-buy.wxss */
+
+/* …… 会员中心页(购买会员卡)(by hison 20170829) {{{ …… */
+/* __ 购买会员卡 */
+.ads-img{width: 100%;}
+
+.mem__card-buy{background: #fff;}
+.mem__card-buy .card-item{border-top: 1rpx solid #ddd; margin: 0 auto; margin-bottom: 30rpx; padding-top: 30rpx; width: 680rpx;}
+.mem__card-buy .card-item:first-child{border-top: 0;}
+.mem__card-buy .card-box{margin: 0 auto; height: 440rpx; width: 680rpx; position: relative;}
+.mem__card-buy .card-bg{height: 100%; width: 100%;}
+.mem__card-buy .card-info .hd-info{box-sizing: border-box; padding: 30rpx 0 0 30rpx; width: 100%; position: absolute; left: 0; top: 0;}
+.mem__card-buy .card-info .hd-info .name{color: #000; font-size: 32rpx;}
+.mem__card-buy .card-info .hd-info .name .type{color: #000; display: block; font-size: 24rpx;}
+.mem__card-buy .card-info .hd-info .tag{background: rgba(50,50,50,.15);border-radius: 10rpx; color: #333; font-size: 24rpx; margin-right: 30rpx; padding: 0 20rpx; height: 50rpx; line-height: 50rpx;}
+.mem__card-buy .card-info .ct-info{box-sizing: border-box; width: 100%; position: absolute;left: 0; top: 180rpx;}
+.mem__card-buy .card-info .ct-info .discount{color:#f00; font-size: 24rpx; padding: 0 30rpx 0 50rpx;}
+.mem__card-buy .card-info .ct-info .discount text{font-size: 50rpx;font-family: arial; margin: 0 10rpx;}
+.mem__card-buy .card-info .ct-info .tips{border-left: 1rpx solid #eee; padding: 0 50rpx 0 30rpx;}
+.mem__card-buy .card-info .ct-info .tips text{display: block; font-size: 26rpx;}
+.mem__card-buy .card-info .ft-info{background: rgba(50,50,50,.25); box-sizing: border-box; border-bottom-left-radius: 30rpx; border-bottom-right-radius: 30rpx; color: #fff; font-size: 26rpx; padding: 0 30rpx; line-height: 60rpx; width: 100%; position: absolute; left: 0; bottom: 0;}
+/*购买按钮*/
+.mem__card-buy .card-btn{margin-top: 20rpx;}
+.mem__card-buy .card-btn .price{font-size: 28rpx;}
+.mem__card-buy .card-btn .buy{background: #12b7f5; border-radius: 30rpx; color:#fff; font-size: 28rpx; text-align: center; padding: 5px 20rpx; width: 120rpx;}
+
+/* }}} */

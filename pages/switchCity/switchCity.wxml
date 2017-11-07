@@ -1,0 +1,55 @@
+<!--pages/switchCity/switchCity.wxml-->
+<!-- 【城市选择-我的位置】页面 -->
+
+<view class="body">
+  <!-- <>切换城市区域 -->
+  <view class="panel-switchCity">
+    <!--右侧字母浮动条-->
+    <view class="floatLetter">
+      <view wx:for="{{floatLetter}}" data-letter="{{item.name}}" catchtouchend="bindClickLetter" style="height:{{itemH}}px;">{{item.name}}</view>
+    </view>
+
+    <!--显示字母提示-->
+    <block wx:if="{{isShowLetter}}">
+      <view class="showSelectedLetter">
+        {{showLetter}}
+      </view>
+    </block>
+
+    <!--城市滚动区域.Start-->
+    <scroll-view scroll-y="true" style="height:{{winHeight}}px;" scroll-into-view="{{scrollToPos}}">
+      <!--顶部返回、重置-->
+      <view class="hd-nav flexbox flex-alignc">
+        <view class="icon_back flex1"></view>
+        <view class="reset">重置</view>
+      </view>
+
+      <!--当前城市(我的位置)-->
+      <view class="current-city">
+        <view class="tit">我的位置</view>
+        <view class="pos">{{currentCity}}</view>
+      </view>
+
+      <!--热门城市-->
+      <view class="hot-city">
+        <view class="tit">热门城市</view>
+        <view class="list">
+          <block wx:for="{{hotCityList}}">
+            <view class="row" data-cityCode="{{item.cityCode}}" data-city="{{item.city}}" bindtap="bindHotCity">
+              <text>{{item.city}}</text>
+            </view>
+          </block>
+        </view>
+      </view>
+
+      <!--城市列表-->
+      <view class="selection-city">
+        <view class="city-box" wx:for="{{cityList}}">
+          <view class="initial" id="{{item.initial}}">{{item.initial}}</view>
+          <view class="item-city" wx:for="{{item.cityInfo}}" wx:for-item="ct" data-cityCode="{{ct.code}}" data-city="{{ct.city}}" bindtap="bindListCity">{{ct.city}}</view>
+        </view>
+      </view>
+    </scroll-view>
+    <!--城市滚动区域.End-->
+  </view>
+</view>

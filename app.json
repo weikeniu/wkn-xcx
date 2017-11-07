@@ -1,0 +1,105 @@
+{
+  "pages": [
+"pages/tehuiyouxuan/index/index",
+
+"pages/order/order",
+
+"pages/order-food-pay/order-food-pay",
+
+
+"pages/member/card-recharge/card-recharge",
+"pages/order-pay/order-pay",
+"pages/index/index",
+"pages/index2/index",
+"pages/mall/TravelAgencyHotelList/TravelAgencyHotelList",
+"pages/mall/hotelService/hotelService",
+"pages/tehuiyouxuan/details/details",
+"pages/calendartest2/calendartest",
+"pages/mall/TravelAgencyHotel/TravelAgencyHotel",
+"pages/calendartest3/calendartest3",
+"pages/map/map",
+"pages/order-details-pages/order-details-room/order-details-room",
+"pages/order-details-pages/order-details-yufu/order-details-yufu",
+"pages/mall/pro-details/pro-details",
+"pages/member/myorders/myorders",
+"pages/member/index/index",
+"pages/member/register/register",
+"pages/member/invoice-details/invoice-details",
+"pages/member/reward-details/reward-details",
+"pages/member/jifen-details/jifen-details",
+"pages/member/card-buy-pay/card-buy-pay",
+"pages/member/card-buy/card-buy",
+"pages/member/forget-paypwd/forget-paypwd",
+"pages/member/edit-paypwd/edit-paypwd",
+"pages/member/member-info/member-info",
+"pages/member/member-privilege/member-privilege",
+"pages/member/card-details/card-details",
+"pages/member/red-packets/red-packets",
+"pages/list/list",
+"pages/list/list-old/list-old",
+"pages/order-restaurant/order-restaurant",
+"pages/mall/logistics-details/logistics-details",
+"pages/mall/index/index",
+"pages/mall/mall-search/mall-search",
+"pages/mall/order-details/order-details",
+"pages/order-edit-userinfo/order-edit-userinfo",
+"pages/order-food-pay2/order-food-pay2",
+"pages/order-food-pay3/order-food-pay3",
+"pages/order-manage/order-manage",
+"pages/order-note/order-note",
+"pages/order-details-pages/order-details-food/order-details",
+"pages/calendartest/calendartest",
+"pages/calendar/calendar",
+"pages/order-food/order-food",
+"pages/order-details-pages/order-details-pro/order-details-pro",
+"pages/mall/ticket/ticket",
+"pages/mall/ticket/ticket-near/ticket-near",
+"pages/mall/mall-pay/mall-pay",
+"pages/switchCity/switchCity",
+"pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#12b7f5",
+    "borderStyle": "black",
+    "backgroundColor": "#f3f3f3",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/navIcon/icon_home.png",
+        "selectedIconPath": "images/navIcon/icon_home_HL.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/list/list",
+        "iconPath": "images/navIcon/icon_dingfang.png",
+        "selectedIconPath": "images/navIcon/icon_dingfang_HL.png",
+        "text": "订房"
+      },
+      {
+        "pagePath": "pages/list/list",
+        "iconPath": "images/navIcon/icon_youhui.png",
+        "selectedIconPath": "images/navIcon/icon_youhui_HL.png",
+        "text": "优惠"
+      },
+      {
+        "pagePath": "pages/list/list",
+        "iconPath": "images/navIcon/icon_huodong.png",
+        "selectedIconPath": "images/navIcon/icon_huodong_HL.png",
+        "text": "活动"
+      },
+      {
+        "pagePath": "pages/member/index/index",
+        "iconPath": "images/navIcon/icon_huiyuan.png",
+        "selectedIconPath": "images/navIcon/icon_huiyuan_HL.png",
+        "text": "会员"
+      }
+    ]
+  }
+}

@@ -1,0 +1,50 @@
+/* …… 小程序弹窗v1.0.0 (by hison 20170719) {{{ …… */
+.popui__modal-panel{position: relative; z-index: 1009;}
+.popui__modal-mask {
+  background: black; opacity: .6; pointer-events: auto; height: 100%; width: 100%; position: fixed; top: 0; left: 0;
+  animation: mask-fadeIn .5s;
+}
+@keyframes mask-fadeIn {0% {opacity: 0;}100% {opacity: .6;}}
+.popui__panel-main{display: table; font-family: Helvetica,arial,sans-serif; pointer-events: none; height: 100%; width: 100%; position: fixed; left: 0; top: 0;}
+.popui__panel-main .popui__panel-section{display: table-cell; vertical-align: middle; text-align: center;}
+.popui__panel-child{background: #fff; border-radius: 10rpx; display: inline-block; pointer-events: auto; font-size: 28rpx; text-align: left; max-width: 700rpx; position: relative;}
+
+.popui__panel-tit{border-radius: 10rpx 10rpx 0 0; font-size: 28rpx; padding: 0 20rpx; text-align: center; height: 70rpx; line-height: 70rpx;}
+.popui__panel-cnt{padding: 40rpx; text-align: center;}
+.popui__panel-btn{background: #f8f8f8; border-top: 1rpx solid #e2e2e2; border-bottom-left-radius: 10rpx; border-bottom-right-radius: 10rpx; display: flex; align-items: center; height: 80rpx; width: 100%;}
+.popui__panel-btn .btn{border-left: 1px solid #e2e2e2; display: block; flex: 1; font-size: 28rpx; padding: 10rpx 0; text-align: center; position: relative;}
+
+/*toast样式*/
+.popui__toast{background: rgba(17,17,17,.7); color: #fff; min-height: 230rpx; width: 230rpx;}
+.popui__toast .popui__toast-icon{margin-bottom: 10rpx;}
+.popui__toast .popui__panel-cnt{padding: 60rpx 15rpx 30rpx; line-height: 1.5;}
+
+/* __ 弹窗动画 */
+.anim-fadeIn{animation: anim-fadeIn .5s;}
+.anim-scaleIn{animation: anim-scaleIn .2s;}
+.anim-fadeInUpBig{animation: anim-fadeInUpBig .2s;}
+.anim-rollIn{animation: anim-rollIn .2s;}
+.anim-shake{animation: anim-shake .2s;}
+@keyframes anim-fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+@keyframes anim-scaleIn {
+  0% {opacity: 0; transform: scale(.5);}
+  100% {opacity: 1; transform: scale(1);}
+}
+@keyframes anim-fadeInUpBig {
+  0% {opacity: 0; transform: translateY(-2000px);}
+  100% {opacity: 1; transform: translateY(0);}
+}
+@keyframes anim-rollIn {
+  0% {opacity: 0; transform: translateX(-100%) rotate(-120deg);}
+  100% {opacity: 1; transform: translateX(0) rotate(0);}
+}
+@keyframes anim-shake {
+  0%,100% {transform: translateX(0);}
+  10%,30%,50%,70%,90% {transform: translateX(-10px);}
+  20%,40%,60%,80% {transform: translateX(10px);}
+}
+/* }}} */
+

@@ -1,0 +1,5 @@
+/* pages/member/forget-paypwd/forget-paypwd.wxss */
+@import "../member-info/member-info.wxss";
+
+/* __ 找回支付密码 */
+.mem-info .form .btn-getCode{color: #12b7f5; border:1rpx solid #12b7f5; border-radius: 10rpx; font-size: 28rpx;margin-right: 20rpx; padding: 10rpx;}

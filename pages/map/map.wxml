@@ -1,0 +1,150 @@
+<view class="body">
+  <view class="map-box">
+    <image src="../../images/map.jpg" style="width:100%;height:100%"></image>
+    <view class="btn-bar">
+      <view class="fl btn y-grid y-alignc y-j-c">
+        <text class="iconfont icon-zuox y-f34"></text>
+      </view>
+      <view class="fr btn y-grid y-alignc y-j-c">
+        <text class="iconfont icon-daohang y-f30 y-rmar10"></text>
+        <text class="y-f34">导航</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="fix-bottom-box">
+    <view class="map-btn-row  y-grid y-alignc y-j-c">
+      <view data-id="1" bindtap="mapBtnTap" class="{{mapBtnNum==1?'cur':''}}">交通</view>
+      <view data-id="2" bindtap="mapBtnTap" class="{{mapBtnNum==2?'cur':''}}">餐饮</view>
+      <view data-id="3" bindtap="mapBtnTap" class="{{mapBtnNum==3?'cur':''}}">娱乐</view>
+      <view data-id="4" bindtap="mapBtnTap" class="{{mapBtnNum==4?'cur':''}}">景点</view>
+    </view>
+    
+    <view class="map-slide-bottom {{mapBtnNum!=0&&arrTapNum!=0?'cur':''}}">
+      <view class="map-arr {{arrTapNum==1?'cur':''}}" style="background: url(../../images/maparr.jpg) no-repeat;background-size: 100%;" bindtap="arrTap"></view>
+      <scroll-view class="map-slide-bottom-inner " scroll-y="true">
+        <view class="li">
+          <view class="fl">
+            <view class="y-f32">广州东站</view>
+            <view class="y-f26 y-c77">
+              <view class="y-grid y-alignc  y-tmar10">
+                <text class="iconfont icon-daohang y-f26 y-rmar10"></text>
+                <text>距酒店3.7公里</text>
+              </view>
+              <view class="y-grid y-alignc y-tmar10">
+                <text class="iconfont icon-jiudiandianhua y-f26 y-rmar10"></text>
+                <text>(020)1213564567</text>
+              </view>
+              <view class="y-grid y-alignc y-tmar10">
+                <text class="iconfont icon-dingwei y-f26 y-rmar10"></text>
+                <text>广州市天河区东站路1号</text>
+              </view>
+            </view>
+          </view>
+          <view class="fr">
+            <view class="daohang-btn">导航</view>
+          </view>
+         </view>
+
+          <view class="li">
+          <view class="fl">
+            <view class="y-f32">广州东站</view>
+            <view class="y-f26 y-c77">
+              <view class="y-grid y-alignc  y-tmar10">
+                <text class="iconfont icon-daohang y-f26 y-rmar10"></text>
+                <text>距酒店3.7公里</text>
+              </view>
+              <view class="y-grid y-alignc y-tmar10">
+                <text class="iconfont icon-jiudiandianhua y-f26 y-rmar10"></text>
+                <text>(020)1213564567</text>
+              </view>
+              <view class="y-grid y-alignc y-tmar10">
+                <text class="iconfont icon-dingwei y-f26 y-rmar10"></text>
+                <text>广州市天河区东站路1号</text>
+              </view>
+            </view>
+          </view>
+          <view class="fr">
+            <view class="daohang-btn">导航</view>
+          </view>
+         </view>
+
+         <view class="li">
+          <view class="fl">
+            <view class="y-f32">广州东站</view>
+            <view class="y-f26 y-c77">
+              <view class="y-grid y-alignc  y-tmar10">
+                <text class="iconfont icon-daohang y-f26 y-rmar10"></text>
+                <text>距酒店3.7公里</text>
+              </view>
+              <view class="y-grid y-alignc y-tmar10">
+                <text class="iconfont icon-jiudiandianhua y-f26 y-rmar10"></text>
+                <text>(020)1213564567</text>
+              </view>
+              <view class="y-grid y-alignc y-tmar10">
+                <text class="iconfont icon-dingwei y-f26 y-rmar10"></text>
+                <text>广州市天河区东站路1号</text>
+              </view>
+            </view>
+          </view>
+          <view class="fr">
+            <view class="daohang-btn">导航</view>
+          </view>
+         </view>
+
+          <view class="li">
+          <view class="fl">
+            <view class="y-f32">广州东站</view>
+            <view class="y-f26 y-c77">
+              <view class="y-grid y-alignc  y-tmar10">
+                <text class="iconfont icon-daohang y-f26 y-rmar10"></text>
+                <text>距酒店3.7公里</text>
+              </view>
+              <view class="y-grid y-alignc y-tmar10">
+                <text class="iconfont icon-jiudiandianhua y-f26 y-rmar10"></text>
+                <text>(020)1213564567</text>
+              </view>
+              <view class="y-grid y-alignc y-tmar10">
+                <text class="iconfont icon-dingwei y-f26 y-rmar10"></text>
+                <text>广州市天河区东站路1号</text>
+              </view>
+            </view>
+          </view>
+          <view class="fr">
+            <view class="daohang-btn">导航</view>
+          </view>
+         </view>
+
+          <view class="li">
+          <view class="fl">
+            <view class="y-f32">广州东站</view>
+            <view class="y-f26 y-c77">
+              <view class="y-grid y-alignc  y-tmar10">
+                <text class="iconfont icon-daohang y-f26 y-rmar10"></text>
+                <text>距酒店3.7公里</text>
+              </view>
+              <view class="y-grid y-alignc y-tmar10">
+                <text class="iconfont icon-jiudiandianhua y-f26 y-rmar10"></text>
+                <text>(020)1213564567</text>
+              </view>
+              <view class="y-grid y-alignc y-tmar10">
+                <text class="iconfont icon-dingwei y-f26 y-rmar10"></text>
+                <text>广州市天河区东站路1号</text>
+              </view>
+            </view>
+          </view>
+          <view class="fr">
+            <view class="daohang-btn">导航</view>
+          </view>
+         </view>
+
+      </scroll-view>
+    </view>
+
+
+
+
+  </view>
+    
+
+</view>

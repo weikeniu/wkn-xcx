@@ -1,0 +1,91 @@
+<!--pages/mall/mall-search/mall-search.wxml-->
+<!-- 【旅行社-商城搜索】页面 -->
+
+<view class="body">
+  <view class="sec__search-page flexbox">
+    <!-- <>顶部搜索 -->
+    <view class="sec__hd-search flexbox flex-alignc">
+      <view class="icon_back"></view>
+      <view class="sear-box flex1">
+        <view class="inner flexbox flex-alignc">
+          <view class="iconfont icon-soushuo1 c--999"></view>
+          <input class="ipt-text flex1" type="text" placeholder="搜索地点/地标/车站/地铁站" />
+          <icon type="clear" color="#ccc" size="20" bindtap="clearIptData" />
+        </view>
+      </view>
+      <view class="btn-ok y-blue">确定</view>
+    </view>
+
+    <!-- <>搜索列表 -->
+    <view class="sec__search-keyword flex1">
+      <view class="search__box flexbox">
+        <view class="side-nav">
+          <scroll-view class="scroll-view_H scroll-side" scroll-y>
+            <view class="side {{tabIdx == 0 ? 'cur' : ''}}" data-index="0" bindtap="switchTab">
+              <text>品牌</text> <label class="i-arr arr01"></label><label class="i-arr arr02"></label>
+            </view>
+            <view class="side {{tabIdx == 1 ? 'cur' : ''}}" data-index="1" bindtap="switchTab">
+              <text>商圈</text> <label class="i-arr arr01"></label><label class="i-arr arr02"></label>
+            </view>
+            <view class="side {{tabIdx == 2 ? 'cur' : ''}}" data-index="2" bindtap="switchTab">
+              <text>行政区</text> <label class="i-arr arr01"></label><label class="i-arr arr02"></label>
+            </view>
+          </scroll-view>
+        </view>
+        <view class="main-list flex1">
+          <block wx:if="{{tabIdx == 0}}">
+            <scroll-view class="scroll-view_H scroll-list" scroll-y>
+              <view class="list"><text>维也纳酒店</text></view>
+              <view class="list"><text>维也纳酒店</text></view>
+              <view class="list"><text>维也纳酒店</text></view>
+              <view class="list"><text>维也纳酒店</text></view>
+              <view class="list"><text>维也纳酒店</text></view>
+              <view class="list"><text>维也纳酒店</text></view>
+              <view class="list"><text>维也纳酒店</text></view>
+              <view class="list"><text>维也纳酒店</text></view>
+              <view class="list"><text>维也纳酒店</text></view>
+              <view class="list"><text>维也纳酒店</text></view>
+            </scroll-view>
+          </block>
+          <block wx:if="{{tabIdx == 1}}">
+            <scroll-view class="scroll-view_H scroll-list" scroll-y>
+              <view class="list"><text>锦江之星</text></view>
+              <view class="list"><text>锦江之星</text></view>
+              <view class="list"><text>锦江之星</text></view>
+              <view class="list"><text>锦江之星</text></view>
+              <view class="list"><text>锦江之星</text></view>
+              <view class="list"><text>锦江之星</text></view>
+              <view class="list"><text>锦江之星</text></view>
+              <view class="list"><text>锦江之星</text></view>
+              <view class="list"><text>锦江之星</text></view>
+              <view class="list"><text>锦江之星</text></view>
+              <view class="list"><text>锦江之星</text></view>
+              <view class="list"><text>锦江之星</text></view>
+              <view class="list"><text>锦江之星</text></view>
+              <view class="list"><text>锦江之星</text></view>
+            </scroll-view>
+          </block>
+          <block wx:if="{{tabIdx == 2}}">
+            <scroll-view class="scroll-view_H scroll-list" scroll-y>
+              <view class="list"><text>汉庭</text></view>
+              <view class="list"><text>如家</text></view>
+              <view class="list"><text>城市便捷</text></view>
+              <view class="list"><text>汉庭</text></view>
+              <view class="list"><text>如家</text></view>
+              <view class="list"><text>城市便捷</text></view>
+              <view class="list"><text>汉庭</text></view>
+              <view class="list"><text>如家</text></view>
+              <view class="list"><text>城市便捷</text></view>
+              <view class="list"><text>汉庭</text></view>
+              <view class="list"><text>如家</text></view>
+              <view class="list"><text>城市便捷</text></view>
+            </scroll-view>
+          </block>
+
+        </view>
+      </view>
+    </view>
+  </view>
+
+</view>
+

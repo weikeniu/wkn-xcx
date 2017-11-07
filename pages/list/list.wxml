@@ -1,0 +1,541 @@
+
+<view class="body">
+  <swiper class="swiper-img type1" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{imgUrls}}">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" width="355" height="150" />
+      </swiper-item>
+    </block>
+    <text class="swiper-name">北京橙子时尚快捷公寓首都机场店</text>
+    <view class="swiper-num">15张</view>
+    <view class="swiper-txt-bar y-grid y-alignc y-box-s">
+      <text class="y-f26 y-flex1">您有一张优惠券未领取！【用券立减】</text>
+      <view class="get-btn" bindtap="showBottomModal" data-modal-index="001">马上领取</view>
+    </view>
+  </swiper>
+
+  <view class="y-bgw y-bmar20">
+    <navigator class="y-arr">
+      <view class="y-grid y-alignc y-lrpad20 y-h100 y-bor bbor y-arr">
+        <text class="y-flex1 y-rmar78 y-f24 y-c99">北京顺义区首都机场3号航站楼三经路1号接待口( 首都机场)</text>
+        <view class="y-blue y-w98 y-f26">地图</view>
+      </view>
+    </navigator>
+    <navigator class="y-arr" url="tel:123456">
+      <view class="y-grid y-alignc y-lrpad20 y-h100 y-bor bbor y-arr">
+        <text class="y-flex1 y-rmar78 y-f24 y-c99">电话：010-1234567</text>
+        <view class="y-blue y-w98 y-f26">拨打</view>
+      </view>
+    </navigator>
+    <navigator class="y-arr" url="#">
+      <view class="y-grid y-alignc y-lrpad20 y-h100 y-bor bbor y-arr">
+        <!--<text class="y-flex1 y-rmar78 y-f24 y-c99">（图标）</text>-->
+        <view class="y-flex1">
+          <text class="iconfont icon-fangjianwifi y-rmar20"></text> <!--房间wifi-->
+          <text class="iconfont icon-kuandaishangwang y-rmar20"></text> <!--宽带上网-->
+          <text class="iconfont icon-gonggongquyuwifi y-rmar20"></text> <!--公共wifi-->
+          <text class="iconfont icon-quantianreshui y-rmar20"></text> <!--全天热水-->
+          <text class="iconfont icon-chuifengji y-rmar20"></text> <!--吹风机-->
+          <text class="iconfont icon-kongtiao y-rmar20"></text> <!--空调-->
+          <text class="iconfont icon-nuanqi y-rmar20"></text> <!--暖气-->
+          <text class="iconfont icon-jiudiancanting y-rmar20"></text> <!--酒店餐厅-->
+          <text class="iconfont icon-wuyanfang y-rmar20"></text> <!--无烟房-->
+           <text class="iconfont icon-tingchechang yu-rmar20r"></text> <!--停车场-->
+        </view>
+        <view class="y-blue y-w98 y-f26">详情</view>
+      </view>
+    </navigator>
+    <navigator class="y-arr" url="#">
+      <view class="y-grid y-alignc y-lrpad20 y-h100 y-bor bbor y-arr">
+        <text class="y-flex1 y-rmar78 y-f24 y-c99">45条评论/4.8分</text>
+        <view class="y-blue y-w98 y-f26">评论</view>
+      </view>
+    </navigator>
+  </view>
+
+
+  <view class="y-bgw y-bmar20">
+    <!-- <view class="y-grid y-bor bbor">
+      <block>
+        <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+          <view class="picker">
+            <text>2月14日</text>
+            <text>今天入住</text>
+          </view>
+        </picker>
+      </block>
+      <block>
+        <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+          <view class="picker">
+            <text>2月15日</text>
+            <text>今天入住</text>
+          </view>
+        </picker>
+      </block>
+    </view> -->
+    
+    <!-- <view class="room-chooseDate y-arr">
+      <view class="chooseDate">
+        <block>
+          <picker mode="date" value="{{HSdate.currentday}}" start="{{HSdate.startday}}" bindchange="bingDateChange" data-type='3'>
+            <view class="startDate">
+              <text class="date">{{HSdate.date}}</text>
+              <text class="week">{{HSdate.week}}入住</text>
+            </view>
+          </picker>
+        </block>
+        <block>
+          <picker mode="date" value="{{HEdate.currentday}}" start="{{HEdate.startday}}" bindchange="bingDateChange" data-type='4'>
+            <view class="endDate">
+              <text class="date">{{HEdate.date}}</text>
+              <text class="week">{{HEdate.week}}离店</text>
+            </view>
+          </picker>
+        </block>
+      </view>
+      <view class="y-blue y-f20 y-w98">共1晚</view>
+    </view> -->
+
+    <navigator class="room-chooseDate y-arr" url="../calendartest2/calendartest?id1=2017-12-20&id2=2018-1-24">
+      <view class="chooseDate">
+        <block>
+          <view>
+            <view class="startDate">
+              <text class="date">{{HSdate.date}}</text>
+              <text class="week">{{HSdate.week}}入住</text>
+            </view>
+          </view>
+        </block>
+        <block>
+          <view>
+            <view class="endDate">
+              <text class="date">{{HEdate.date}}</text>
+              <text class="week">{{HEdate.week}}离店</text>
+            </view>
+          </view>
+        </block>
+      </view>
+      <view class="y-blue y-f20 y-w98">共1晚</view>
+    </navigator>
+
+    <!-- //钟点房-->
+    <view>
+      <view class="room-content-head y-grid y-lrpad20 y-alignc y-h100 y-bor bbor {{clickNum==1?'cur':''}}" bindtap="roomSlide" data-id="1">
+        <text class="iconfont icon-zhongdianfang1 y-blue y-rmar10"></text>
+        <text class="y-flex1 y-f30">钟点房</text>
+        <view class="y-c60 y-f22 y-rpad30">￥
+          <text class="y-f44">69</text>起</view>
+      </view>
+      <view class="room-content-slide {{clickNum==1?'cur':''}}">
+        <!-- //钟点房列表.start-->
+        <navigator class="room__nav" url="../order/order">
+          <view class="room__item">
+            <view class="hdTit y-c60 y-f30">会员活动专享</view>
+            <view class="y-grid y-lrpad20 y-tbpad30">
+              <view class="y-flex1 y-rpad30">
+                <text class="y-f26 y-c66 clamp1">标准单人间、商务标准间(1小时钟点房)</text>
+                <view class="room-tag"><label>1小时钟点房</label></view>
+                <view class="room-tag"><label>普通会员</label></view>
+              </view>
+              <view class="y-textr y-rpad20">
+                <view class="y-c60 y-f18">￥
+                  <text class="y-f44">69</text>
+                </view>
+                <view class="y-f20 y-c99">￥89</view>
+                <view class="y-f20 y-c99">会员优惠￥20</view>
+              </view>
+              <!--订房按钮-->
+              <view class="booking-mark" style="display:none;">
+                <view class="y-f30 y-cw y-bg60 y-h52 y-l52">订</view>
+                <view class="y-f22 y-c60 y-h44 y-l44">在线付</view>
+              </view>
+              <!--客满按钮-->
+              <view class="booking-mark flex-selfc" style="border: 2rpx solid #999;">
+                <view class="y-f30 y-cw bg--999 y-h52 y-l52">客满</view>
+                <view class="y-f22 y-c99 y-h44 y-l44">在线订</view>
+              </view>
+            </view>
+          </view>
+        </navigator>
+        <navigator class="room__nav" url="../order/order">
+          <view class="room__item">
+            <view class="hdTit y-c60 y-f30">微信特惠</view>
+            <view class="memType">
+              <view class="td">普通会员<text>￥72</text></view>
+              <view class="td">高级会员<text>￥70</text></view>
+              <view class="td">白银会员<text>￥68</text></view>
+              <view class="td">黄金会员<text>￥65</text></view>
+              <view class="td">钻石会员<text>￥64</text></view>
+            </view>
+            <view class="y-grid y-lrpad20 y-tbpad30">
+              <view class="y-flex1 y-rpad30">
+                <text class="y-f26 y-c66 clamp1">标准单人间、商务标准间</text>
+                <view class="room-tag"><label>1小时钟点房</label></view>
+                <view class="room-tag"><label>普通会员</label></view>
+              </view>
+              <view class="y-textr y-rpad20">
+                <view class="y-c60 y-f18">￥
+                  <text class="y-f44">72</text>
+                </view>
+                <view class="y-f20 y-c99">￥98</view>
+                <view class="y-f20 y-c99">会员优惠￥26</view>
+              </view>
+              <!--订房按钮-->
+              <view class="booking-mark">
+                <view class="y-f30 y-cw y-bg60 y-h52 y-l52">订</view>
+                <view class="y-f22 y-c60 y-h44 y-l44">会员价</view>
+                <view class="roomSurplus y-c60">剩29间</view>
+              </view>
+            </view>
+          </view>
+        </navigator>
+        <!-- //钟点房列表.end-->
+      </view>
+    </view>
+  </view>
+
+  <view class="y-bgw y-bmar20">
+    <!-- //房型列表.start-->
+    <view class="item">
+      <view class="room-content-head y-grid y-lrpad20 y-alignc y-h160 y-bor bbor {{clickNum==2?'cur':''}}" bindtap="roomSlide" data-id="2">
+        <view class="room-img y-rmar20" catchtap="bindImgPreview" data-id="0">
+          <image src="../../images/defaultRoomImg.jpg" class="full-img"></image>
+          <view class="imgNum ff-hv">5张</view>
+        </view>
+        <view class="y-flex1">
+          <view class="y-f24">标准单人间</view>
+          <view class="y-f20 y-c66">1.5m大床 无早 有窗 有WIFI</view>
+        </view>
+        <view class="y-c60 y-f22 y-rpad30">￥
+          <text class="y-f44">69</text>起</view>
+      </view>
+      <!--展开、折叠部分-->
+      <view class="room-content-slide {{clickNum==2?'cur':''}}">
+        <navigator class="room__nav" url="../order/order">
+          <view class="room__item">
+            <view class="hdTit y-c60 y-f30">会员活动专享</view>
+            <view class="y-grid y-lrpad20 y-tbpad30">
+              <view class="y-flex1 y-rpad30">
+                <text class="y-f26 y-c66 clamp1">[大床] 无早</text>
+                <view class="room-tag"><label>14:40退房</label></view>
+                <view class="room-tag"><label>会员专享</label></view>
+              </view>
+              <view class="y-textr y-rpad20">
+                <view class="y-c60 y-f18">￥
+                  <text class="y-f44">69</text>
+                </view>
+                <view class="y-f20 y-c99">￥89</view>
+                <view class="y-f20 y-c99">会员优惠￥20</view>
+              </view>
+              <!--订房按钮-->
+              <view class="booking-mark">
+                <view class="y-f30 y-cw y-bg60 y-h52 y-l52">订</view>
+                <view class="y-f22 y-c60 y-h44 y-l44">在线付</view>
+                <view class="roomSurplus y-c60">剩9间</view>
+              </view>
+            </view>
+          </view>
+        </navigator>
+        <navigator class="room__nav" url="../order/order">
+          <view class="room__item">
+            <view class="hdTit y-c60 y-f30">微信特惠</view>
+            <view class="memType">
+              <view class="td">普通会员<text>￥150</text></view>
+              <view class="td">高级会员<text>￥148</text></view>
+              <view class="td">白银会员<text>￥141</text></view>
+              <view class="td">黄金会员<text>￥132</text></view>
+              <view class="td">钻石会员<text>￥124</text></view>
+            </view>
+            <view class="y-grid y-lrpad20 y-tbpad30">
+              <view class="y-flex1 y-rpad30">
+                <text class="y-f26 y-c66 clamp1">标准单人间、商务标准间</text>
+                <view class="room-tag"><label>14:40退房</label></view>
+                <view class="room-tag"><label>普通会员</label></view>
+              </view>
+              <view class="y-textr y-rpad20">
+                <view class="y-c60 y-f18">￥
+                  <text class="y-f44">72</text>
+                </view>
+                <view class="y-f20 y-c99">￥150</view>
+                <view class="y-f20 y-c99">会员优惠￥35</view>
+              </view>
+              <!--订房按钮-->
+              <view class="booking-mark">
+                <view class="y-f30 y-cw y-bg60 y-h52 y-l52">订</view>
+                <view class="y-f22 y-c60 y-h44 y-l44">在线付</view>
+                <view class="roomSurplus y-c60">剩29间</view>
+              </view>
+            </view>
+          </view>
+        </navigator>
+        <navigator class="room__nav" url="../order/order">
+          <view class="room__item">
+            <view class="hdTit y-c60 y-f30">微信特惠</view>
+            <view class="memType">
+              <view class="td">普通会员<text>￥125</text></view>
+              <view class="td">高级会员<text>￥158</text></view>
+              <view class="td">白银会员<text>￥136</text></view>
+              <view class="td">黄金会员<text>￥182</text></view>
+              <view class="td">钻石会员<text>￥136</text></view>
+            </view>
+            <view class="y-grid y-lrpad20 y-tbpad30">
+              <view class="y-flex1 y-rpad30">
+                <text class="y-f26 y-c66 clamp1">标准海景房、商务标准间</text>
+                <view class="room-tag"><label>14:20退房</label></view>
+                <view class="room-tag"><label>高级会员</label></view>
+              </view>
+              <view class="y-textr y-rpad20">
+                <view class="y-c60 y-f18">￥
+                  <text class="y-f44">120</text>
+                </view>
+                <view class="y-f20 y-c99">￥155</view>
+                <view class="y-f20 y-c99">会员优惠￥35</view>
+              </view>
+              <!--订房按钮-->
+              <view class="booking-mark">
+                <view class="y-f30 y-cw y-bg60 y-h52 y-l52">订</view>
+                <view class="y-f22 y-c60 y-h44 y-l44">在线付</view>
+                <view class="roomSurplus y-c60">剩7间</view>
+              </view>
+            </view>
+          </view>
+        </navigator>
+
+      </view>
+    </view>
+
+    <view class="item">
+      <view class="room-content-head y-grid y-lrpad20 y-alignc y-h160 y-bor bbor {{clickNum==3?'cur':''}}" bindtap="roomSlide" data-id="3">
+        <view class="room-img y-rmar20" catchtap="bindImgPreview" data-id="0">
+          <image src="../../images/defaultRoomImg.jpg" class="full-img"></image>
+          <view class="imgNum ff-hv">5张</view>
+        </view>
+        <view class="y-flex1">
+          <view class="y-f24">豪华海景房</view>
+          <view class="y-f20 y-c66">1.5m大床 无早 有窗 有WIFI</view>
+        </view>
+        <view class="y-c60 y-f22 y-rpad30">￥
+          <text class="y-f44">448</text>起</view>
+      </view>
+      <!--展开、折叠部分-->
+      <view class="room-content-slide {{clickNum==3?'cur':''}}">
+        <navigator class="room__nav" url="../order/order">
+          <view class="room__item">
+            <view class="hdTit y-c60 y-f30">会员活动专享</view>
+            <view class="y-grid y-lrpad20 y-tbpad30">
+              <view class="y-flex1 y-rpad30">
+                <text class="y-f26 y-c66 clamp1">[大床] 无早</text>
+                <view class="room-tag"><label>14:40退房</label></view>
+                <view class="room-tag"><label>会员专享</label></view>
+              </view>
+              <view class="y-textr y-rpad20">
+                <view class="y-c60 y-f18">￥
+                  <text class="y-f44">69</text>
+                </view>
+                <view class="y-f20 y-c99">￥89</view>
+                <view class="y-f20 y-c99">会员优惠￥20</view>
+              </view>
+              <!--订房按钮-->
+              <view class="booking-mark">
+                <view class="y-f30 y-cw y-bg60 y-h52 y-l52">订</view>
+                <view class="y-f22 y-c60 y-h44 y-l44">在线付</view>
+                <view class="roomSurplus y-c60">剩9间</view>
+              </view>
+            </view>
+          </view>
+        </navigator>
+        <navigator class="room__nav" url="../order/order">
+          <view class="room__item">
+            <view class="hdTit y-c60 y-f30">会员活动专享</view>
+            <view class="y-grid y-lrpad20 y-tbpad30">
+              <view class="y-flex1 y-rpad30">
+                <text class="y-f26 y-c66 clamp1">标准单人间[无早]</text>
+                <view class="room-tag"><label>1小时钟点房</label></view>
+                <view class="room-tag"><label>普通会员</label></view>
+              </view>
+              <view class="y-textr y-rpad20">
+                <view class="y-c60 y-f18">￥
+                  <text class="y-f44">120</text>
+                </view>
+                <view class="y-f20 y-c99">￥100</view>
+                <view class="y-f20 y-c99">会员优惠￥20</view>
+              </view>
+              <!--订完按钮-->
+              <view class="booking-mark flex-selfc" style="border: 2rpx solid #999;">
+                <view class="y-f30 y-cw bg--999 y-h52 y-l52">订完</view>
+                <view class="y-f22 y-c99 y-h44 y-l44">在线订</view>
+              </view>
+            </view>
+          </view>
+        </navigator>
+
+      </view>
+    </view>
+    <!-- //房型列表.end-->
+
+  </view>
+
+
+  <view class="y-bmar20">
+    <view class="y-bgw y-h100 y-bor tbbor y-grid y-lrpad20 y-alignc" style="padding-right:0;">
+      <view class="iconfont icon-tehui y-blue y-rmar10"></view>
+      <view class="y-f30 y-flex1">特惠</view>
+      <view class="y-blue y-arr y-f26 y-rpad50">更多</view>
+    </view>
+    <view class="y-bgf3 y-bgw">
+      <navigator class="y-grid y-lrpad20 y-alignc y-h160 y-bor bbor y-arr" style="border-bottom-color:#ddd;">
+        <view class="room-img y-rmar20">
+          <image src="../../images/defaultRoomImg.jpg" class="full-img"></image>
+        </view>
+        <view class="y-flex1 y-rpad30">
+          <view class="y-f24">情人节特优惠-精品特惠大床房 精品特惠大床房精品特惠大床房</view>
+          <view class="y-c60 y-f22">￥<text class="y-f30">999</text></view>
+        </view>
+      </navigator>
+      <navigator class="y-grid y-lrpad20 y-alignc y-h160 y-bor bbor y-arr" style="border-bottom-color:#ddd;">
+        <view class="room-img y-rmar20">
+          <image src="../../images/defaultRoomImg.jpg" class="full-img"></image>
+        </view>
+        <view class="y-flex1 y-rpad30">
+          <view class="y-f24">情人节特优惠-精品特惠大床房</view>
+          <view class="y-c60 y-f22">￥<text class="y-f30">999</text></view>
+        </view>
+      </navigator>
+    </view>
+  </view>
+
+
+  <!-- <>图片预览弹窗.Start --> 
+  <view class="mask {{maskState==0?'':'cur'}}">
+    <view class="mask-middle" data-id="0">
+      <view class="mask-inner alert-box">
+        <view class="hdTit align-c">体验标准单人房 <view class="closeImgBox" bindtap='bindCloseImgPreview'><image src="../../images/xxxx_103.jpg" style="height:50rpx;width:50rpx;"></image></view></view>
+        <!-- //图片轮播 -->
+        <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+          <block wx:for="{{imgUrls}}">
+            <swiper-item>
+              <image src="{{item}}" class="slide-image"/>
+            </swiper-item>
+          </block>
+        </swiper>
+        <view class="room-info">
+          <view class="row y-grid y-alignc"><text>早餐：无早</text><text>面积：25㎡</text></view>
+          <view class="row y-grid y-alignc"><text>宽带：wifi</text><text>楼层：1-7</text></view>
+          <view class="row y-grid y-alignc"><text>床型：双床</text><text>加床：不能加床</text></view>
+        </view>
+        <view class="ft-btns y-grid y-alignc">
+          <view class="y-flex1 y-c60 ml30">
+            <text class="y-f24">￥</text><text class="y-f36">168</text>
+          </view>
+          <view class="btn-order">预订</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- <>图片预览弹窗.End -->
+
+  <!-- <>领取弹窗(优惠券).Start -->
+  <view id="popup">
+    <view class="ui__pop-mask {{isMask ? 'open' : ''}}" bindtap="bindPopupShadeClose"></view>
+    <view class="ui__pop-box {{popupShow ? 'show' : ''}}">
+      <view class="ui__pop-close" bindtap="bindPopupClose"><image src="../../images/icon-close@1x.png" style="height: 60rpx; width: 60rpx;"></image></view>
+      <view class="head-logo"><image src="../../images/icon__coupon-hd.png" style="height: 210rpx; width: 194rpx;"></image></view>
+      <!-- 优惠券列表-->
+      <view class="coupon-box">
+        <view class="coupon-list">
+          <view class="line"></view>
+          <view class="inner-overflow">
+            <view class="tips">
+              <text>领取会员优惠券，更多特权多优惠！</text>
+              <text>10元优惠券【预订立减】</text>
+            </view>
+            <view class="collapseBox {{isCollapse ? 'collapsed' : ''}}">
+              <view class="h2">会员权益</view>
+              <view class="hdTxt"><text>会员卡优惠与积分说明</text></view>
+              <view class="table">
+                <view class="tr thead">
+                  <view class="th">特权内容</view>
+                  <view class="th">订房优惠</view>
+                  <view class="th">积分加成</view>
+                </view>
+                <block wx:for="{{memLevels}}">
+                  <view class="tr {{index%2==0 ? 'odd' : ''}}"> <!--给奇数行加class为odd-->
+                    <view class="td">{{item.type}}</view>
+                    <view class="td">{{item.discount}}折</view>
+                    <view class="td">{{item.score}}倍</view>
+                  </view>
+                </block>
+              </view>
+
+              <view class="hdTxt mt20"><text>会员等级与升级规则</text></view>
+              <view class="table">
+                <view class="tr thead">
+                  <view class="th">等级</view>
+                  <view class="th">间夜</view>
+                  <view class="th"></view>
+                </view>
+                <block wx:for="{{memLevels}}">
+                  <view class="tr {{index%2==0 ? 'odd' : ''}}">
+                    <view class="td">{{item.type}}</view>
+                    <view class="td">{{item.diff}}</view>
+                    <view class="td"></view>
+                  </view>
+                </block>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="foot-btn">
+        <view class="btn-collapse" bindtap="bindPopupCollapse">{{isCollapse ? "点击展开" : "点击收起"}}<view class="arrow {{isCollapse ? 'cur' : ''}}"></view></view>
+        <image class="foot-bg" src="../../images/icon__coupon-btn.png" style="height: 279rpx; width: 540rpx;"></image>
+        <button class="btn-recieve" type="default"></button>
+      </view>
+    </view>
+  </view>
+  <!-- <>领取弹窗(优惠券).End -->
+
+
+
+  <!-- <>底部弹窗模板.Start -->
+  <!-- //弹窗1(领取酒店红包) -->
+  <block wx:if="{{modalIndex == 001}}">
+    <view class="bottom__modal-mask" bindtap="hideBottomModal" wx:if="{{showModalStatus}}"></view>
+    <view animation="{{animationData}}" class="bottom__modal-panel" wx:if="{{showModalStatus}}">
+      <!--内容区-->
+      <view class="select-panel hotelHongbao">
+        <view class="head">
+          <text class="text flex1">酒店红包</text>
+        </view>
+        <view class="cont">
+          <scroll-view scroll-y style="max-height: 620rpx;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+            <block wx:for="{{hongbaoList}}">
+              <view class="scroll-view-item" bindtap="bindRowReceive" data-index="{{item.index}}">
+                <view class="item">
+                  <block wx:if="{{item.status}}">
+                    <image src="../../images/icon-hbbg-on.jpg" style="height:190rpx;width:660rpx;"></image>
+                  </block>
+                  <block wx:else>
+                    <image src="../../images/icon-hbbg.jpg" style="height:190rpx;width:660rpx;"></image>
+                  </block>
+                  <view class="cnt">
+                    <view class="inner">
+                      <view class="flex1">
+                        <view class="price">￥<text>{{item.price}}</text></view>
+                        <view class="term"><text>{{item.type}}</text><text>有效期 {{item.period}}</text></view>
+                      </view>
+                      <view class="tips">{{item.status ? "已领取" : "立即领取"}}</view>
+                    </view>
+                  </view>
+                </view>
+              </view>
+            </block>
+          </scroll-view>
+          <view class="btn-ok" bindtap="hideBottomModal">完成</view>
+        </view>
+      </view>
+    </view>
+  </block>
+  <!-- <>底部弹窗模板.End -->
+
+</view>

@@ -1,0 +1,32 @@
+<!--pages/member/red-packets/red-packets.wxml-->
+<!-- 【会员中心-领取红包】页面 -->
+
+<view class="body">
+  <!-- <>红包列表 -->
+  <view class="red__packets-list">
+    <block wx:for="{{packetList}}">
+      <view class="item flexbox flex-alignc" bindtap="bindPacketChoose" data-index="{{index}}" style="background:url(../../../images/red-bag-bg.png) no-repeat; background-size:cover;">
+        <view class="money">
+          <view class="num"><label>￥</label><text class="ff-ar">{{item.price}}</text></view>
+          <view class="jian y-c77">满20可用</view>
+        </view>
+        <view class="type flex1">
+          <view class="tit">{{item.type}}</view><view class="time c--999">有效期至{{item.difftime}}</view>
+        </view>
+        <block wx:if="{{item.status == 'on'}}">
+          <view class="btn-receive {{item.selected ? 'on' : ''}}">{{item.selected ? '立即使用' : '立即领取'}}</view>
+        </block>
+        <block wx:else>
+          <view class="btn-receive off"><text class="del db">已过期</text><text class="db">(点击删除)</text></view>
+        </block>
+      </view>
+    </block>
+  </view>
+
+  <!-- <>领取红包(没有数据提示) -->
+  <view class="red__packets-nodata" style="display: none;">
+    <image src="../../../images/no-resoult.png"></image>
+    <view class="txt mt30">暂时未有可领取的红包哦</view>
+  </view>
+
+</view>

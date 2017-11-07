@@ -1,0 +1,19 @@
+<!-- 【弹窗自定义模板】 -->
+<template name="dialog">
+  <block>
+    <view class="popui__modal-panel" wx:if="{{dialogCfg.showModalStatus}}">
+      <view wx:if="{{dialogCfg.shade}}" class="popui__modal-mask"></view>
+      <view class="popui__panel-main">
+        <view class="popui__panel-section">
+          <view class="popui__panel-child anim-{{dialogCfg.anim}} {{dialogCfg.type ? 'popui__'+dialogCfg.type : ''}}" style="{{dialogCfg.style}}">
+            <!-- //内容区 -->
+            <view class="popui__panel-cnt">
+              <view wx:if="{{dialogCfg.icon}}" class="popui__toast-icon"><icon type="{{dialogCfg.icon}}" size="30" color="#fff" /></view>
+              {{dialogCfg.content}}
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </block>
+</template>

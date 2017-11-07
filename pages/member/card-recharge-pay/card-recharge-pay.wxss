@@ -1,0 +1,16 @@
+/* pages/member/card-recharge-pay/card-recharge-pay.wxss */
+/* …… 会员中心页(by hison 20171010) {{{ …… */
+/* __ 储值卡余额信息(顶部) */
+.uc__rechargeInfo{background: #12b7f5; text-align: center; height: 270rpx; width: 100%;}
+.uc__rechargeInfo .amount{color: #fff; display: block; font-size: 60rpx;}
+.uc__rechargeInfo .shengyu text{background: rgba(255,255,255,.3); border-radius: 20rpx; color:#fff; display: inline-block; font-size: 26rpx; margin-top: 10rpx; padding: 0 20rpx; line-height: 45rpx;}
+
+/* __ 储值卡支付(表单) */
+.uc__form-recharge{background: #fff; padding: 20rpx 40rpx;}
+.uc__form-recharge .ipt-box input{border: 1rpx solid #ddd; border-right: 0; font-size: 28rpx; padding: 0 20rpx; height: 80rpx;}
+.uc__form-recharge .ipt-box .btn-pay{background: #fff; border:1rpx solid #ddd; border-top-left-radius: 0; border-bottom-left-radius: 0; color: #999; font-size: 30rpx; padding: 0 30rpx; line-height: 80rpx;}
+.uc__form-recharge .ipt-box .btn-pay.on{background: #12b7f5; color: #fff;}
+.uc__form-recharge .ipt-box .btn-pay::after{border: 0;}
+.uc__form-recharge .forget-pwd{color:#12b7f5; font-size: 26rpx;}
+
+/* }}} */

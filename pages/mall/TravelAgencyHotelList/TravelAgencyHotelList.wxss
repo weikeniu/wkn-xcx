@@ -1,0 +1,64 @@
+/* pages/mall/TravelAgencyHotelList/TravelAgencyHotelList.wxss */
+@import "../TravelAgencyHotel/TravelAgencyHotel.wxss";
+
+/* …… 旅行社-酒店列表页(by hison 20170919) {{{ …… */
+/* __ 顶部搜索区域 */
+.sec__hd-search{background: #fff; border-bottom: 1rpx solid rgba(50,50,50,.1); height: 100rpx;}
+.sec__hd-search .location{padding-left: 20rpx;}
+.sec__hd-search .location .iconfont{font-size: 12px;}
+.sec__hd-search .location text{font-size: 26rpx;}
+.sec__hd-search .sel-date{padding-left: 20rpx;}
+.sec__hd-search .sel-date .date{font-size:24rpx;}
+.sec__hd-search .sel-date .date .day{margin-left:10rpx;}
+.sec__hd-search .sel-date .icon-xiax{font-size: 8px; margin-top: 25rpx;}
+.sec__hd-search .sear-box{padding: 0 20rpx;}
+.sec__hd-search .sear-box .inner{background: #f0f0f0; box-sizing: border-box; border-radius: 50rpx; padding: 0 20rpx; height: 70rpx; width: 100%;}
+.sec__hd-search .sear-box .inner .iconfont{margin: 0 10rpx;}
+.sec__hd-search .sear-box .inner .ipt-text{background: none; border: 0; outline: none; font-size: 24rpx; height: 70rpx;}
+/*附近位置*/
+.sec__hd-position{background: #fafafa; border-bottom: 1rpx solid rgba(50,50,50,.1); padding: 0 20rpx; height: 70rpx;}
+.sec__hd-position .currentPos{font-size: 24rpx;}
+
+
+/* __ 酒店列表 */
+.sec__hotel-list .item{border-bottom:1rpx solid rgba(50,50,50,.1); padding: 20rpx; position: relative;}
+/*酒店图片*/
+.sec__hotel-list .item .h-img{margin-right: 20rpx; height: 240rpx; width: 200rpx; position: relative;}
+.sec__hotel-list .item .h-img image{height: 100%; width: 100%;}
+.sec__hotel-list .item .h-img .lbl{background: #12b7f5; color: #fff; font-size: 24rpx; text-align: center; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; line-height: 42rpx; width: 100%; position: absolute; left: 0; bottom: 0;}
+.sec__hotel-list .item .h-img .lbl.lbl01{background: #ff4400;}
+.sec__hotel-list .item .h-img .lbl.lbl02{background: #f7bc43;}
+.sec__hotel-list .item .h-img .lbl.lbl03{background: #12b7f5;}
+/*没有图片*/
+.sec__hotel-list .item .h-img .icon-tongyonmorentu{color: rgb(100, 180, 250); display: inline-block; overflow: hidden; margin-top:20rpx; height: 100%; width: 100%; font-size: 200rpx;}
+/*酒店信息*/
+.sec__hotel-list .item .h-info{font-size: 24rpx; line-height: 38rpx;}
+/*金牌、银牌、铜牌*/
+.sec__hotel-list .item .h-info .icon-jinpai{color: rgb(245, 202, 86);}
+.sec__hotel-list .item .h-info .icon-yinpai{color: rgb(128, 170, 191);}
+.sec__hotel-list .item .h-info .icon-tongpai{color: rgb(204, 131, 113);}
+
+.sec__hotel-list .item .h-info .icon-dingwei{font-size: 14px;}
+.sec__hotel-list .item .h-info .icon-daohang{font-size: 14px;}
+.sec__hotel-list .item .h-info .name{font-size: 28rpx; margin-bottom: 10rpx;}
+.sec__hotel-list .item .h-info .star text{color: #777; font-size: 24rpx;}
+.sec__hotel-list .item .h-info .star .tag{border: 1rpx solid #f40; border-radius: 5rpx; color: #f40; display: inline-block; font-size: 22rpx; margin-left: 10rpx; padding: 0 5rpx; line-height: 33rpx;}
+.sec__hotel-list .item .h-info .star .tag.blue{border-color: #12b7f5; color: #12b7f5;}
+.sec__hotel-list .item .h-info .addr{color: #777;}
+.sec__hotel-list .item .h-info .distance{color: #777;}
+.sec__hotel-list .item .h-info .time{color: #5dc65b;}
+/*预订价格*/
+.sec__hotel-list .item .price{color: #ff4400; font-size: 24rpx; position: absolute; right: 20rpx; bottom: 20rpx;}
+.sec__hotel-list .item .price text{font-size: 40rpx;}
+
+
+/* __ 底部筛选栏 */
+.pro__filter-bottom{padding-top: 90rpx;}
+.pro__filter-bottom .bottomfixed{background: rgba(255,255,255,.95); border-top: 1rpx solid rgba(50,50,50,.15); height: 90rpx; width: 100%; position: fixed; left: 0; bottom: 0; z-index: 1000;}
+.pro__filter-bottom .inner{font-size: 28rpx; height: 100%;}
+.pro__filter-bottom .inner .col{line-height: 90rpx;}
+.pro__filter-bottom .inner .arr{
+  border-top: 3rpx solid #999; border-right: 3rpx solid #999; display: inline-block; vertical-align: top; margin: 42rpx 0 0 10rpx; height: 16rpx; width: 16rpx;
+  transform: rotate(-45deg);
+}
+/* }}} */

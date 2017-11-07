@@ -1,0 +1,24 @@
+/* pages/member/card-buy-pay/card-buy-pay.wxss */
+@import "../card-buy/card-buy.wxss";
+
+/* …… 会员中心页(购买会员卡)(by hison 20170829) {{{ …… */
+page{background: #f3f3f3;}
+/* __ 购买会员卡(支付) */
+.mem__card-buy .card-item{margin-bottom: 20rpx;}
+.mem__card-buy .card-tips{color:#999;font-size: 26rpx; padding: 0 20rpx; height: 90rpx;}
+
+/* __ 会员信息 */
+.mem-info .ipt-box{border-bottom: 1rpx solid #eee; height: 100rpx;}
+.mem-info .lbl{display:inline-block; font-size: 28rpx; padding: 0 20rpx; min-width: 120rpx;}
+.mem-info .ipt-text{color: #333; font-size: 28rpx;}
+.mem-info .text{color: #333; font-size: 28rpx;}
+
+/* __ 底部信息 */
+.sec_footer{padding-top: 140rpx;}
+.sec_footer .bottomfixed{background: #fff; border-top: 1rpx solid #ddd; height: 120rpx; width: 100%; position: fixed; left: 0; bottom: 0; z-index: 1000;}
+.sec_footer .inner{display: flex; align-items: center;}
+.sec_footer .inner .total{color: #000; font-size: 30rpx; padding-left: 20rpx;}
+.sec_footer .inner button{background: #ff4400; border-radius: 0; color: #fff; float: right; font-size: 32rpx; height: 120rpx; line-height: 120rpx; width: 260rpx;}
+.sec_footer .inner button[disabled]{background:#aaa;}
+
+/* }}} */

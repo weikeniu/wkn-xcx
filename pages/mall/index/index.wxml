@@ -1,0 +1,131 @@
+<!--pages/mall/index/index.wxml-->
+<!-- 【旅行社-商城】页面 -->
+
+<view class="body">
+  <!-- <>轮播图区域 -->
+  <view class="sec__swiper w100">
+    <!-- <>顶部搜索区域 -->
+    <view class="sec__hd-search flexbox flex-alignc">
+      <!--<view class="location y-blue"><label class="iconfont icon-dingwei1"></label> <text>附近</text></view>-->
+      <view class="sear-box flex1" catchtap="bindSearTo">
+        <view class="inner flexbox flex-alignc">
+          <view class="iconfont icon-soushuo1 c--999"></view>
+          <input class="ipt-text flex1" type="text" bindfocus="bindSearTo" placeholder="搜索地点/品牌/商圈/地铁站" />
+          <!--<icon type="clear" color="#ccc" size="20" bindtap="clearIptData" />-->
+        </view>
+      </view>
+    </view>
+
+    <swiper indicator-dots="{{indicatorDots}}" indicator-color="rgba(255,255,255,.5)" indicator-active-color="#fff" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}" bindchange="bindSwiperChange">
+      <block wx:for="{{swiperData}}">
+        <swiper-item>
+          <image src="{{item.imgUrl}}" class="slide-image" />
+          <!--浮动框-->
+          <view class="intro__floatbox">
+            <view class="inner align-c">
+              <view class="tit clamp1">{{item.title}}</view>
+              <view class="dotline flexbox flex-alignc"><view class="line"></view><view class="dot"></view><view class="line"></view></view>
+              <view class="intro clamp1">{{item.desc}}</view>
+              <view class="btn-buying bg--f40" bindtap="bindBuyingNow">立即抢购<text class="arr"></text></view>
+            </view>
+          </view>
+          <!--标题-->
+          <view class="swiper__text-mask">
+            <text class="text clamp1">{{item.imgTitle}}</text>
+          </view>
+        </swiper-item>
+      </block>
+    </swiper>
+    <!--浮动框-->
+    <!--<view class="intro__floatbox">
+      <view class="inner align-c">
+        <view class="tit clamp1">景点/地方</view>
+        <view class="dotline flexbox flex-alignc"><view class="line"></view><view class="dot"></view><view class="line"></view></view>
+        <view class="intro clamp2">描述内容描述内容描述</view>
+        <view class="btn-buying bg--f40" bindtap="bindBuyingNow">立即抢购<text class="arr"></text></view>
+      </view>
+    </view>-->
+    <!--标题-->
+    <!--<view class="swiper__text-mask">
+      <text class="text clamp1">{{imgTitles[index__swiper]}}</text>
+    </view>-->
+  </view>
+
+  <!-- <>水平导航区域 -->
+  <view class="sec__nav-horizontal">
+    <scroll-view class="scroll-view_H" scroll-x="true" style="width: 100%">
+      <view class="scroll-view-item_H"><navigator url="../ticket/ticket"><label class="iconfont icon-wenquan"></label><text>温泉</text></navigator></view>
+      <view class="scroll-view-item_H"><navigator url="../ticket/ticket"><label class="iconfont icon-zhizhucan1"></label><text>自助餐</text></navigator></view>
+      <view class="scroll-view-item_H"><navigator url="../ticket/ticket"><label class="iconfont icon-zhiyouxing1"></label><text>自由行</text></navigator></view>
+      <view class="scroll-view-item_H"><navigator url="../ticket/ticket"><label class="iconfont icon-gentuanyou1"></label><text>跟团游</text></navigator></view>
+      <view class="scroll-view-item_H"><navigator url="../ticket/ticket"><label class="iconfont icon-dachu1"></label><text>大促</text></navigator></view>
+      <view class="scroll-view-item_H"><navigator url="../ticket/ticket"><label class="iconfont icon-qianggou2"></label><text>抢购</text></navigator></view>
+      <view class="scroll-view-item_H"><navigator url="#"><label class="iconfont icon-zhiding1"></label><text>自定义</text></navigator></view>
+      <view class="scroll-view-item_H"><navigator url="#"><label class="iconfont icon-zhiding1"></label><text>自定义</text></navigator></view>
+    </scroll-view>
+  </view>
+
+  <!-- <>景点列表 -->
+  <view class="sec__product-list">
+    <!--列表.Start-->
+    <view class="pro-item" bindtap="bindViewProDetail">
+      <view class="pro-cover">
+        <image class="pro-cover-img" src="../../../images/pro__travel-img01.jpg"></image>
+        <view class="fix-tag">限时<br />抢购</view>
+        <view class="fix-addr">安徽</view>
+        <view class="fix-desc clamp1">黄山自然风景区</view>
+      </view>
+      <view class="pro-intro">
+        <view class="title clamp1">端午观看龙舟赛、品竹筒海端午观看龙舟赛、品竹筒海</view>
+        <view class="flexbox flex-alignc">
+          <view class="tag">国内跟团游</view>
+          <view class="price flex1">￥<text>699</text></view>
+        </view>
+      </view>
+    </view>
+    <view class="pro-item" bindtap="bindViewProDetail">
+      <view class="pro-cover">
+        <image class="pro-cover-img" src="../../../images/pro__travel-img02.jpg"></image>
+        <view class="fix-addr">广州</view>
+        <view class="fix-desc clamp1">岭南古村落风景区</view>
+      </view>
+      <view class="pro-intro">
+        <view class="title clamp1">端午南派武术套票[高明碧海湾武术馆]</view>
+        <view class="flexbox flex-alignc">
+          <view class="tag">国内当地游玩</view>
+          <view class="price flex1">￥<text>518</text></view>
+        </view>
+      </view>
+    </view>
+    <view class="pro-item" bindtap="bindViewProDetail">
+      <view class="pro-cover">
+        <image class="pro-cover-img" src="../../../images/pro__travel-img01.jpg"></image>
+        <view class="fix-addr">安徽</view>
+        <view class="fix-desc clamp1">黄山自然风景区</view>
+      </view>
+      <view class="pro-intro">
+        <view class="title clamp1">端午观看龙舟赛、品竹筒海端午观看龙舟赛、品竹筒海</view>
+        <view class="flexbox flex-alignc">
+          <view class="tag">国内跟团游</view>
+          <view class="price flex1">￥<text>699</text></view>
+        </view>
+      </view>
+    </view>
+    <view class="pro-item" bindtap="bindViewProDetail">
+      <view class="pro-cover">
+        <image class="pro-cover-img" src="../../../images/pro__travel-img02.jpg"></image>
+        <view class="fix-addr">广州</view>
+        <view class="fix-desc clamp1">岭南古村落风景区</view>
+      </view>
+      <view class="pro-intro">
+        <view class="title clamp1">端午南派武术套票[高明碧海湾武术馆]</view>
+        <view class="flexbox flex-alignc">
+          <view class="tag">国内当地游玩</view>
+          <view class="price flex1">￥<text>518</text></view>
+        </view>
+      </view>
+    </view>
+    <!--列表.End-->
+  </view>
+  
+</view>

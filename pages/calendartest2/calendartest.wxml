@@ -1,0 +1,33 @@
+<view class="calendar">
+  <view class="cal-inner">
+    <view class="thead y-grid y-textc">
+      <view class="y-flex1">周日</view>
+      <view class="y-flex1">周一</view>
+      <view class="y-flex1">周二</view>
+      <view class="y-flex1">周三</view>
+      <view class="y-flex1">周四</view>
+      <view class="y-flex1">周五</view>
+      <view class="y-flex1">周六</view>
+    </view>
+    <scroll-view class="cal-scroll" scroll-y >
+     <view class="cal-box" wx:for="{{calNum}}"  wx:for-index="calIdx">
+        <view class="mth y-grid y-lrpad20">
+          <!-- <view bindtap="prevM">上月</view> -->
+          <view class="y-flex1">{{y[calIdx]}}年{{m[calIdx]}}月</view>
+          <!-- <view bindtap="nextM">下月</view> -->
+        </view>
+        <view class="dtd">
+            <!--月头空格-->
+            <view  wx:for="{{day[calIdx]}}" class="td fl"> </view>
+            <!--真正的日历-->
+            <view wx:for="{{daycount[m[calIdx]-1]}}" wx:for-index="dIdx" class="td fl {{dTure>dIdx+1&&mTure==m[calIdx]&&yTure==y[calIdx]?'dis':''}} {{dCur==dIdx+1&&mCur==m[calIdx]&&yCur==y[calIdx]?'in':''}}" bindtap="dateTap" data-d="{{y[calIdx]+'-'+m[calIdx]+'-'+(dIdx+1)}}">
+              <view>{{dIdx+1}}</view>
+              <view>{{dCur==dIdx+1&&mCur==m[calIdx]&&yCur==y[calIdx]?'选择':''}}</view>
+              <!--<view>{{dNext==dIdx+1&&mCur2==m[calIdx]&&yCur==y[calIdx]?'离店':''}}</view>-->
+            </view>
+        </view>
+      </view>
+
+    </scroll-view>
+  </view>
+</view>

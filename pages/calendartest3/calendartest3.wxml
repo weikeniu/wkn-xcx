@@ -1,0 +1,42 @@
+<view class="calendar">
+  <view class="cal-inner">
+    <view class="thead y-grid y-textc">
+      <view class="y-flex1">周日</view>
+      <view class="y-flex1">周一</view>
+      <view class="y-flex1">周二</view>
+      <view class="y-flex1">周三</view>
+      <view class="y-flex1">周四</view>
+      <view class="y-flex1">周五</view>
+      <view class="y-flex1">周六</view>
+    </view>
+    <scroll-view class="cal-scroll" scroll-y >
+      <view class="cal-box" wx:for="{{calNum}}"  wx:for-index="calIdx">
+        <view class="mth y-grid y-lrpad20">
+          <!-- <view bindtap="prevM">上月</view> -->
+          <view class="y-flex1">{{y[calIdx]}}年{{m[calIdx]}}月</view>
+          <!-- <view bindtap="nextM">下月</view> -->
+        </view>
+        <view class="dtd">
+            <!--月头空格-->
+            <view  wx:for="{{day[calIdx]}}" class="td fl"> </view>
+            <!--真正的日历-->
+            <view wx:for="{{daycount[m[calIdx]-1]}}" wx:for-index="dIdx" class="td fl {{dTure>dIdx+1&&mTure==m[calIdx]&&yTure==y[calIdx]?'dis':''}} {{dCur==dIdx+1&&mCur==m[calIdx]&&yCur==y[calIdx]?'in':''}} {{dNext==dIdx+1&&mCur2==m[calIdx]&&yCur2==y[calIdx]?'leave':''}}" bindtap="dateTap" data-d="{{y[calIdx]+'-'+m[calIdx]+'-'+(dIdx+1)}}">
+              <view>{{dIdx+1}}</view>
+              <view>{{dCur==dIdx+1&&mCur==m[calIdx]&&yCur==y[calIdx]?'入住':''}}</view>
+              <view>{{dNext==dIdx+1&&mCur2==m[calIdx]&&yCur2==y[calIdx]?'离店':''}}</view>
+              <view class="pop {{dCur==dIdx+1&&mCur==m[calIdx]&&yCur==y[calIdx]&&showView==1?'cur':''}}">请选择离店日期</view>
+              <view class="pop {{dNext==dIdx+1&&mCur2==m[calIdx]&&yCur2==y[calIdx]&&showView==2?'cur':''}}">共{{inDays}}晚</view>
+             </view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>
+<!--<view class="fix-bottom y-grid y-alignc y-h120 ">
+    <view class="y-flex1">入住共{{inDays}}晚</view>
+    <view class="fix-bottom-btn">取消</view>
+</view>-->
+<!--<view class="select-succeed {{showView==1?'cur':''}}">
+  <view class="iconfont icon-gouxuan"></view>
+  <view class="y-f30">日期选择成功</view>
+</view>-->

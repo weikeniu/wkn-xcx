@@ -1,0 +1,291 @@
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+}
+
+.textStyle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.textContainer {
+  margin-top: 200px;
+}
+
+.swiper-img.type1 {
+  width: 100%;
+  height: 360rpx;
+  position: relative;
+}
+
+.swiper-img image {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-txt-bar {
+  width: 100%;
+  height: 100rpx;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  padding: 0 20rpx;
+}
+
+.swiper-name {
+  position: absolute;
+  top: 35rpx;
+  left: 20rpx;
+  color: #fff;
+  font-size: 26rpx;
+  text-shadow: 1rpx 1rpx 1rpx rgba(0, 0, 0, 0.8);
+}
+
+.swiper-num {
+  width: 70rpx;
+  height: 40rpx;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  right: 0;
+  top: 30rpx;
+  border-top-left-radius: 20rpx;
+  border-bottom-left-radius: 20rpx;
+  text-align: center;
+  font-size: 20rpx;
+  line-height: 40rpx;
+}
+
+.get-btn {
+  width: 180rpx;
+  height: 60rpx;
+  background: #f50;
+  text-align: center;
+  line-height: 60rpx;
+  font-size: 30rpx;
+  border-radius: 10rpx;
+}
+
+.room-content-head {
+  position: relative;
+}
+
+.room-content-head:after {
+  width: 15rpx;
+  height: 15rpx;
+  border-top: 2rpx solid #999;
+  border-right: 2rpx solid #999;
+  content: " ";
+  position: absolute;
+  top: 50%;
+  right: 20rpx;
+  margin-top: -10rpx;
+  transform: rotate(135deg);
+}
+
+.room-content-head.cur:after {
+  transform: rotate(-45deg);
+}
+
+.room-img{position: relative;}
+.room-img .imgNum{background: rgba(0,0,0,.5); border-radius: 5rpx; color: #fff; font-size: 24rpx; padding: 0 10rpx; line-height: 40rpx; position: absolute; right: 10rpx; bottom: 10rpx;}
+
+.room__nav{padding: 20rpx 20rpx 0;}
+.room__item{background: #fff; border: 1rpx solid #e8e8e8; border-radius: 10rpx;}
+.room__item .hdTit{border-bottom: 1rpx solid #e8e8e8; padding: 10rpx 20rpx;}
+.room-tag label{border: 1rpx solid #12b7f5; color: #12b7f5; border-radius: 5rpx; font-size: 22rpx; margin-top: 10rpx; padding: 0 5rpx;}
+.room__item .memType{display: flex; align-items: center; border-bottom: 1rpx solid #e8e8e8; margin: 0 20rpx; padding: 20rpx 0;}
+.room__item .memType .td{flex: 1; color: #999; font-size: 24rpx; text-align: center;}
+
+.room-content-slide {
+  background: #f3f3f3;
+  display: none;
+}
+
+.room-content-slide.cur {
+  display: block;
+}
+
+.room-content-slide .icon-hyzx{
+  color:#fff; display: block; font-size: 24rpx; text-indent: 40rpx; margin-top: 10rpx; height: 40rpx;line-height:40rpx;width:150rpx;
+}
+
+.booking-mark {
+  height: 96rpx;
+  width: 96rpx;
+  border: 2rpx solid #f60;
+  text-align: center;
+  border-radius: 9rpx;
+  position: relative;
+}
+.roomSurplus{font-size:22rpx; text-align: center; width: 100%; position: absolute; bottom: -35rpx;}
+
+.room-mark {
+  width: 100rpx;
+  height: 30rpx;
+  border-radius: 4rpx;
+  background: #02b9c4;
+  color: #fff;
+  font-size: 18rpx;
+  text-align: center;
+  line-height: 30rpx;
+}
+
+.room-chooseDate {
+  background: #fff;
+  border-top: 2rpx solid #f3f3f3;
+  border-bottom: 2rpx solid #f3f3f3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20rpx;
+  height: 100rpx;
+  line-height: 60rpx;
+}
+
+.room-chooseDate .chooseDate {
+  display: flex;
+  justify-content: space-between;
+}
+
+.room-chooseDate .chooseDate .startDate {
+  border-right: 1px solid #ddd;
+  padding-right: 30rpx;
+}
+
+.endDate {
+  padding-left: 28rpx;
+}
+
+.room-chooseDate .chooseDate .date {
+  color: #000;
+  font-size: 30rpx;
+}
+
+.room-chooseDate .chooseDate .week {
+  color: #777;
+  font-size: 22rpx;
+  margin-left: 10rpx;
+}
+
+
+/* __ 图片预览弹窗(预览图).Start */
+.mask{
+  height: 100%;width: 100%; position: fixed;top: 0;left: 0;
+  background: rgba(0,0,0,0.5);
+  font-family: microsoft yahei,simhei;
+  display:none;
+}
+.mask.cur{display: table;}
+.mask-middle{
+  display:table-cell; vertical-align:middle;
+}
+.alert-box {
+  border-radius: 16rpx; margin: 0 auto; width: 615rpx !important;
+  overflow: hidden; position: static !important;
+}
+.alert-box .hdTit{background: #fff; font-size: 32rpx; text-align: center; height: 80rpx; line-height: 80rpx; position: relative;}
+.alert-box .hdTit .closeImgBox{position: absolute; top: 10rpx; right: 20rpx;}
+/*轮播图*/
+.alert-box swiper{
+  width:615rpx;
+  height:415rpx;
+}
+.alert-box swiper .slide-image{display: block; height: 100%; width: 100%;}
+
+.alert-box .room-info{background:#fff; padding: 20rpx 50rpx;}
+.alert-box .room-info .row{height: 50rpx;}
+.alert-box .room-info .row text{flex: 1; color:#999; font-size: 24rpx;}
+
+.alert-box .ft-btns{background: #fff; border-top: 1rpx solid #ddd; height: 80rpx;}
+.alert-box .ft-btns .btn-order{background: #f60; color: #fff; font-size: 32rpx; text-align: center; padding: 0 30rpx; height: 80rpx; line-height: 80rpx; width: 100rpx;}
+/* __ 图片预览弹窗(预览图).End */
+
+
+/* …… 订房页(20170619) {{{ …… */
+/* __ 领取弹窗(优惠券) */
+.ui__pop-mask{
+  background: #000; height: 100%; width: 100%; position: fixed; left: 0; top: 0; z-index: 1000;
+  visibility: hidden; opacity: 0;
+  transition: all .3s; -webkit-transition: all .3s; -moz-transition: all .3s;
+}
+.ui__pop-mask.open{visibility: visible; opacity: .3;}
+.ui__pop-box{
+  display: none; margin-left: -270rpx; width: 540rpx; position: absolute; left: 50%; top: 40rpx; z-index: 1001;
+}
+.ui__pop-box.show{
+  display: block;
+}
+.ui__pop-box .ui__pop-close{position: absolute; right: 20rpx; top: 80rpx;}
+.ui__pop-box .head-logo{text-align: center; margin-bottom: -65rpx;}
+.coupon-box{background: #ee5b5b; border-radius: 20rpx; margin:0 20rpx; padding-bottom: 250rpx; min-height: 100rpx;}
+.coupon-list{padding: 30rpx; position: relative;}
+.coupon-list .line{
+  content: ""; border: 1rpx solid #ffff00; border-bottom: 0; border-radius: 20rpx; height: 105%; position: absolute; left: 15rpx; top: 15rpx; right: 15rpx;
+}
+.coupon-list .inner-overflow{overflow: auto; -webkit-overflow-scrolling:touch; margin-top: 30rpx; max-height: calc(100vh - 570rpx); position: relative; z-index: 11;}
+.coupon-list .tips{padding-top: 10rpx;}
+.coupon-list .tips text{color:#fff; display: block; font-size: 26rpx; text-align: center; margin-top: 10rpx;}
+.coupon-list .collapseBox{
+  overflow: hidden; height: auto;
+  transition: all .3s;
+}
+.coupon-list .collapseBox.collapsed{height: 0;}
+.coupon-list .h2{color: #ffff00; font-size: 30rpx; padding: 30rpx 0 20rpx; text-align: center;}
+.coupon-list .hdTxt{background: #d84040; color: #ffffa3; font-size: 24rpx; padding: 0 30rpx; line-height: 60rpx;}
+.coupon-list .table{border: 0;}
+.coupon-list .table .tabList{overflow: auto; height: 180rpx; position: relative; z-index: 11;}
+.coupon-list .table .tr{display: flex; align-items: center; justify-content: center; height: 60rpx; width: 100%;}
+.coupon-list .table .tr.odd{background: #e65252;}
+.coupon-list .table .tr .th, .coupon-list .table .tr .td{color: #fff; font-size: 24rpx; font-family: Helvetica; flex: 1; text-align: left;}
+.coupon-list .table .tr .th:nth-child(1){padding-left: 30rpx;}
+.coupon-list .table .tr .td:nth-child(1){padding-left: 30rpx;}
+.ui__pop-box .foot-btn{text-align: center; min-height: 250rpx; width: 100%; position: absolute; left: 0; bottom: 0;}
+.ui__pop-box .foot-btn .btn-collapse{border-bottom-left-radius: 50%; border-bottom-right-radius: 50%; color: #fff; display: inline-block; font-size: 24rpx; height: 80rpx; width: 160rpx; position: relative; top: -10rpx; z-index: 9;}
+.ui__pop-box .foot-btn .btn-collapse .arrow{display: block; position: relative;}
+.ui__pop-box .foot-btn .btn-collapse .arrow:after{
+  content: " "; border-color: #ccc; border-style: solid; border-width: 2rpx 2rpx 0 0; margin-top: 20rpx; height: 12rpx; width: 12rpx; position: absolute; top: 50%; left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg); transform-origin: center;
+}
+.ui__pop-box .foot-btn .btn-collapse .arrow.cur:after{
+  margin-top: 10rpx; transform: translate(-50%, -50%) rotate(135deg);
+}
+.ui__pop-box .foot-btn .foot-bg{position: absolute; left: 0; bottom: 0;}
+.ui__pop-box .foot-btn .btn-recieve{background: none; border: 0; border-radius: 20rpx; font-size: 0; height: 80rpx; width: 370rpx; position: absolute; left: 80rpx; bottom: 40rpx;}
+
+
+/* __ 底部弹窗模板------ */
+.bottom__modal-mask {
+  background: #000; opacity: 0.2; overflow: hidden;
+  height: 100%; width: 100%; position: fixed; top: 0; left: 0;z-index: 1001;
+}
+.bottom__modal-panel {
+  background: #fff; overflow: hidden;
+  width: 100%; position: fixed; bottom: 0; left: 0; z-index: 1002;
+}
+
+/*公共*/
+.select-panel .head{border-bottom: 1rpx solid #ddd; display: flex; font-size: 32rpx; align-items: center; height: 120rpx;}
+.select-panel .head .btn{font-size: 28rpx;padding: 0 50rpx;}
+.select-panel .head .text{text-align: center;}
+.select-panel .tip_txt{background: #f9f9f9; border-bottom: 1rpx solid #ddd; font-size: 26rpx; font-family: helvetica; text-align: center; line-height: 100rpx;}
+/* -- 最晚到店时间*/
+.select-panel .scroll-view-item{display: flex; align-items: center; padding-top: 20rpx; height: 190rpx;}
+.select-panel .scroll-view-item .item{margin: 0 auto; overflow: hidden; height: 190rpx; width: 660rpx; position: relative;}
+.select-panel .scroll-view-item .item .cnt{color: #fff; height: 100%; width: 100%; position: absolute; left: 0; top: 0;}
+.select-panel .scroll-view-item .item .cnt .inner{display: flex; align-items: center; padding-left: 30rpx; height: 100%;}
+.select-panel .scroll-view-item .item .cnt .inner .price{font-size: 26rpx; margin-right: 20rpx; margin-bottom: 10rpx;}
+.select-panel .scroll-view-item .item .cnt .inner .price text{font-size: 50rpx;}
+.select-panel .scroll-view-item .item .cnt .inner .term text{display: block; font-size: 26rpx; font-family: helvetica;}
+.select-panel .scroll-view-item .item .cnt .inner .tips{border-left: 1rpx dashed #fff; font-size: 30rpx; text-align: center; height: 90%; line-height: 170rpx; width: 200rpx;}
+.select-panel .cont .btn-ok{background: #ff6600; color: #fff; font-size: 30rpx; text-align: center; margin: 20rpx; height: 100rpx; line-height: 100rpx;}
+/* }}} */
+

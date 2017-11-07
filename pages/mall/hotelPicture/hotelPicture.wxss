@@ -1,0 +1,12 @@
+/* pages/mall/hotelPicture/hotelInfo.wxss */
+
+/* …… 酒店图片(by hison 20171013) {{{ …… */
+.sec__hotel-picture .bbor{background:#efeff4; height: 20rpx;}
+.sec__hotel-picture{padding: 20rpx;}
+.wrap-item{border: 1rpx solid #ddd; border-radius: 10rpx; margin-bottom: 20rpx;}
+.wrap-item .hdtxt{background: -webkit-linear-gradient(top,#fff,#e2e2e2); font-size: 28rpx; padding: 0 20rpx; height: 80rpx; line-height: 80rpx;}
+.wrap-item .imglist{padding:0 10rpx 20rpx;flex-wrap: wrap; box-sizing: border-box;}
+.wrap-item .imglist .li{margin-top: 20rpx; box-sizing: border-box; padding:0 10rpx; overflow: hidden; height: 150rpx; width: 33.3%;}
+.wrap-item .imglist .li image{height: 150rpx; width: 100%;}
+
+/* }}} */

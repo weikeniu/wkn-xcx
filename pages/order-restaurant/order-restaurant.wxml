@@ -1,0 +1,88 @@
+<view class="body">
+  <view class="y-w-full">
+    <view class="y-w-full y-h360">
+      <image class="full-img" src="../../images/114.png"></image>
+    </view>
+    <view class="y-h100 y-l100 y-bor bbor y-f30 y-lpad20">
+      浪漫观海酒廊
+    </view>
+  </view>
+
+  <view class="y-bgw y-lrpad20 y-tbpad50 y-bor tbor y-f26 y-bmar20">
+    <view class="y-bmar40">无论是浅酌轻谈或是开怀畅饮，观海酒廊都是最理想的场地。在乐队精彩的演演绎中尽情地品味心仪的鸡尾酒和琳琅满目的小吃，度过惬意的闲暇时光，且窗外中国南海的碧海蓝天定让您流连忘返。</view>
+    <view>
+      <view>美食: 鸡尾酒、葡萄酒、啤酒和小吃</view>
+      <view>电话: (86)(752) 832 8888 转8550</view>
+      <view>营业时间: 早上 9:00 – 凌晨 12:00</view>
+      <view>环境: 休闲放松</view>
+      <view>着装要求: 休闲</view>
+      <view>可否吸烟: 不可吸烟</view>
+      <view>服务方式: 酒吧菜单</view>
+    </view>
+  </view>
+
+  <view class="y-bor tbor y-lpad20 y-bgw y-f30 y-bmar20">
+    <view class="y-bor bbor y-h100 y-grid y-alignc y-rpad20">
+      <view class="iconfont icon-pintuan y-c99 y-rmar10"></view>
+      <view class="y-w142">用餐人数</view>
+      <view class="y-flex1">{{userNum}}人</view>
+      <view class="y-grid ar">
+          <view class="iconfont icon-jianhao y-f50 y-c99" bindtap="reduce"></view>
+          <view class="food-num">{{userNum}}</view>
+          <view class="iconfont icon-jiahao y-f50 y-c99" bindtap="add"></view>
+      </view>
+    </view>
+
+    <navigator url="../calendartest2/calendartest?id={{selectDate}}"  class="y-bor bbor y-h100 y-grid y-alignc y-rpad20 y-arr">
+      <view class="iconfont icon-rili y-c99 y-rmar10"></view>
+      <view class="y-w142">用餐日期</view>
+      <view class="y-flex1">{{selectDate}}</view>
+    </navigator>
+
+    <view class="y-bor bbor y-h100 y-grid y-alignc y-rpad20 y-arr">
+      <view class="iconfont icon-zhongdianfang y-c99 y-rmar10"></view>
+      <view class="y-w142">到达时间</view>
+       <picker mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange" class="y-flex1">
+        <view class="picker">
+            {{time}}
+        </view>
+      </picker>
+    </view>
+
+    <view class="y-bor bbor y-h100 y-grid y-alignc y-rpad20">
+      <view class="iconfont icon-lianxiren y-c99 y-rmar10"></view>
+      <view class="y-w142">联系人</view>
+      <view class="y-flex1">
+      	<input type="input" placeholder="请输入姓名" />
+      </view>
+      <radio-group>
+        <label>
+          男<radio class="y-lmar10" />
+        </label>
+        <label>
+          女<radio class="y-lmar10" />
+        </label>
+      </radio-group>
+    </view>
+
+    <view class="y-bor bbor y-h100 y-grid y-alignc y-rpad20">
+      <view class="iconfont icon-shoujihao y-c99 y-rmar10"></view>
+      <view class="y-w142">手机号</view>
+      <view class="y-flex1">
+      	<input type="number" placeholder="请输入订餐人手机号码" />
+      </view>
+    </view>
+
+    <view class="y-bor bbor y-h100 y-grid y-alignc y-rpad20">
+      <view class="iconfont icon-beizhu y-c99 y-rmar10"></view>
+      <view class="y-w142">备注</view>
+      <view class="y-flex1">
+      	<input type="input" placeholder="请输入其它要求" />
+      </view>
+    </view>
+
+  </view>
+
+  <button class="btn">立即预订</button>
+
+</view>

@@ -1,0 +1,106 @@
+/* pages/order/order.wxss */
+
+/* …… 订单页(by hison 20170620) {{{ …… */
+/* __ 客房信息 */
+.room-info{background: #fff; border-bottom: 1rpx solid #ccc;}
+.room-info .part01{border-bottom: 1rpx solid #ccc;}
+.room-info .part01.y-arr::after{transition: all .3s; transform: rotate(135deg); transform-origin: center;}
+.room-info .part01.y-arr.cur::after{transform: rotate(-45deg);}
+.room-info .part01 .txt{font-size: 32rpx;}
+.room-info .part01 .checkdate{font-size: 26rpx; margin-top: 10rpx;}
+.room-info .part01 .checkdate .endDate{margin: 0 20rpx 0 100rpx;}
+.room-info .part02{display: none; background: #f3f3f3; border-bottom: 1rpx solid #ccc; overflow: hidden;}
+.room-info .part02.open{display: block;}
+.room-info .part02 .row{color: #999; font-size: 26rpx; margin-bottom: 5rpx;}
+.room-info .part02 .row text{margin-right: 140rpx;}
+.room-info .part03 .item{display: flex; font-size: 22rpx; margin-top: 15rpx; align-items: center;}
+.room-info .part03 .item:nth-child(1){margin-top: 0;}
+.room-info .part03 .item image{margin-right: 10rpx; vertical-align: middle;}
+.room-info .part03 .item .h2{font-size: 26rpx; margin-right: 30rpx;}
+
+.section{background: #fff; border-top: 1rpx solid #ccc; border-bottom: 1rpx solid #ccc;}
+.section .lbl{color: #666; font-size: 30rpx; margin-right: 25rpx; width: 135rpx;}
+.section .line{border-bottom: 1rpx solid #e3e3e3; padding-top:0;padding-bottom:0;}
+.section .line:last-child{border-bottom: 0;}
+/* __ 保留时间/房间数 */
+.room-roomNumber .retentionTime{display: flex; align-items: center; height: 100rpx;}
+.room-roomNumber .retentionTime .time{color: #000;font-size: 30rpx;font-family: microsoft yahei,simhei}
+.room-roomNumber .roomChooseNum{display: flex; align-items: center; height: 120rpx;}
+.roomChooseNum .outer{border: 1rpx solid #ccc; display: flex; align-items: center; text-align: center; height: 60rpx;}
+.roomChooseNum .outer .num{border-left: 1rpx solid #ccc; border-right: 1rpx solid #ccc; font-size: 30rpx; line-height: 60rpx; width: 120rpx;}
+.roomChooseNum .outer .minus, .roomChooseNum .outer .plus{
+  text-align: center; height: 60rpx; line-height: 55rpx; width: 100rpx;
+}
+.roomChooseNum .outer .minus{color: #999; font-size: 28rpx; font-weight: 700;}
+.roomChooseNum .outer .minus.on{color: #12b7f5;}
+.roomChooseNum .outer .plus{color: #12b7f5; font-size: 56rpx; line-height: 50rpx;}
+
+/* __ 入住人信息 */
+.room-checkMemberInfo .checkoutInfo{display: flex;}
+.checkoutInfo .lbl{line-height: 90rpx;}
+.checkoutInfo .iptList input{border-top: 1rpx solid #e3e3e3; font-size: 30rpx; font-family: microsoft yahei; height: 100rpx;}
+.checkoutInfo .iptList input:nth-child(1){border-top: 0;}
+.room-checkMemberInfo .telphone{display: flex; align-items: center; height: 100rpx;}
+.room-checkMemberInfo .telphone input{font-size: 30rpx;}
+.room-checkMemberInfo .cp_price{display: flex; align-items: center; height: 120rpx;}
+.room-checkMemberInfo .cp_price .info .price{font-size: 30rpx;}
+.room-checkMemberInfo .cp_price .info .tip{color: #666; font-size: 24rpx;}
+
+/* __ 发票押金信息 */
+.room-invoiceDeposit .switchDeposit, .room-invoiceDeposit .switchInvoice{display: flex; align-items: center; height: 100rpx;}
+.room-invoiceDeposit .hotelDeposit{display: flex; align-items: center; height: 120rpx;}
+.room-invoiceDeposit .hotelDeposit .info .price{font-size: 30rpx;}
+.room-invoiceDeposit .hotelDeposit .info .tip{color: #666; font-size: 24rpx;}
+.room-invoiceDeposit .unitName{display: flex; align-items: center; height: 120rpx;}
+.room-invoiceDeposit .unitName input{font-size: 30rpx;}
+.room-invoiceDeposit .specialRequire{display: flex; align-items: center; height: 100rpx;}
+.room-invoiceDeposit .specialRequire .require{color: #000; font-size: 30rpx;}
+
+/* __ 底部信息 */
+.sec_footer{padding-top: 140rpx;}
+.sec_footer .bottomfixed{background: #fff; border-top: 1rpx solid #ccc; height: 120rpx; width: 100%; position: fixed; left: 0; bottom: 0; z-index: 1000;}
+.sec_footer .inner{display: flex; align-items: center;}
+.sec_footer .inner .pay{color: #999; font-size: 24rpx; padding-left: 20rpx;}
+.sec_footer .inner .pay .price{color: #ff4400; display: block; font-size: 30rpx;}
+.sec_footer .inner .details{color: #666; font-size: 28rpx; margin-right: 20rpx; padding-right: 60rpx; line-height: 120rpx;}
+.sec_footer .inner .details.y-arr:after{margin-top: 0; transform: rotate(-45deg); transform-origin: center;}
+.sec_footer .inner .details.y-arr2:after{margin-top: -12rpx; transform: rotate(135deg); transform-origin: center;}
+.sec_footer .inner button{background: #ff4400; border-radius: 0; color: #fff; float: right; font-size: 32rpx; height: 120rpx; line-height: 120rpx; width: 260rpx;}
+
+
+/* __ 底部弹窗模板------ */
+.bottom__modal-mask {
+  background: #000; opacity: 0.2; overflow: hidden;
+  height: 100%; width: 100%; position: fixed; top: 0; left: 0;z-index: 1001;
+}
+.bottom__modal-panel {
+  background: #fff; overflow: hidden;
+  width: 100%; position: fixed; bottom: 0; left: 0; z-index: 1002;
+}
+
+/*公共*/
+.select-panel .head{border-bottom: 1rpx solid #ddd; display: flex; font-size: 32rpx; align-items: center; height: 120rpx;}
+.select-panel .head .btn{font-size: 28rpx;padding: 0 50rpx; line-height: 120rpx;}
+.select-panel .head .text{text-align: center;}
+.select-panel .tip_txt{background: #f9f9f9; border-bottom: 1rpx solid #ddd; font-size: 26rpx; font-family: helvetica; text-align: center; line-height: 100rpx;}
+/* -- 最晚到店时间*/
+.select-panel .scroll-view-item{display: flex; align-items: center; height: 120rpx;}
+.select-panel.orderDetail .scroll-view-item{display: flex; align-items: center; height: 70rpx;}
+.select-panel .scroll-view-item .ico{opacity: 0; visibility: hidden; text-align: right; padding-right: 20rpx; width: 100rpx;}
+.select-panel .scroll-view-item.cur .ico{opacity: 1; visibility: visible;}
+.select-panel .scroll-view-item .bor{border-top: 1px solid #e3e3e3; margin-top: -1rpx; height: 100%;}
+.select-panel .scroll-view-item .no-bor{border-top: 0; margin-top: -1rpx; height: 100%;}
+.select-panel .scroll-view-item .cnt{display: flex; align-items: center; overflow: hidden; padding: 0 20rpx; height: 100%;}
+.select-panel .scroll-view-item .cnt .dashed{overflow: hidden; padding: 0 10rpx; height: 100%; line-height: 100rpx;}
+.select-panel .scroll-view-item .time{color: #000; font-size: 30rpx; font-family: helvetica;}
+.select-panel .scroll-view-item.cur .time{color: #12b7f5!important;}
+.select-panel .scroll-view-item .text{color: #000; font-size: 30rpx; font-family: helvetica;}
+.select-panel .scroll-view-item.cur .text{color: #12b7f5!important;}
+.select-panel .scroll-view-item .coupon .price{font-size: 26rpx; margin-right: 20rpx;}
+.select-panel .scroll-view-item .coupon .price text{font-size: 50rpx;}
+.select-panel .scroll-view-item .coupon .term text{display: block; font-size: 26rpx; font-family: helvetica;}
+.select-panel .scroll-view-item.cur .coupon{color: #12b7f5!important;}
+.select-panel .scroll-view-item .order{font-size: 28rpx; font-family: Verdana; padding-right: 60rpx;}
+/* }}} */
+
+

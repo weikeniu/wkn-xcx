@@ -1,0 +1,246 @@
+<!--pages/member/myorders/myorders.wxml-->
+<!-- 【我的订单】页面 -->
+
+<view class="body">
+
+  <!-- <>我的订单 -->
+  <view class="my__order-info">
+    <view class="tab-nav flexbox">
+      <view class="col flex1 {{tabIndex == 0 ? 'cur' : ''}}" bindtap="bindTabSwitch" data-index="0"><label>全部</label></view>
+      <view class="col flex1 {{tabIndex == 1 ? 'cur' : ''}}" bindtap="bindTabSwitch" data-index="1"><label>有效单</label></view>
+      <view class="col flex1 {{tabIndex == 2 ? 'cur' : ''}}" bindtap="bindTabSwitch" data-index="2"><label>待支付<text class="dots"></text></label></view>
+      <view class="col flex1 {{tabIndex == 3 ? 'cur' : ''}}" bindtap="bindTabSwitch" data-index="3"><label>退款单</label></view>
+    </view>
+    <view class="tab-cnt">
+      <view class="order-wrap {{tabIndex == 0 ? 'cur' : ''}}">
+        <!-- 列表.Start -->
+        <view class="item">
+          <view class="hotelName flexbox flex-alignc">
+            <text class="iconfont icon-jiudian mr15"></text>
+            <navigator class="name flex1" url="#">北京首都机场华艺酒店式公寓<label class="iconfont icon-youx ml10 c--999"></label></navigator>
+            <view class="status y-blue">已离店</view>
+          </view>
+          <navigator class="hotelInfo" url="#">
+            <view class="flexbox">
+              <view class="room-img mr20" catchtap="bindImgPreview" data-id="0">
+                <image class="full-img" src="../../../images/defaultRoomImg.jpg"></image>
+                <view class="imgNum ff-hv">5张</view>
+              </view>
+              <view class="room-info flex1">
+                <view class="tit">标准单人间(预付)</view>
+                <view class="c--999 ff-ar mt5">1间 1晚</view>
+                <view class="c--999 ff-ar">2017/01/12至2017/01/15</view>
+              </view>
+              <view class="room-price y-f28 ff-ar">￥<text>399</text></view>
+            </view>
+          </navigator>
+          <view class="footBtns align-r">
+            <view class="dib btn">评价一下</view>
+            <view class="dib btn">再次预订</view>
+          </view>
+        </view>
+        <view class="item">
+          <view class="hotelName flexbox flex-alignc">
+            <text class="iconfont icon-jiudian mr15"></text>
+            <navigator class="name flex1" url="#">北京首都机场华艺酒店式公寓<label class="iconfont icon-youx ml10 c--999"></label></navigator>
+            <view class="status y-blue">待入住</view>
+          </view>
+          <navigator class="hotelInfo" url="#">
+            <view class="flexbox">
+              <view class="room-img mr20" catchtap="bindImgPreview" data-id="0">
+                <image class="full-img" src="../../../images/defaultRoomImg.jpg"></image>
+                <view class="imgNum ff-hv">5张</view>
+              </view>
+              <view class="room-info flex1">
+                <view class="tit">标准单人间(预付)</view>
+                <view class="c--999 ff-ar mt5">1间 1晚</view>
+                <view class="c--999 ff-ar">2017/01/12至2017/01/15</view>
+              </view>
+              <view class="room-price y-f28 ff-ar">￥<text>399</text></view>
+            </view>
+          </navigator>
+          <view class="footBtns align-r">
+            <view class="dib btn">联系酒店</view>
+          </view>
+        </view>
+        <view class="item">
+          <view class="hotelName flexbox flex-alignc">
+            <text class="iconfont icon-jiudian mr15"></text>
+            <navigator class="name flex1" url="#">北京首都机场华艺酒店式公寓<label class="iconfont icon-youx ml10 c--999"></label></navigator>
+            <view class="status y-blue">已入住</view>
+          </view>
+          <navigator class="hotelInfo" url="#">
+            <view class="flexbox">
+              <view class="room-img mr20" catchtap="bindImgPreview" data-id="0">
+                <image class="full-img" src="../../../images/defaultRoomImg.jpg"></image>
+                <view class="imgNum ff-hv">5张</view>
+              </view>
+              <view class="room-info flex1">
+                <view class="tit">标准单人间(预付)</view>
+                <view class="c--999 ff-ar mt5">1间 1晚</view>
+                <view class="c--999 ff-ar">2017/01/12至2017/01/15</view>
+              </view>
+              <view class="room-price y-f28 ff-ar">￥<text>399</text></view>
+            </view>
+          </navigator>
+          <view class="footBtns align-r">
+            <view class="dib btn">评价一下</view>
+          </view>
+        </view>
+        <view class="item">
+          <view class="hotelName flexbox flex-alignc">
+            <text class="iconfont icon-jiudian mr15"></text>
+            <navigator class="name flex1" url="#">北京首都机场华艺酒店式公寓<label class="iconfont icon-youx ml10 c--999"></label></navigator>
+            <view class="status y-blue">待支付</view>
+          </view>
+          <navigator class="hotelInfo" url="#">
+            <view class="flexbox">
+              <view class="room-img mr20" catchtap="bindImgPreview" data-id="0">
+                <image class="full-img" src="../../../images/defaultRoomImg.jpg"></image>
+                <view class="imgNum ff-hv">5张</view>
+              </view>
+              <view class="room-info flex1">
+                <view class="tit">标准单人间(预付)</view>
+                <view class="c--999 ff-ar mt5">1间 1晚</view>
+                <view class="c--999 ff-ar">2017/01/12至2017/01/15</view>
+              </view>
+              <view class="room-price y-f28 ff-ar">￥<text>399</text></view>
+            </view>
+          </navigator>
+          <view class="footBtns align-r">
+            <view class="dib btn on">立即支付</view>
+          </view>
+        </view>
+        <view class="item">
+          <view class="hotelName flexbox flex-alignc">
+            <text class="iconfont icon-jiudian mr15"></text>
+            <navigator class="name flex1" url="#">北京首都机场华艺酒店式公寓<label class="iconfont icon-youx ml10 c--999"></label></navigator>
+            <view class="status y-blue">已退款</view>
+          </view>
+          <navigator class="hotelInfo" url="#">
+            <view class="flexbox">
+              <view class="room-img mr20" catchtap="bindImgPreview" data-id="0">
+                <image class="full-img" src="../../../images/defaultRoomImg.jpg"></image>
+                <view class="imgNum ff-hv">5张</view>
+              </view>
+              <view class="room-info flex1">
+                <view class="tit">标准单人间(预付)</view>
+                <view class="c--999 ff-ar mt5">1间 1晚</view>
+                <view class="c--999 ff-ar">2017/01/12至2017/01/15</view>
+              </view>
+              <view class="room-price y-f28 ff-ar">￥<text>399</text></view>
+            </view>
+          </navigator>
+          <view class="footBtns align-r">
+            <view class="dib btn">再次预订</view>
+          </view>
+        </view>
+        <!-- 列表.End -->
+      </view>
+      <view class="order-wrap {{tabIndex == 1 ? 'cur' : ''}}">
+        <view class="item">
+          <view class="hotelName flexbox flex-alignc">
+            <text class="iconfont icon-jiudian mr15"></text>
+            <navigator class="name flex1" url="#">北京首都机场华艺酒店式公寓<label class="iconfont icon-youx ml10 c--999"></label></navigator>
+            <view class="status y-blue">已入住</view>
+          </view>
+          <navigator class="hotelInfo" url="#">
+            <view class="flexbox">
+              <view class="room-img mr20" catchtap="bindImgPreview" data-id="0">
+                <image class="full-img" src="../../../images/defaultRoomImg.jpg"></image>
+                <view class="imgNum ff-hv">5张</view>
+              </view>
+              <view class="room-info flex1">
+                <view class="tit">标准单人间(预付)</view>
+                <view class="c--999 ff-ar mt5">1间 1晚</view>
+                <view class="c--999 ff-ar">2017/01/12至2017/01/15</view>
+              </view>
+              <view class="room-price y-f28 ff-ar">￥<text>399</text></view>
+            </view>
+          </navigator>
+          <view class="footBtns align-r">
+            <view class="dib btn">评价一下</view>
+          </view>
+        </view>
+      </view>
+      <view class="order-wrap {{tabIndex == 2 ? 'cur' : ''}}">
+        <view class="item">
+          <view class="hotelName flexbox flex-alignc">
+            <text class="iconfont icon-jiudian mr15"></text>
+            <navigator class="name flex1" url="#">北京首都机场华艺酒店式公寓<label class="iconfont icon-youx ml10 c--999"></label></navigator>
+            <view class="status y-blue">待支付</view>
+          </view>
+          <navigator class="hotelInfo" url="#">
+            <view class="flexbox">
+              <view class="room-img mr20" catchtap="bindImgPreview" data-id="0">
+                <image class="full-img" src="../../../images/defaultRoomImg.jpg"></image>
+                <view class="imgNum ff-hv">5张</view>
+              </view>
+              <view class="room-info flex1">
+                <view class="tit">标准单人间(预付)</view>
+                <view class="c--999 ff-ar mt5">1间 1晚</view>
+                <view class="c--999 ff-ar">2017/01/12至2017/01/15</view>
+              </view>
+              <view class="room-price y-f28 ff-ar">￥<text>399</text></view>
+            </view>
+          </navigator>
+          <view class="footBtns align-r">
+            <view class="dib btn on">立即支付</view>
+          </view>
+        </view>
+      </view>
+      <view class="order-wrap {{tabIndex == 3 ? 'cur' : ''}}">
+        <view class="item">
+          <view class="hotelName flexbox flex-alignc">
+            <text class="iconfont icon-jiudian mr15"></text>
+            <navigator class="name flex1" url="#">北京首都机场华艺酒店式公寓<label class="iconfont icon-youx ml10 c--999"></label></navigator>
+            <view class="status y-blue">已退款</view>
+          </view>
+          <navigator class="hotelInfo" url="#">
+            <view class="flexbox">
+              <view class="room-img mr20" catchtap="bindImgPreview" data-id="0">
+                <image class="full-img" src="../../../images/defaultRoomImg.jpg"></image>
+                <view class="imgNum ff-hv">5张</view>
+              </view>
+              <view class="room-info flex1">
+                <view class="tit">标准单人间(预付)</view>
+                <view class="c--999 ff-ar mt5">1间 1晚</view>
+                <view class="c--999 ff-ar">2017/01/12至2017/01/15</view>
+              </view>
+              <view class="room-price y-f28 ff-ar">￥<text>399</text></view>
+            </view>
+          </navigator>
+          <view class="footBtns align-r">
+            <view class="dib btn">再次预订</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- <>没有订单数据提示 -->
+  <view class="red__packets-nodata" style="display: none;">
+    <image src="../../../images/no-resoult.png"></image>
+    <view class="txt mt30">您还没有相关的订单哦！</view>
+  </view>
+
+
+  <!-- <>图片预览弹窗.Start --> 
+  <view class="mask {{maskState==0?'':'cur'}}">
+    <view class="mask-middle" data-id="0">
+      <view class="mask-inner alert-box">
+        <view class="hdTit align-c">北京首都机场华艺酒店式公寓 <view class="closeImgBox" bindtap='bindCloseImgPreview'><image src="../../../images/xxxx_103.jpg" style="height:50rpx;width:50rpx;"></image></view></view>
+        <!-- //图片轮播 -->
+        <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" style="height:615rpx;">
+          <block wx:for="{{imgUrls}}">
+            <swiper-item>
+              <image src="{{item}}" class="slide-image"/>
+            </swiper-item>
+          </block>
+        </swiper>
+      </view>
+    </view>
+  </view>
+  <!-- <>图片预览弹窗.End -->
+
+</view>

@@ -1,0 +1,170 @@
+<!--pages/mall/ticket/ticket-near/ticket-near.wxml-->
+<!-- 【旅行社-门票 附近位置】页面 -->
+
+<view class="body">
+  <!-- <>顶部搜索区域 -->
+  <view class="sec__hd-position flexbox flex-alignc">
+    <view class="currentPos flex1">当前位置：广东省广州市越秀区寺右新马路108号</view>
+    <view class="iconfont icon-shuaxin c--12b7f5"></view>
+  </view>
+
+  <!-- <>景点列表 -->
+  <view class="sec__product-list">
+    <!--列表.Start-->
+    <view class="pro-item" bindtap="bindViewProDetail">
+      <view class="pro-cover">
+        <image class="pro-cover-img" src="../../../../images/pro__travel-img01.jpg"></image>
+        <view class="fix-tag">限时<br />抢购</view>
+        <view class="fix-addr">安徽</view>
+        <view class="fix-desc clamp1">黄山自然风景区</view>
+      </view>
+      <view class="pro-intro">
+        <view class="title clamp1">端午观看龙舟赛、品竹筒海端午观看龙舟赛、品竹筒海</view>
+        <view class="flexbox flex-alignc">
+          <view class="tag nobor">国内跟团游</view>
+          <view class="price flex1 align-r">￥<text>699</text></view>
+        </view>
+      </view>
+    </view>
+    <view class="pro-item" bindtap="bindViewProDetail">
+      <view class="pro-cover">
+        <image class="pro-cover-img" src="../../../../images/pro__travel-img02.jpg"></image>
+        <view class="fix-addr">广州</view>
+        <view class="fix-desc clamp1">岭南古村落风景区</view>
+      </view>
+      <view class="pro-intro">
+        <view class="title clamp1">端午南派武术套票[高明碧海湾武术馆]</view>
+        <view class="flexbox flex-alignc">
+          <view class="tag nobor">国内当地游玩</view>
+          <view class="price flex1 align-r">￥<text>518</text></view>
+        </view>
+      </view>
+    </view>
+    <view class="pro-item" bindtap="bindViewProDetail">
+      <view class="pro-cover">
+        <image class="pro-cover-img" src="../../../../images/pro__travel-img01.jpg"></image>
+        <view class="fix-addr">安徽</view>
+        <view class="fix-desc clamp1">黄山自然风景区</view>
+      </view>
+      <view class="pro-intro">
+        <view class="title clamp1">端午观看龙舟赛、品竹筒海端午观看龙舟赛、品竹筒海</view>
+        <view class="flexbox flex-alignc">
+          <view class="tag nobor">国内跟团游</view>
+          <view class="price flex1 align-r">￥<text>699</text></view>
+        </view>
+      </view>
+    </view>
+    <view class="pro-item" bindtap="bindViewProDetail">
+      <view class="pro-cover">
+        <image class="pro-cover-img" src="../../../../images/pro__travel-img02.jpg"></image>
+        <view class="fix-addr">广州</view>
+        <view class="fix-desc clamp1">岭南古村落风景区</view>
+      </view>
+      <view class="pro-intro">
+        <view class="title clamp1">端午南派武术套票[高明碧海湾武术馆]</view>
+        <view class="flexbox flex-alignc">
+          <view class="tag nobor">国内当地游玩</view>
+          <view class="price flex1 align-r">￥<text>518</text></view>
+        </view>
+      </view>
+    </view>
+    <view class="pro-item" bindtap="bindViewProDetail">
+      <view class="pro-cover">
+        <image class="pro-cover-img" src="../../../../images/pro__travel-img01.jpg"></image>
+        <view class="fix-addr">安徽</view>
+        <view class="fix-desc clamp1">黄山自然风景区</view>
+      </view>
+      <view class="pro-intro">
+        <view class="title clamp1">端午观看龙舟赛、品竹筒海端午观看龙舟赛、品竹筒海</view>
+        <view class="flexbox flex-alignc">
+          <view class="tag nobor">国内跟团游</view>
+          <view class="price flex1 align-r">￥<text>699</text></view>
+        </view>
+      </view>
+    </view>
+    <view class="pro-item" bindtap="bindViewProDetail">
+      <view class="pro-cover">
+        <image class="pro-cover-img" src="../../../../images/pro__travel-img02.jpg"></image>
+        <view class="fix-addr">广州</view>
+        <view class="fix-desc clamp1">岭南古村落风景区</view>
+      </view>
+      <view class="pro-intro">
+        <view class="title clamp1">端午南派武术套票[高明碧海湾武术馆]</view>
+        <view class="flexbox flex-alignc">
+          <view class="tag nobor">国内当地游玩</view>
+          <view class="price flex1 align-r">￥<text>518</text></view>
+        </view>
+      </view>
+    </view>
+    <!--列表.End-->
+  </view>
+
+  <!-- <>底部排序 -->
+  <view class="pro__filter-bottom">
+    <view class="bottomfixed">
+      <view class="inner flexbox flex-alignc align-c">
+        <view class="col flex1" bindtap="showBottomModal" data-modal-index="001">推荐排序<label class="arr"></label></view>
+        <view class="col flex1" bindtap="showBottomModal" data-modal-index="002">筛选<label class="arr"></label></view>
+      </view>
+    </view>
+  </view>
+
+  
+  <!-- <>底部弹窗模板.Start -->
+  <!-- //弹窗1(推荐排序) -->
+  <block wx:if="{{modalIndex == 001}}">
+    <view class="bottom__modal-mask" bindtap="hideBottomModal" wx:if="{{showModalStatus}}"></view>
+    <view animation="{{animationData}}" class="bottom__modal-panel" wx:if="{{showModalStatus}}">
+      <!--内容区-->
+      <view class="select-panel recommendSort">
+        <view class="cont">
+          <scroll-view scroll-y style="max-height: 600rpx;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+            <block wx:for="{{tjSortList}}">
+              <view class="scroll-view-item {{item.selected ? 'cur' : ''}}" bindtap="bindRecommendSort" data-index="{{item.index}}">
+                <view class="ico"><image src="../../../../images/icon__select-cur.png" style="height:37rpx;width:55rpx;"></image></view>
+                <view class="bor flex1"><view class="cnt val">{{item.text}}</view></view>
+              </view>
+            </block>
+          </scroll-view>
+        </view>
+      </view>
+    </view>
+  </block>
+  <!-- //弹窗2(筛选) -->
+  <block wx:elif="{{modalIndex == 002}}">
+    <view class="bottom__modal-mask" bindtap="hideBottomModal" wx:if="{{showModalStatus}}"></view>
+    <view animation="{{animationData}}" class="bottom__modal-panel" wx:if="{{showModalStatus}}">
+      <!--内容区-->
+      <view class="select-panel specialRequire">
+        <view class="head">
+          <view class="btn cancel" bindtap="hideBottomModal">取消</view>
+          <text class="text flex1"> </text>
+          <view class="btn ok c--12b7f5" bindtap="bindCompleteRequire">完成</view>
+        </view>
+        <view class="cont">
+          <scroll-view scroll-y style="max-height: 600rpx;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+            <view class="scroll-view-item-filter">
+              <!--价格筛选-->
+              <view class="f_tit c--999 mt30">价格筛选</view>
+              <view class="f_list clearfix">
+                <block wx:for="{{singleFilterList}}">
+                  <view class="col {{item.selected ? 'cur' : ''}}" bindtap="bindSingleFilter" data-index="{{item.index}}"><text>{{item.text}}</text></view>
+                </block>
+              </view>
+              <!--类别筛选-->
+              <view class="f_tit c--999 mt30">类别筛选(复选)</view>
+              <view class="f_list clearfix">
+                <block wx:for="{{multiFilterList}}">
+                  <view class="col {{item.selected ? 'cur' : ''}}" bindtap="bindMultiFilter" data-index="{{item.index}}"><text>{{item.text}}</text></view>
+                </block>
+              </view>
+            </view>
+          </scroll-view>
+        </view>
+      </view>
+    </view>
+  </block>
+  <!-- <>底部弹窗模板.End -->
+
+</view>
+

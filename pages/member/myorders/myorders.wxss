@@ -1,0 +1,69 @@
+/* pages/member/myorders/myorders.wxss */
+
+/* …… 我的订单(by hison 20170904) {{{ …… */
+page{background: #efeff4;}
+/* __ 选项卡导航 */
+.my__order-info .tab-nav{background: #fff; border-bottom: 1px solid rgba(50,50,50,.15); text-align: center; height: 80rpx; line-height: 80rpx;}
+.my__order-info .tab-nav .col label{color: #000; display: inline-block; font-size: 30rpx; position: relative;}
+.my__order-info .tab-nav .col.cur label{border-bottom: 4rpx solid #12b7f5; color:#12b7f5; height: 76rpx;}
+.my__order-info .tab-nav .col .dots{background: #f00; border-radius: 50%; height:10rpx; width:10rpx; position: absolute; top: 15rpx; right: -10rpx;}
+
+/* __ 订单列表 */
+.my__order-info .tab-cnt .order-wrap{display: none;}
+.my__order-info .tab-cnt .order-wrap.cur{display: block;}
+.order-wrap .item{margin-bottom:20rpx;}
+.order-wrap .item .hotelName{background: #fff; padding: 0 20rpx; height: 80rpx;}
+.order-wrap .item .hotelName .icon-youx{font-size: 12rpx;}
+.order-wrap .item .hotelName .name{font-size: 26rpx;}
+.order-wrap .item .hotelName .status{font-size: 26rpx;}
+.order-wrap .item .hotelInfo{background: #f8f8f8; padding: 10rpx 20rpx;}
+.order-wrap .item .hotelInfo .room-img{position: relative;}
+.order-wrap .item .hotelInfo .room-img .imgNum{background: rgba(0,0,0,.5); border-radius: 5rpx; color: #fff; font-size: 24rpx; padding: 0 10rpx; line-height: 40rpx; position: absolute; right: 10rpx; bottom: 10rpx;}
+.order-wrap .item .hotelInfo .room-info{font-size: 24rpx;}
+.order-wrap .item .hotelInfo .room-info .tit{font-size: 26rpx;}
+.order-wrap .item .hotelInfo .room-price{font-size: 26rpx;}
+
+.order-wrap .item .footBtns{background: #fff; padding: 0 20rpx; height: 80rpx;}
+.order-wrap .item .footBtns .btn{border: 1rpx solid rgba(50,50,50,.15); border-radius: 30rpx; color:#777; font-size: 26rpx; margin-top: 15rpx; margin-left: 20rpx; text-align: center; height: 50rpx;line-height: 50rpx; width:150rpx;}
+.order-wrap .item .footBtns .btn.on{border-color:#f40;color:#f40;}
+
+/* __ 没有数据 */
+.red__packets-nodata{text-align: center; padding: 150rpx 0 50rpx;}
+.red__packets-nodata image{height: 180rpx; width: 180rpx;}
+.red__packets-nodata .txt{color:#666; font-size: 30rpx;}
+
+/* }}} */
+
+
+
+/* __ 图片预览弹窗(预览图).Start */
+.mask{
+  height: 100%;width: 100%; position: fixed;top: 0;left: 0;
+  background: rgba(0,0,0,0.5);
+  font-family: microsoft yahei,simhei;
+  display:none;
+}
+.mask.cur{display: table;}
+.mask-middle{
+  display:table-cell; vertical-align:middle;
+}
+.alert-box {
+  border-radius: 16rpx; margin: 0 auto; width: 615rpx !important;
+  overflow: hidden; position: static !important;
+}
+.alert-box .hdTit{background: #fff; font-size: 32rpx; text-align: center; height: 80rpx; line-height: 80rpx; position: relative;}
+.alert-box .hdTit .closeImgBox{position: absolute; top: 10rpx; right: 20rpx;}
+/*轮播图*/
+.alert-box swiper{
+  width:615rpx;
+  height:415rpx;
+}
+.alert-box swiper .slide-image{display: block; height: 100%; width: 100%;}
+
+.alert-box .room-info{background:#fff; padding: 20rpx 50rpx;}
+.alert-box .room-info .row{height: 50rpx;}
+.alert-box .room-info .row text{flex: 1; color:#999; font-size: 24rpx;}
+
+.alert-box .ft-btns{background: #fff; border-top: 1rpx solid #ddd; height: 80rpx;}
+.alert-box .ft-btns .btn-order{background: #f60; color: #fff; font-size: 32rpx; text-align: center; padding: 0 30rpx; height: 80rpx; line-height: 80rpx; width: 100rpx;}
+/* __ 图片预览弹窗(预览图).End */

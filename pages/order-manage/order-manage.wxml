@@ -1,0 +1,68 @@
+<view class="body y-bgw">
+  <!--头部-->
+  <view class="y-h105 y-bor bbor y-bgw">
+    <view class="y-textc y-l105 y-f38">我的订单</view>
+  </view>
+  <!--头部-->
+  <!--列表  -->
+  <view>
+    <navigator url="#" class="dl y-bor bbor">
+      <view class="dt y-lrpad20 y-grid y-alignc y-bor bbor y-h80">
+        <text class="iconfont icon-jiudian order-icon type1 y-rmar10"></text>
+        <text class="y-flex1 y-f33 y-cff7f7f">酒店</text>
+        <text class="y-blue y-f24">已离店</text>
+      </view>
+      <view class="dd y-pad20">
+        <view class="y-grid y-f32 y-bmar30">
+          <text class="y-flex1">北京首都机场华艺酒店式公寓</text>
+          <text>￥399</text>
+        </view>
+        <view class="y-f24 y-c99 y-l34">
+          <view>2017-01-10至2017-01-11</view>
+          <view>标准大床房（预付）</view>
+          <view>1间 1晚</view>                    
+        </view>
+      </view>
+    </navigator>
+
+
+    <navigator url="#" class="dl y-bor bbor">
+      <view class="dt y-lrpad20 y-grid y-alignc y-bor bbor y-h80">
+        <text class="iconfont icon-tuangou order-icon type2 y-rmar10"></text>
+        <text class="y-flex1 y-f33 y-cffb27f">酒店-团购</text>
+        <text class="y-blue y-f24">待支付</text>
+      </view>
+      <view class="dd y-pad20">
+        <view class="y-grid y-f32 y-bmar30">
+          <text class="y-flex1">北京首都机场华艺酒店式公寓</text>
+          <text>￥399</text>
+        </view>
+        <view class="y-f24 y-c99 y-l34">
+          <view>2017-01-10至2017-01-11</view>
+          <view>标准大床房（预付）</view>
+          <view>1间 1晚</view>                    
+        </view>
+      </view>
+    </navigator>
+
+
+  </view>
+  <!--列表  -->
+
+  <!-- //加载提示(文字加载) -->
+  <block wx:if="{{showLoading}}">
+    <view class="page-loading">
+      <text class="weui-loading" />
+      <text class="loading-text">正在加载</text>
+    </view>
+  </block>
+
+  <!-- //加载提示(遮罩加载) -->
+  <view class="page-loading__mask">
+    <view class="inner">
+      <view class="img"><image src="/images/loading-w.png" mode="widthFix" class="rollImg"></image></view>
+      <view class="img"><image src="/images/loading-n.png" mode="widthFix"></image></view>
+    </view>
+  </view>
+
+</view>

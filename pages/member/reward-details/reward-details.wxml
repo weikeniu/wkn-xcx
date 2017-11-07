@@ -1,0 +1,156 @@
+<!--pages/member/reward-details/reward-details.wxml-->
+<!-- 【会员中心-中奖明细】页面 -->
+
+<view class="body">
+    
+  <!-- <>顶部导航条 -->
+  <!-- <view class="uc__card-hdNav flexbox flex-alignc">
+    <view class="back"><label class="iconfont icon-zuox"></label></view>
+    <view class="num flex1 ff-hv"><label class="iconfont icon-choujiang1"></label><text class="ml10">中奖明细</text></view>
+  </view> -->
+
+  <!-- <>中奖明细 (黑色版本) -->
+  <!-- <view class="uc__card-details">
+    <view class="head ff-hv">2017年1月</view>
+    <view class="list">
+      <view class="li flexbox">
+        <view class='time'>周五<label class='db c--999 ff-hv'>08-12</label></view>
+        <view class="name flex1">
+          <view class='flexbox'>
+            <label class='iconfont icon-dingfang'></label>
+            <view class='dib flex1'>
+              订房红包<label class="db c--999 ff-hv">￥168</label>
+            </view>
+          </view>
+        </view>
+        <view class="status red">已领取<label class="db c--999 ff-hv"></label></view>
+      </view>
+      <view class="li flexbox">
+        <view class='time'>周四<label class='db c--999 ff-hv'>08-22</label></view>
+        <view class="name flex1">
+          <view class='flexbox'>
+            <label class='iconfont icon-hongbao'></label>
+            <view class='dib flex1'>
+              特惠优选红包<label class="db c--999 ff-hv">￥218</label>
+            </view>
+          </view>
+        </view>
+        <view class="status red">已领取<label class="db c--999 ff-hv"></label></view>
+      </view>
+      <view class="li flexbox">
+        <view class='time'>周一<label class='db c--999 ff-hv'>08-28</label></view>
+        <view class="name flex1">
+          <view class='flexbox'>
+            <label class='iconfont icon-chaoshi'></label>
+            <view class='dib flex1'>
+              超市红包<label class="db c--999 ff-hv">￥168</label>
+            </view>
+          </view>
+        </view>
+        <view class="status red">已领取<label class="db c--999 ff-hv"></label></view>
+      </view>
+      <view class="li flexbox">
+        <view class='time'>周五<label class='db c--999 ff-hv'>08-12</label></view>
+        <view class="name flex1">
+          <view class='flexbox'>
+            <label class='iconfont icon-dingcan'></label>
+            <view class='dib flex1'>
+              订餐红包<label class="db c--999 ff-hv">￥168</label>
+            </view>
+          </view>
+        </view>
+        <view class="status">未领取<label class="db c--999 ff-hv"></label></view>
+      </view>
+      <view class="li flexbox">
+        <view class='time'>周五<label class='db c--999 ff-hv'>08-12</label></view>
+        <view class="name flex1">
+          <view class='flexbox'>
+            <label class='iconfont icon-huyiting'></label>
+            <view class='dib flex1'>
+              会议宴会红包<label class="db c--999 ff-hv">￥210</label>
+            </view>
+          </view>
+        </view>
+        <view class="status red">已领取<label class="db c--999 ff-hv"></label></view>
+      </view>
+
+    </view>
+  </view> -->
+
+  <!-- <>中奖明细(没有数据提示) -->
+  <!-- <view class="uc__cardDetails-nodata" style="display: none;">
+    <image src="../../../images/icon__no-winning.png"></image>
+    <view class="txt mt10">还没有中奖明细</view>
+    <label class="c--999 ff-hv">过段时间再来瞧瞧吧</label>
+    <button type="default" hover-class="button-hover">返回</button>
+  </view> -->
+
+
+  <!-- <>中奖明细 (蓝色版本) -->
+  <view class="uc__card-details">
+    <view class="list">
+      <view class="li flexbox flex-alignc">
+        <view class="name flex1">
+          <view class='flexbox flex-alignc'>
+            <image src="../../../images/icon-bb.png" style="height:60rpx;width:60rpx;"></image>
+            <view class='dib ml10 flex1'>
+              20
+            </view>
+          </view>
+        </view>
+        <view class="status"><label class="db c--999 ff-hv">2017-12-25 23:33:26</label></view>
+      </view>
+      <view class="li flexbox flex-alignc">
+        <view class="name flex1">
+          <view class='flexbox flex-alignc'>
+            <image src="../../../images/icon-bb.png" style="height:60rpx;width:60rpx;"></image>
+            <view class='dib ml10 flex1'>
+              128
+            </view>
+          </view>
+        </view>
+        <view class="status"><label class="db c--999 ff-hv">2017-12-25 10:33:26</label></view>
+      </view>
+      <view class="li flexbox flex-alignc">
+        <view class="name flex1">
+          <view class='flexbox flex-alignc'>
+            <image src="../../../images/icon-bb.png" style="height:60rpx;width:60rpx;"></image>
+            <view class='dib ml10 flex1'>
+              289
+            </view>
+          </view>
+        </view>
+        <view class="status"><label class="db c--999 ff-hv">2017-12-25 08:33:26</label></view>
+      </view>
+      <view class="li flexbox flex-alignc">
+        <view class="name flex1">
+          <view class='flexbox flex-alignc'>
+            <image src="../../../images/icon-bb.png" style="height:60rpx;width:60rpx;"></image>
+            <view class='dib ml10 flex1'>
+              134
+            </view>
+          </view>
+        </view>
+        <view class="status"><label class="db c--999 ff-hv">2017-12-25 12:12:26</label></view>
+      </view>
+
+    </view>
+  </view>
+
+  <!-- <>中奖明细(没有数据提示) -->
+  <view class="uc__cardDetails-nodata" style="display: none;">
+    <image src="../../../images/no-resoult.png"></image>
+    <view class="txt mt10">还没有中奖明细</view>
+    <label class="c--999 ff-hv">过段时间再来瞧瞧吧</label>
+  </view>
+
+  <!-- //加载提示 -->
+  <block wx:if="{{showLoading}}">
+    <view class="page-loading">
+      <text class="weui-loading" />
+      <text class="loading-text">加载中...</text>
+    </view>
+  </block>
+
+</view>
+

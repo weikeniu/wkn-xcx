@@ -1,0 +1,182 @@
+<!--pages/order-pay/order-pay.wxml-->
+<!-- 【订单-支付详情】页面 -->
+
+<view class="body pb20">
+  <!-- <>客房信息 -->
+  <view class="order-payInfo">
+    <view class="part01">
+      <view class="hd-orderInfo pad20 bg--12b7f5 c--fff">
+        <view class="status">待支付</view>
+        <view class="desc ff-hv mt10">酒店将为您保留30分钟，请在02月-15日14:00前完成在线支付。如超时未支付订单将自动取消。</view>
+      </view>
+      <view class="pay-num flexbox flex-alignc" bindtap="bindCostDetails">
+        <view class="flex1 c--ff6600 y-f30">
+          <text>在线支付</text><text class="total">￥<text class="ff-ar">367</text></text><text class="c--999 ml20">未支付</text>
+        </view>
+        <view class="detail y-arr c--12b7f5 y-f26 {{toggleCost ? 'cur' : ''}}">费用明细</view>
+      </view>
+    </view>
+
+    <!--费用明细-->
+    <view class="cost-details {{toggleCost ? 'cur' : ''}}">
+      <view class="scroll-view-item">
+        <view class="no-bor flex1">
+          <view class="cnt order">
+            <text>在线支付</text>
+            <text class="c--999 dashed flex1">  </text>
+            <text class="c--ff6600">￥367</text>
+          </view>
+        </view>
+      </view>
+      <view class="scroll-view-item">
+        <view class="no-bor flex1">
+          <view class="cnt order">
+            <text class="c--999">房费（1间x1晚）</text>
+            <text class="c--999 dashed flex1">----------------------------------------------------</text>
+            <text class="c--999 del">￥280</text>
+          </view>
+        </view>
+      </view>
+      <view class="scroll-view-item">
+        <view class="no-bor flex1">
+          <view class="cnt order">
+            <text class="c--999">高级会员折扣价</text>
+            <text class="c--999 dashed flex1">----------------------------------------------------</text>
+            <text class="c--ff6600">280*0.99=￥277</text>
+          </view>
+        </view>
+      </view>
+      <view class="scroll-view-item">
+        <view class="no-bor flex1">
+          <view class="cnt order">
+            <text class="c--999">使用优惠券抵扣</text>
+            <text class="c--999 dashed flex1">----------------------------------------------------</text>
+            <text class="c--999">-￥10</text>
+          </view>
+        </view>
+      </view>
+      <view class="scroll-view-item">
+        <view class="no-bor flex1">
+          <view class="cnt order">
+            <text class="c--999">提前交酒店押金</text>
+            <text class="c--999 dashed flex1">----------------------------------------------------</text>
+            <text class="c--999">￥100</text>
+          </view>
+        </view>
+      </view>
+    </view>
+
+
+    <view class="part02 pad20">
+      <view class="item">
+        <image src="../../images/icon__order-lbl07.png" style="height: 40rpx;width:40rpx;"></image>
+        <text class="h2 c--ff6600">订单确认后，取消扣款</text>
+      </view>
+      <view class="item">
+        <image src="../../images/icon__order-lbl05.png" style="height: 40rpx;width:40rpx;"></image>
+        <text class="h2 c--9db513">如订单无法确认，房费全额退还</text>
+      </view>
+      <view class="item">
+        <image src="../../images/icon__order-lbl03.png" style="height: 36rpx;width:40rpx;"></image>
+        <text class="h2 c--13b83a">免费取消</text>
+      </view>
+      <view class="item">
+        <image src="../../images/icon__order-lbl01.png" style="height: 40rpx;width:40rpx;"></image>
+        <text class="h2 c--ff6600">立即确认</text>
+      </view>
+      <view class="item">
+        <image src="../../images/icon__order-lbl02.png" style="height: 40rpx;width:40rpx;"></image>
+        <text class="h2 c--b28850">限时取消</text>
+      </view>
+      <view class="item">
+        <image src="../../images/icon__order-lbl06.png" style="height: 40rpx;width:40rpx;"></image>
+        <text class="h2 c--9db513">离店退押金</text>
+      </view>
+    </view>
+    <view class="part03 pad20 flexbox flex-alignc">
+      <view class="flex1"><view class="btn-toPay bg--f60">去支付</view></view>
+      <view class="btn-cancelOrder">取消订单</view>
+    </view>
+  </view>
+
+  <!-- <>联系客服(遇到问题) -->
+  <view class="sec-problems mt20">
+    <view class="problems-list pad20">
+      <view class="tit">您可能遇到的问题</view>
+      <view class="list ff-hv"><text>支付遇到问题</text><text>未付款能关闭订单吗</text><text>如何修改订单</text><text>查询酒店信息</text></view>
+    </view>
+    <view class="ft-btns flexbox flex-alignc">
+      <view class="flex1">联系酒店<text>催确认/协商退改</text></view>
+      <view class="flex1">联系客服<text>问题咨询/在线帮助</text></view>
+    </view>
+  </view>
+
+  <!-- <>订房信息 -->
+  <view class="order-roomInfo mt20">
+    <view class="hotel pad20">
+      <view class="name">北京橙子时尚快捷公寓首都机场店</view>
+      <view class="addr ff-hv c--999">北京顺义区首都机场3号航站楼三经路1号接待口(首都机场)</view>
+    </view>
+    <view class="room-info pad20">
+      <view class="name">豪华客房-大床</view>
+      <view class="info ff-hv">
+        <view class="c--999">预订成功后，房间将整晚保留。</view>
+        <view class="c--999">入住：2月14日， 离店：2月15日 共1晚*2间</view>
+        <view class="c--999">早餐：无早，宽带：免费</view>
+        <view class="c--999">床型：大床，加床：不能加床</view>
+        <view class="c--999">张小明，李小强</view>
+        <view class="c--999">133****2127</view>
+      </view>
+      <view class="btn-copyInfo">复制信息</view>
+    </view>
+    <view class="ft-btns flexbox flex-alignc">
+      <view class="flex1"><text class="iconfont icon-jiudian"></text><text>酒店</text></view>
+      <view class="flex1"><text class="iconfont icon-daohang"></text><text>导航</text></view>
+      <view class="flex1"><text class="iconfont icon-shangcheng"></text><text>周边</text></view>
+    </view>
+  </view>
+
+  <!-- <>订单/发票信息 -->
+  <view class="order-info mt20">
+    <view class="name">订单信息</view>
+    <view class="info ff-hv">
+      <view class="c--999">订单号：2017061885356575</view>
+      <view class="c--999">下单时间：2017.06.18 14:30</view>
+    </view>
+
+    <view class="name mt50">发票信息</view>
+    <view class="info ff-hv">
+      <view class="c--999">发票金额：￥267（票面金额）</view>
+      <view class="c--999">发票抬头：黄晓明</view>
+    </view>
+  </view>
+
+  <!-- <>底部弹窗模板.Start -->
+  <!-- //弹窗1(推荐排序) -->
+  <block>
+    <view class="popup__modal-panel">
+      <view class="popup__modal-mask" bindtap="hidePopupModal" wx:if="{{showModalStatus}}" data-shade-close="true"></view>
+      <view class="popup__panel-main" animation="{{animationData}}" wx:if="{{showModalStatus}}">
+        <view class="popup-mdsection">
+          <view class="popup-cont">
+            <view class="item flexbox">
+              <image src="../../images/icon__order-lbl07.png" style="height: 40rpx;width:40rpx;"></image>
+              <view class="flex1 ml10">
+                <view class="c--ff6600">订单确认后，取消扣款</view>
+                <view class="c--666 mt10">预订人因自身原因或因其他非因法定原因要求变更或取消，将扣收全额预付款。 （” 法定原因”以《合同法》和《消费者权益保护法》规定为准，一般包括自然灾害、政府征用、酒店方过错等导致预订人不能正常入住的情形。）</view>
+              </view>
+            </view>
+            <view class="item flexbox mt30">
+              <image src="../../images/icon__order-lbl05.png" style="height: 40rpx;width:40rpx;"></image>
+              <view class="flex1 ml10">
+                <text class="c--9db513">如订单无法确认，房费全额退还</text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </block>
+  <!-- <>底部弹窗模板.End -->
+
+</view>

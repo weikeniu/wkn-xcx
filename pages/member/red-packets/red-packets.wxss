@@ -1,0 +1,24 @@
+/* pages/member/red-packets/red-packets.wxss */
+
+/* …… 会员中心页(领取红包)(by hison 20170828) {{{ …… */
+page{background: #f3f3f3;}
+/* __ 红包列表 */
+.red__packets-list{padding: 20rpx;}
+.red__packets-list .item{margin-bottom: 20rpx; height: 140rpx; width: 100%;}
+.red__packets-list .item .money{padding:0 20rpx; min-width: 110rpx;}
+.red__packets-list .item .money .num{color: #f40; font-size: 32rpx; line-height: 50rpx;}
+.red__packets-list .item .money .num text{font-size: 54rpx;}
+.red__packets-list .item .money .jian{font-size: 24rpx;}
+.red__packets-list .item .type .tit{font-size: 30rpx; line-height: 50rpx;}
+.red__packets-list .item .type .time{font-size: 24rpx;}
+.red__packets-list .item .btn-receive{border-left: 1rpx solid #ddd; color: #f40; font-size: 26rpx; text-align: center; height:110rpx; line-height: 110rpx; width: 160rpx;}
+.red__packets-list .item .btn-receive.on{color: #ffae00;}
+.red__packets-list .item .btn-receive.off{color: #999; font-size: 24rpx; line-height: 35rpx;}
+.red__packets-list .item .btn-receive.off .del{font-size: 26rpx; padding-top: 20rpx;}
+
+/* __ 没有数据 */
+.red__packets-nodata{text-align: center; padding: 150rpx 0 50rpx;}
+.red__packets-nodata image{height: 180rpx; width: 180rpx;}
+.red__packets-nodata .txt{font-size: 30rpx;}
+
+/* }}} */

@@ -1,0 +1,368 @@
+<!--pages/order/order.wxml-->
+<view class="body">
+  <!-- <>客房信息 -->
+  <view class="room-info">
+    <view class="part01 pad20 y-arr {{toggle ? 'cur' : ''}}" bindtap="bindToggleRoomInfo">
+      <view class="txt">豪华客房-大床</view>
+      <view class="checkdate c--999 ff-hv">
+        <text>入住：2月14日</text>
+        <text class="endDate">离店：2月15日</text>
+        <text>共1晚</text>
+      </view>
+    </view>
+    <view class="part02 {{toggle ? 'open' : ''}}">
+      <view class="inner pad20">
+        <view class="row"><text>早餐：无早</text> <text>面积：15㎡</text></view>
+        <view class="row"><text>宽带：免费</text> <text>楼层：7-11</text></view>
+        <view class="row"><text>床型：大床</text> <text>加床：不能加床</text></view>
+      </view>
+    </view>
+    <view class="part03 pad20">
+      <view class="item">
+        <image src="../../images/icon__order-lbl01.png" style="height: 40rpx;width:40rpx;"></image>
+        <text class="h2 c--ff6600">立即确认</text><text class="c--999">预订此房型后可立即确认订单。</text>
+      </view>
+      <view class="item">
+        <image src="../../images/icon__order-lbl02.png" style="height: 40rpx;width:40rpx;"></image>
+        <text class="h2 c--b28850">限时取消</text><text class="flex1 c--999">2017.2.14日21:00前免费取消修改，出行更灵活。</text>
+      </view>
+      <view class="item">
+        <image src="../../images/icon__order-lbl03.png" style="height: 36rpx;width:40rpx;"></image>
+        <text class="h2 c--13b83a">在线付款</text><text class="c--999">预订时完成支付，到酒店直接入住。</text>
+      </view>
+      <view class="item">
+        <image src="../../images/icon__order-lbl04.png" style="height: 40rpx;width:40rpx;"></image>
+        <text class="h2 c--13b5b1">保留房间</text><text class="c--999">房间已为您整晚保留。</text>
+      </view>
+      <view class="item">
+        <image src="../../images/icon__order-lbl05.png" style="height: 40rpx;width:40rpx;"></image>
+        <text class="h2 c--9db513">到店付款</text><text class="c--999">需在到店后在前台付款办理入住。</text>
+      </view>
+      <view class="item">
+        <image src="../../images/icon__order-lbl07.png" style="height: 40rpx;width:40rpx;"></image>
+        <text class="h2 c--ff6600">取消规则</text><text class="c--999">预订后不可取消或变更。</text>
+      </view>
+      <view class="item">
+        <image src="../../images/icon__order-lbl08.png" style="height: 40rpx;width:40rpx;"></image>
+        <text class="h2 y-blue">停车场</text><text class="c--999">提供免费停车位。</text>
+      </view>
+    </view>
+
+  </view>
+
+  <!-- <>保留时间/房间数 -->
+  <view class="section room-roomNumber mt20">
+    <!-- //保留时间 -->
+    <view class="line retentionTime pad20 y-arr" bindtap="showBottomModal" data-modal-index="001">
+      <text class="lbl">保留到</text><text class="time ff-hv">{{data__time}}</text>
+    </view>
+    <!-- //房间数 -->
+    <view class="line roomChooseNum pad20">
+      <text class="lbl">房间数</text>
+      <view class="outer">
+        <view class="minus {{roomNum != 1 ? 'on' : ''}}" bindtap="bindRoomNum" id="0">—</view>
+        <view class="num ff-hv">{{roomNum}}</view>
+        <view class="plus" bindtap="bindRoomNum" id="1">+</view>
+      </view>
+    </view>
+
+  </view>
+
+  <!-- <>入住人信息 -->
+  <view class="section room-checkMemberInfo mt20">
+    <!-- //入住人 -->
+    <view class="line checkoutInfo pad20">
+      <view class="lbl">入住人</view>
+      <view class="iptList flex1">
+        <input type="text" placeholder="每间只需填写一位" placeholder-style="color: #aaa;" wx:for="{{roomNum}}" />
+      </view>
+    </view>
+
+    <view class="line telphone pad20">
+      <view class="lbl">手机号</view>
+      <view class="tel flex1"><input type="number" placeholder="联系人手机号" placeholder-style="color: #aaa;" /></view>
+    </view>
+
+    <view class="line cp_price pad20 y-arr" bindtap="showBottomModal" data-modal-index="002">
+      <view class="lbl">优惠券</view>
+      <view class="info flex1">
+        <text class="price ff-arial c--ff6600">￥{{data__coupon}}</text>
+        <view class="tip">已从房费金额中扣减</view>
+      </view>
+    </view>
+
+    <view class="line cp_price pad20">
+      <view class="lbl">总房价</view>
+      <view class="info flex1">
+        <text class="price ff-arial c--ff6600">￥267</text>
+        <view class="tip">已优惠13元，可获<text class="score c--12b7f5">267</text>积分</view>
+      </view>
+    </view>
+
+  </view>
+
+  <!-- <>发票押金信息 -->
+  <view class="section room-invoiceDeposit mt20">
+    <!-- //押金 -->
+    <view class="line switchDeposit pad20">
+      <view class="lbl">押金</view>
+      <view class="flex1"><switch bindchange="bindSwitchDeposit" color="#12b7f5" /></view>
+    </view>
+    <view class="line hotelDeposit pad20" wx:if="{{isDeposit}}">
+      <view class="lbl">酒店押金</view>
+      <view class="info flex1">
+        <text class="price ff-arial c--ff6600">￥100</text>
+        <view class="tip">提前交酒店押金，离店后原路返还</view>
+      </view>
+    </view>
+    <!-- //发票 -->
+    <view class="line switchInvoice pad20">
+      <view class="lbl">发票</view>
+      <view class="flex1"><switch bindchange="bindSwitchInvoice" color="#12b7f5" /></view>
+    </view>
+    <view class="line unitName pad20" wx:if="{{isInvoice}}">
+      <view class="lbl">发票抬头</view>
+      <view class="name flex1"><input type="text" placeholder="请输入个人/单位名称" placeholder-style="color: #aaa;" /></view>
+    </view>
+    <view class="line specialRequire pad20 y-arr" bindtap="showBottomModal" data-modal-index="003">
+      <text class="lbl">特殊要求</text><text class="require">{{data__require}}</text>
+    </view>
+
+  </view>
+
+  <!-- //底部按钮 -->
+  <view class="sec_footer">
+    <view class="bottomfixed">
+      <view class="inner">
+        <view class="pay flex1"><text class="price">离店后支付￥367</text><text class="c--999">为您优惠13元</text></view>
+        <block wx:if="{{orderToggle}}">
+          <view class="details y-arr" bindtap="showBottomModal" data-modal-index="004">明细</view>
+        </block>
+        <block wx:elif="{{!orderToggle}}">
+          <view class="details y-arr y-arr2" bindtap="hideBottomModal" data-modal-index="004">明细</view>
+        </block>
+        <button type="default">提交</button>
+      </view>
+    </view>
+  </view>
+
+
+  <!-- <>底部弹窗模板.Start -->
+  <!-- //弹窗1(最晚到店时间) -->
+  <block wx:if="{{modalIndex == 001}}">
+    <view class="bottom__modal-mask" bindtap="hideBottomModal" wx:if="{{showModalStatus}}"></view>
+    <view animation="{{animationData}}" class="bottom__modal-panel" wx:if="{{showModalStatus}}">
+      <!--内容区-->
+      <view class="select-panel latestArrive">
+        <view class="head">
+          <text class="text flex1">最晚到店时间</text>
+        </view>
+        <view class="tip_txt c--ff6600">该酒店14:00办理入住，早到可能需要等待。</view>
+        <view class="cont">
+          <scroll-view scroll-y style="max-height: 480rpx;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+            <view class="scroll-view-item {{index__time==0 ? 'cur' : ''}}" bindtap="bindLatestArrive" data-index="0" data-time="17:00">
+              <view class="ico"><image src="../../images/icon__select-cur.png" style="height:37rpx;width:55rpx;"></image></view>
+              <view class="bor flex1"><view class="cnt time">17:00</view></view>
+            </view>
+            <view class="scroll-view-item {{index__time==1 ? 'cur' : ''}}" bindtap="bindLatestArrive" data-index="1" data-time="18:00">
+              <view class="ico"><image src="../../images/icon__select-cur.png" style="height:37rpx;width:55rpx;"></image></view>
+              <view class="bor flex1"><view class="cnt time">18:00</view></view>
+            </view>
+            <view class="scroll-view-item {{index__time==2 ? 'cur' : ''}}" bindtap="bindLatestArrive" data-index="2" data-time="19:00">
+              <view class="ico"><image src="../../images/icon__select-cur.png" style="height:37rpx;width:55rpx;"></image></view>
+              <view class="bor flex1"><view class="cnt time">19:00</view></view>
+            </view>
+            <view class="scroll-view-item {{index__time==3 ? 'cur' : ''}}" bindtap="bindLatestArrive" data-index="3" data-time="20:00">
+              <view class="ico"><image src="../../images/icon__select-cur.png" style="height:37rpx;width:55rpx;"></image></view>
+              <view class="bor flex1"><view class="cnt time">20:00</view></view>
+            </view>
+            <view class="scroll-view-item {{index__time==4 ? 'cur' : ''}}" bindtap="bindLatestArrive" data-index="4" data-time="21:00">
+              <view class="ico"><image src="../../images/icon__select-cur.png" style="height:37rpx;width:55rpx;"></image></view>
+              <view class="bor flex1"><view class="cnt time">21:00</view></view>
+            </view>
+            <view class="scroll-view-item {{index__time==5 ? 'cur' : ''}}" bindtap="bindLatestArrive" data-index="5" data-time="22:00">
+              <view class="ico"><image src="../../images/icon__select-cur.png" style="height:37rpx;width:55rpx;"></image></view>
+              <view class="bor flex1"><view class="cnt time">22:00</view></view>
+            </view>
+            <view class="scroll-view-item {{index__time==6 ? 'cur' : ''}}" bindtap="bindLatestArrive" data-index="6" data-time="23:00">
+              <view class="ico"><image src="../../images/icon__select-cur.png" style="height:37rpx;width:55rpx;"></image></view>
+              <view class="bor flex1"><view class="cnt time">23:00</view></view>
+            </view>
+            <view class="scroll-view-item {{index__time==7 ? 'cur' : ''}}" bindtap="bindLatestArrive" data-index="7" data-time="凌晨3点">
+              <view class="ico"><image src="../../images/icon__select-cur.png" style="height:37rpx;width:55rpx;"></image></view>
+              <view class="bor flex1"><view class="cnt time">凌晨3点</view></view>
+            </view>
+          </scroll-view>
+        </view>
+      </view>
+    </view>
+  </block>
+  <!-- //弹窗2(优惠券) -->
+  <block wx:elif="{{modalIndex == 002}}">
+    <view class="bottom__modal-mask" bindtap="hideBottomModal" wx:if="{{showModalStatus}}"></view>
+    <view animation="{{animationData}}" class="bottom__modal-panel" wx:if="{{showModalStatus}}">
+      <!--内容区-->
+      <view class="select-panel couponsList">
+        <view class="head">
+          <view class="btn cancel c--999" bindtap="hideBottomModal">取消</view>
+          <text class="text flex1">选择优惠券</text>
+          <view class="btn ok c--12b7f5" bindtap="bindCompleteCoupon">完成</view>
+        </view>
+        <view class="cont">
+          <scroll-view scroll-y style="max-height: 360rpx;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+            <view class="scroll-view-item  {{index__coupon==0 ? 'cur' : ''}}" bindtap="bindChooseCoupon" data-index="0" data-coupon="10">
+              <view class="ico"><image src="../../images/icon__select-cur.png" style="height:37rpx;width:55rpx;"></image></view>
+              <view class="bor flex1">
+                <view class="cnt coupon c--ff6600">
+                  <view class="price">￥<text>10</text></view>
+                  <view class="term"><text>0元起用</text><text>有效期 2017.01.01-2017.01.15</text></view>
+                </view>
+              </view>
+            </view>
+            <view class="scroll-view-item  {{index__coupon==1 ? 'cur' : ''}}" bindtap="bindChooseCoupon" data-index="1" data-coupon="30">
+              <view class="ico"><image src="../../images/icon__select-cur.png" style="height:37rpx;width:55rpx;"></image></view>
+              <view class="bor flex1">
+                <view class="cnt coupon c--ff6600">
+                  <view class="price">￥<text>30</text></view>
+                  <view class="term"><text>0元起用</text><text>有效期 2017.01.01-2017.01.15</text></view>
+                </view>
+              </view>
+            </view>
+            <view class="scroll-view-item  {{index__coupon==2 ? 'cur' : ''}}" bindtap="bindChooseCoupon" data-index="2" data-coupon="50">
+              <view class="ico"><image src="../../images/icon__select-cur.png" style="height:37rpx;width:55rpx;"></image></view>
+              <view class="bor flex1">
+                <view class="cnt coupon c--ff6600">
+                  <view class="price">￥<text>50</text></view>
+                  <view class="term"><text>0元起用</text><text>有效期 2017.01.01-2017.01.15</text></view>
+                </view>
+              </view>
+            </view>
+            <view class="scroll-view-item  {{index__coupon==3 ? 'cur' : ''}}" bindtap="bindChooseCoupon" data-index="3" data-coupon="80">
+              <view class="ico"><image src="../../images/icon__select-cur.png" style="height:37rpx;width:55rpx;"></image></view>
+              <view class="bor flex1">
+                <view class="cnt coupon c--ff6600">
+                  <view class="price">￥<text>80</text></view>
+                  <view class="term"><text>0元起用</text><text>有效期 2017.01.01-2017.01.15</text></view>
+                </view>
+              </view>
+            </view>
+
+            <view class="scroll-view-item {{index__coupon==4 ? 'cur' : ''}}" bindtap="bindChooseCoupon" data-index="4" data-coupon="80">
+              <view class="ico"><image src="../../images/icon__select-cur.png" style="height:37rpx;width:55rpx;"></image></view>
+              <view class="bor flex1">
+                <view class="cnt coupon y-ccc">
+                  <view class="price">￥<text>80</text></view>
+                  <view class="term"><text>0元起用</text><text>有效期 2017.01.01-2017.01.15</text></view>
+                </view>
+              </view>
+            </view>
+
+          </scroll-view>
+        </view>
+      </view>
+    </view>
+  </block>
+  <!-- //弹窗3(特殊要求) -->
+  <block wx:elif="{{modalIndex == 003}}">
+    <view class="bottom__modal-mask" bindtap="hideBottomModal" wx:if="{{showModalStatus}}"></view>
+    <view animation="{{animationData}}" class="bottom__modal-panel" wx:if="{{showModalStatus}}">
+      <!--内容区-->
+      <view class="select-panel specialRequire">
+        <view class="head">
+          <view class="btn cancel c--999" bindtap="hideBottomModal">取消</view>
+          <text class="text flex1">住宿偏好</text>
+          <view class="btn ok c--12b7f5" bindtap="bindCompleteRequire">完成</view>
+        </view>
+        <view class="tip_txt c--ff6600">酒店针对您的偏好尽量安排，但不能保证，请您谅解。</view>
+        <view class="cont">
+          <scroll-view scroll-y style="max-height: 480rpx;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+            <view class="scroll-view-item  {{index__require==0 ? 'cur' : ''}}" bindtap="bindChooseRequire" data-index="0" data-require="尽量安排无烟房">
+              <view class="ico"><image src="../../images/icon__select-cur.png" style="height:37rpx;width:55rpx;"></image></view>
+              <view class="bor flex1"><view class="cnt text">尽量安排无烟房</view></view>
+            </view>
+            <view class="scroll-view-item  {{index__require==1 ? 'cur' : ''}}" bindtap="bindChooseRequire" data-index="1" data-require="尽量安排吸烟房">
+              <view class="ico"><image src="../../images/icon__select-cur.png" style="height:37rpx;width:55rpx;"></image></view>
+              <view class="bor flex1"><view class="cnt text">尽量安排吸烟房</view></view>
+            </view>
+            <view class="scroll-view-item  {{index__require==2 ? 'cur' : ''}}" bindtap="bindChooseRequire" data-index="2" data-require="尽量安排高层房">
+              <view class="ico"><image src="../../images/icon__select-cur.png" style="height:37rpx;width:55rpx;"></image></view>
+              <view class="bor flex1"><view class="cnt text">尽量安排高层房</view></view>
+            </view>
+            <view class="scroll-view-item  {{index__require==3 ? 'cur' : ''}}" bindtap="bindChooseRequire" data-index="3" data-require="尽量安排空调房">
+              <view class="ico"><image src="../../images/icon__select-cur.png" style="height:37rpx;width:55rpx;"></image></view>
+              <view class="bor flex1"><view class="cnt text">尽量安排空调房</view></view>
+            </view>
+          </scroll-view>
+        </view>
+      </view>
+    </view>
+  </block>
+  <!-- //弹窗4(底部明细) -->
+  <block wx:elif="{{modalIndex == 004}}">
+    <view class="bottom__modal-mask" bindtap="hideBottomModal" wx:if="{{showModalStatus}}" style="z-index:900;"></view>
+    <view animation="{{animationData}}" class="bottom__modal-panel" wx:if="{{showModalStatus}}" style="bottom: 120rpx; z-index:999;">
+      <!--内容区-->
+      <view class="select-panel orderDetail">
+        <view class="head">
+          <text class="text flex1">订单明细</text>
+        </view>
+        <view class="cont">
+          <scroll-view scroll-y style="max-height: 100%;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+            <view class="scroll-view-item">
+              <view class="ico"></view>
+              <view class="no-bor flex1">
+                <view class="cnt order">
+                  <text>在线支付</text>
+                  <text class="c--999 dashed flex1">  </text>
+                  <text class="c--ff6600">￥367</text>
+                </view>
+              </view>
+            </view>
+            <view class="scroll-view-item">
+              <view class="ico"></view>
+              <view class="no-bor flex1">
+                <view class="cnt order">
+                  <text class="c--999">房费（1间x1晚）</text>
+                  <text class="c--999 dashed flex1">----------------------------------------------------</text>
+                  <text class="c--999 del">￥280</text>
+                </view>
+              </view>
+            </view>
+            <view class="scroll-view-item">
+              <view class="ico"></view>
+              <view class="no-bor flex1">
+                <view class="cnt order">
+                  <text class="c--999">高级会员折扣价</text>
+                  <text class="c--999 dashed flex1">----------------------------------------------------</text>
+                  <text class="c--ff6600">280*0.99=￥277</text>
+                </view>
+              </view>
+            </view>
+            <view class="scroll-view-item">
+              <view class="ico"></view>
+              <view class="no-bor flex1">
+                <view class="cnt order">
+                  <text class="c--999">使用优惠券抵扣</text>
+                  <text class="c--999 dashed flex1">----------------------------------------------------</text>
+                  <text class="c--999">-￥10</text>
+                </view>
+              </view>
+            </view>
+            <view class="scroll-view-item">
+              <view class="ico"></view>
+              <view class="no-bor flex1">
+                <view class="cnt order">
+                  <text class="c--999">提前交酒店押金</text>
+                  <text class="c--999 dashed flex1">----------------------------------------------------</text>
+                  <text class="c--999">￥100</text>
+                </view>
+              </view>
+            </view>
+          </scroll-view>
+        </view>
+      </view>
+    </view>
+  </block>
+  <!-- <>底部弹窗模板.End -->
+
+</view>

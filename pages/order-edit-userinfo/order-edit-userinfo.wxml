@@ -1,0 +1,57 @@
+<!--pages/order-edit-userinfo/order-edit-userinfo.wxml-->
+<!-- 【订单-编辑用户信息】页面 -->
+
+<view class="body">
+  <!-- <>编辑用户信息 -->
+  <view class="sec-editUserInfo mt20">
+    <view class="item">
+      <view class="inner">
+        <view class="lbl">联系人</view>
+        <view class="flex1"><input class="ipt-text" type="text" placeholder="请输入名称" placeholder-style="color: #aaa;" value="{{inputVal}}" /></view>
+        <icon type="clear" color="#ccc" size="20" bindtap="clearIptData" />
+      </view>
+    </view>
+    <view class="item">
+      <view class="inner no-bor">
+        <view class="lbl"></view>
+        <view class="list flex1">
+          <block wx:for="{{userList}}">
+          <text class="{{item.selected ? 'cur' : ''}}" bindtap="bindSelUser" data-index="{{item.index}}">{{item.name}}</text>
+          </block>
+        </view>
+      </view>
+    </view>
+    <view class="item">
+      <view class="inner">
+        <view class="lbl">电话</view>
+        <view class="flex1"><input class="ipt-text" type="text" placeholder="请输入电话" placeholder-style="color: #aaa;" /></view>
+        <view class="btn-getCode btn-code">获取验证码</view>
+      </view>
+    </view>
+    <view class="item">
+      <view class="inner">
+        <view class="lbl"></view>
+        <view class="flex1"><input class="ipt-text" type="text" placeholder="输入验证码" placeholder-style="color: #aaa;" /></view>
+        <view class="btn-valid btn-code">立即验证</view>
+      </view>
+    </view>
+    <view class="item">
+      <view class="inner">
+        <view class="lbl">地址</view>
+        <view class="flex1"><input class="ipt-text" type="text" value="广州桃花江豪生酒店" disabled /></view>
+      </view>
+    </view>
+    <view class="item">
+      <view class="inner">
+        <view class="lbl">房号</view>
+        <view class="flex1"><input class="ipt-text" type="text" placeholder="例：203A室" placeholder-style="color: #aaa;" /></view>
+      </view>
+    </view>
+
+    <!--//按钮-->
+    <view class="ft-btns">
+      <view class="ok">确定</view>
+    </view>
+  </view>
+
+</view>

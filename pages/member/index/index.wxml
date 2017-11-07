@@ -1,0 +1,103 @@
+<!--pages/member/index/index.wxml-->
+<view class="body">
+  <!--头部-->
+  <view class="mem-top">
+    <image src="../../../images/topbg.jpg" class="mem-top-bg"></image>
+    <view class="y-grid y-alignc   mem-top-inner ">
+    	<view class="mem-head y-rmar20">
+        <view class="img-cirle"><image src="../../../images/memhead.jpg"></image></view>
+        <view class="mem-type">普通会员</view>
+      </view>
+      <view class="y-flex1 mem-info">
+        <view class="y-f32 y-bmar10">陈怡蓉</view>
+        <view class="y-f32 y-bmar20">133161133127</view>
+        <view class="y-grid y-alignc y-arr type-w y-rpad40">
+           <view class="y-f28 y-flex1">会员卡号：3156454154</view> 
+           <navigator url="../member-privilege/member-privilege" class="y-f22 no-shadow">会员特权</navigator>
+        </view>
+                      
+      </view>
+    </view>
+  </view>
+  
+  <!--头部end-->  
+
+  <!--中部-->
+  <view class="y-bgw y-bmar20">
+    <navigator url="../card-recharge/card-recharge" class="y-h100 y-lrpad20 y-grid y-alignc y-bor bbor y-arr">
+      <view class="mem-ico type1 iconfont icon-hongbao1 y-rmar20"></view>
+      <view class="y-flex1 y-f32">我的储值卡</view>
+      <view class="y-f22 y-blue y-rpad20">去充值</view>
+    </navigator>
+    <view class="y-grid y-alignc y-h165 y-bor bbor">
+      <navigator url="../card-recharge/card-recharge" class="y-flex1 y-textc">
+        <view class="y-c66">
+          <text class="y-f32">0</text>
+          <text class="y-f22">元</text>
+        </view>
+        <view class="y-grid y-alignc y-j-c type1">
+          <view class="mem-s-ico iconfont icon-jianjie1"></view>
+          <view class="y-f28 mem-s-txt">储值卡</view>
+        </view>
+      </navigator>
+      <navigator url="../red-packets/red-packets" class="y-flex1 y-textc">
+        <view class="y-c66">
+          <text class="y-f32">132</text>
+          <text class="y-f22">元</text>
+        </view>
+        <view class="y-grid y-alignc y-j-c type2">
+          <view class="mem-s-ico iconfont icon-hongbao1"></view>
+          <view class="y-f28 mem-s-txt">红包</view>
+        </view>
+      </navigator>
+      <navigator url="../jifen-details/jifen-details" class="y-flex1 y-textc">
+        <view class="y-c66">
+          <text class="y-f32">500</text>
+          <text class="y-f22">积分</text>
+        </view>
+        <view class="y-grid y-alignc y-j-c type3">
+          <view class="mem-s-ico iconfont icon-fengdian3"></view>
+          <view class="y-f28 mem-s-txt">积分</view>
+        </view>
+      </navigator>
+    </view>
+  </view>
+  <!--中部end-->
+
+  <!--中部-->
+  <navigator url="#" class="y-w-full y-bmar20">
+    <image src="../../../images/gg.jpg" class="ad-img"></image>
+  </navigator>
+  <!--中部end-->
+  
+  <view class="y-bgw">
+   <navigator url="#" class="y-h120 y-lrpad20 y-grid y-alignc y-bor bbor y-arr">
+      <view class="mem-ico type2 iconfont icon-chongzhi1 y-rmar20"></view>
+      <view class="y-flex1 y-f32">买单</view>
+    </navigator>
+     <navigator url="../invoice-details/invoice-details" class="y-h120 y-lrpad20 y-grid y-alignc y-bor bbor y-arr">
+      <view class="mem-ico type3 iconfont icon-jianjie1 y-rmar20"></view>
+      <view class="y-flex1 y-f32">发票</view>
+    </navigator>
+     <navigator url="../reward-details/reward-details" class="y-h120 y-lrpad20 y-grid y-alignc y-bor bbor y-arr">
+      <view class="mem-ico type4 iconfont icon-choujiang1 y-rmar20"></view>
+      <view class="y-flex1 y-f32">中奖</view>
+    </navigator>
+     <navigator url="#" class="y-h120 y-lrpad20 y-grid y-alignc y-bor bbor y-arr">
+      <view class="mem-ico type5 iconfont icon-huiyiting y-rmar20"></view>
+      <view class="y-flex1 y-f32">微客</view>
+    </navigator>
+    <navigator url="../member-info/member-info" class="y-h120 y-lrpad20 y-grid y-alignc y-bor bbor y-arr">
+      <view class="mem-ico type6 iconfont icon-huiyuan y-rmar20"></view>
+      <view class="y-flex1 y-f32">账号</view>
+    </navigator>
+    <navigator url="../edit-paypwd/edit-paypwd" class="y-h120 y-lrpad20 y-grid y-alignc y-bor bbor y-arr">
+      <view class="mem-ico type7 iconfont icon-sheshi1 y-rmar20"></view>
+      <view class="y-flex1 y-f32">支付密码</view>
+    </navigator>
+    <navigator url="../card-buy/card-buy" class="y-h120 y-lrpad20 y-grid y-alignc y-bor bbor y-arr">
+      <view class="mem-ico type4 iconfont icon-huiyuanka1 y-rmar20"></view>
+      <view class="y-flex1 y-f32">购买会员卡</view>
+    </navigator>
+  </view>
+</view>

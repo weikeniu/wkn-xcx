@@ -1,0 +1,135 @@
+/* pages/member/index/index.wxss */
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+}
+
+.textStyle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.textContainer {
+  margin-top: 200px;
+}
+.mem-top{
+  width: 100%;
+  height: 280rpx;
+  position: relative;
+
+
+}
+.mem-top-bg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width:100%;
+  height: 100%;
+  z-index: 0;
+}
+.mem-top-inner{
+  position: relative;
+  height: 100%;
+  padding-left:40rpx;
+ 
+}
+.img-cirle{
+  width: 155rpx;
+  height: 155rpx;
+  border-radius: 50%;
+  border: 5rpx solid #82cefa;
+  overflow: hidden;
+}
+.img-cirle image{
+  width: 100%;
+  height: 100%;
+}
+.mem-head{
+  position: relative;
+}
+.mem-type{
+  width: 164rpx;
+  height:40rpx;
+  border:1rpx solid #fff;
+  border-radius: 40rpx;
+  text-align: center;
+  color: #af4014;
+  font-size:28rpx;
+  line-height: 40rpx;
+  background: #ffcc00;
+  position: absolute;
+  bottom: -10rpx;
+}
+.mem-info{
+  color: #fff;
+  /*font-size: 32rpx;*/
+  text-shadow: 1rpx 1rpx 3rpx rgba(0,0,0,0.5);
+}
+.mem-ico{
+  width: 52rpx;
+  height: 52rpx;
+  border-radius: 50%;
+  color: #fff;
+  text-align: center;
+  line-height: 52rpx;
+  font-size: 32rpx;
+}
+.mem-ico.type1{
+  background: #2cb1fe;
+}
+.mem-ico.type2{
+  background: #febf2c;
+}
+.mem-ico.type3{
+  background: #14c1be;
+}
+.mem-ico.type4{
+  background: #fe2cb0;
+}
+.mem-ico.type5{
+  background: #f50;
+}
+.mem-ico.type6{
+  background: #12b7f5;
+}
+.mem-ico.type7{
+  background: #789dd8;
+}
+.mem-s-ico{
+  width:32rpx;
+  height:32rpx;
+  border-radius:50%;
+  color: #fff;
+  text-align: center;
+  line-height: 32rpx;
+  margin-right: 10rpx;
+  font-size: 17rpx;
+}
+.type1 .mem-s-ico{
+  background: #fe9722;
+}
+.type1 .mem-s-txt{
+  color: #fe9722;
+}
+.type2 .mem-s-ico{
+  background: #f03838;
+}
+.type2 .mem-s-txt{
+  color: #f03838;
+}
+.type3 .mem-s-ico{
+  background: #14c1be;
+}
+.type3 .mem-s-txt{
+  color: #14c1be;
+}
+.ad-img{
+  width: 100%;
+  height: 165rpx;
+}

@@ -1,0 +1,29 @@
+/* pages/member/card-details/card-details.wxss */
+
+/* …… 会员中心页(by hison 20170828) {{{ …… */
+page{background: #f3f3f3;}
+/* __ 顶部导航条 */
+.uc__card-hdNav{background: #353840; height: 100rpx; width: 100%;}
+.uc__card-hdNav .back{color: #fff; text-align: center; width: 90rpx;}
+.uc__card-hdNav .num{color: #fff; font-size: 28rpx; text-align: right; padding-right: 30rpx;}
+
+/* __ 储值卡明细 */
+.uc__card-details .head{color: #666; font-size: 28rpx; padding: 0 20rpx; height: 70rpx; line-height: 70rpx;}
+.uc__card-details .list{background: #fff;}
+.uc__card-details .list .li{border-bottom: 1rpx solid rgba(50,50,50,.1); padding: 30rpx 20rpx;}
+.uc__card-details .list .li label{font-size: 26rpx; margin-top: 5rpx;}
+.uc__card-details .list .li .type{color: #333; font-size: 28rpx;}
+/* .uc__card-details .list .li .nums{color: #08be14; font-size: 32rpx; font-family: arial; text-align: right;}
+.uc__card-details .list .li.red .nums{color: #f40;} */
+.uc__card-details .list .li .nums{color: #333; font-size: 32rpx; font-family: arial; text-align: right;}
+.uc__card-details .list .li.red .nums{color: #333;}
+
+/* __ 没有数据 */
+.uc__cardDetails-nodata{text-align: center; padding: 150rpx 0 50rpx;}
+.uc__cardDetails-nodata image{height: 180rpx; width: 180rpx;}
+.uc__cardDetails-nodata .txt{font-size: 36rpx;}
+.uc__cardDetails-nodata label{font-size: 24rpx;}
+.uc__cardDetails-nodata button{border: 1rpx solid #f40; color: #f40; font-size: 30rpx; margin-top: 50rpx; line-height: 80rpx; width: 300rpx;}
+
+/* }}} */
+

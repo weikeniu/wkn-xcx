@@ -1,0 +1,150 @@
+<view class="body">
+  <view class="order-d-top y-grid y-alignc">
+    <view class="y-flex1 y-cw">
+      <view class="y-f40">已付款</view>
+      <view class="y-f26">订单已成功确认，请在使用日期到店放心使用</view>
+    </view>
+    <image src="../../../images/tkcgb_03.jpg" class="state-ico"></image>
+  </view>
+
+
+  <view class="y-bgw">
+     <view class="y-grid y-alignc pay-top y-lrpad20 y-tbpad30 y-bgw">
+    <view url="#" class="iconfont icon-shoujianren y-blue y-rmar25"></view>
+    <view url="#" class="y-flex1 ">
+      <view class="y-f36 y-bmar10">
+        <text class="y-rmar10">李青秋</text>
+        <text class="y-f30">女士 13570555489</text>
+      </view>
+    </view>
+  </view>
+  <view class="border-copy y-bmar20" style="background-image:url('../../../images/border_03.jpg')"></view>
+
+    
+  </view>
+
+  <view class="y-bgw y-bmar20">
+  	<view class="y-grid y-alignc y-bor bbor y-h100 y-arr y-lrpad20">
+      <navigator class="y-f30 y-c66 y-rmar10">广州桃花江豪生酒店</navigator>
+      <navigator class="iconfont icon-lianxidianhua y-c40 y-f36"></navigator>
+    </view>
+
+  	<view class="y-bor bbor y-lrpad20 y-tbpad30 y-bgf9">
+        <view class="y-grid">
+          <view class="pro-img y-rmar20"><image src="../../../images/pro__travel-img02.jpg"></image></view>
+          <view class="y-flex1">
+            <view class="y-f26 y-bmar10">欢乐亲子时间【欢乐君澜3天2晚】套餐原 价2688元，火爆促销仅需</view>
+            <view class="y-f24 y-c99">
+              <view>套餐类型：上海/杭州-克拉玛缇</view>
+              <view>出发日期：2017-4-29</view>
+              <view>购买数量：x1</view>
+              
+            </view>
+          </view>
+        </view>
+        <view class="y-overflow y-tpad30">
+          <button class="y-btn1 fr" bindtap="bindAppointment" data-index="0">提交预约</button>
+        </view>
+    </view>
+
+    <!-- //预约隐藏层 -->
+    <view class="yuyue-wrap {{clickNum==0?'cur':''}}">
+      <view class="y-bgw y-bor bbor y-grid y-h80 y-textl">
+        <view class="y-flex1">
+          <view class="y-grid y-alignc y-h80 y-f24 y-bor rbor">
+            <text class="y-c33 y-lrpad20">使用人</text>
+            <view class="y-flex1"><input type="text" placeholder="请输入名称" /></view>
+          </view>
+        </view>
+        <navigator url="../../calendartest2/calendartest?id1=2017-10-26" class="y-flex1 y-arr" open-type="redirect">
+          <view class="y-grid y-alignc y-h80 y-f24">
+            <text class="y-c33 y-lrpad20">使用日期</text>
+            <text class="y-flex1 y-rmar20">2017-10-26</text>
+          </view>
+        </navigator>
+      </view>
+    </view>
+
+    <view class="y-bor bbor y-lrpad20 y-tbpad30 y-bgf9">
+        <view class="y-grid">
+          <view class="pro-img y-rmar20"><image src="../../../images/pro__travel-img02.jpg"></image></view>
+          <view class="y-flex1">
+            <view class="y-f26 y-bmar10">欢乐亲子时间【欢乐君澜3天2晚】套餐原 价2688元，火爆促销仅需</view>
+            <view class="y-f24 y-c99">
+              <view>套餐类型：上海/杭州-克拉玛缇</view>
+              <view>出发日期：2017-4-29</view>
+              <view>购买数量：x1</view>
+              
+            </view>
+          </view>
+        </view>
+        <view class="y-overflow y-tpad30">
+          <button class="y-btn1 fr" bindtap="bindAppointment" data-index="1">提交预约</button>
+        </view>
+    </view>
+
+    <!-- //预约隐藏层 -->
+    <view class="yuyue-wrap {{clickNum==1?'cur':''}}">
+      <view class="y-bgw y-bor bbor y-grid y-h80 y-textl">
+        <view class="y-flex1">
+          <view class="y-grid y-alignc y-h80 y-f24 y-bor rbor">
+            <text class="y-c33 y-lrpad20">使用人</text>
+            <view class="y-flex1"><input type="text" placeholder="请输入名称" /></view>
+          </view>
+        </view>
+        <navigator url="../../calendartest2/calendartest?id1=2017-10-26" class="y-flex1 y-arr" open-type="redirect">
+          <view class="y-grid y-alignc y-h80 y-f24">
+            <text class="y-c33 y-lrpad20">使用日期</text>
+            <text class="y-flex1 y-rmar20">2017-10-26</text>
+          </view>
+        </navigator>
+      </view>
+    </view>
+
+
+    <view class="y-grid y-alignc y-h120 y-lrpad20">
+    	<view class="y-f30 y-rmar30">总价</view>
+      <view class="y-flex1">
+        <view class="y-c40"><text class="y-f30">￥</text><text class="y-f36">256</text></view>
+        <view class="y-f22 y-c99">已优惠5元，可获<text class="y-blue">268</text>积分</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="y-bgw y-bmar20 y-lrpad20">
+  	<view class="y-bor bbor y-h80 y-l80 y-f30">订单信息</view>
+    <view class="y-tbpad30 y-f24 y-c99">
+      <view class="y-grid y-bmar10">
+        <view class="y-w115">支付方式</view>
+        <view class="y-flex1">微信支付</view>
+       </view>
+       <view class="y-grid y-bmar10">
+        <view class="y-w115">订单编号</view>
+        <view class="y-flex1">14121545454</view>
+       </view>
+       <view class="y-grid y-bmar10">
+        <view class="y-w115">下单时间</view>
+        <view class="y-flex1"> 2017-05-10 12：16：29</view>
+       </view>
+       <view class="y-grid y-bmar10">
+        <view class="y-w115">付款方式</view>
+        <view class="y-flex1"> 2017-05-10 12：16：29</view>
+       </view>
+    </view>
+  </view>
+
+   <view class="y-bgw y-bmar20 y-lrpad20">
+  	<view class="y-bor bbor y-h80 y-l80 y-f30">发票信息</view>
+    <view class="y-tbpad30 y-f24 y-c99">
+      <view class="y-grid y-bmar10">
+        <view>发票金额：</view>
+        <view class="y-flex1">￥267（票面金额）</view>
+       </view>
+       <view class="y-grid y-bmar10">
+        <view>发票抬头：</view>
+        <view class="y-flex1">张晓梅</view>
+       </view>
+    </view>
+  </view>
+
+</view>

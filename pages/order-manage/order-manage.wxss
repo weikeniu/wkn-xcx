@@ -1,0 +1,33 @@
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+}
+
+.textStyle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.textContainer {
+  margin-top: 200px;
+}
+.order-icon{
+  width: 42rpx;
+  height: 42rpx;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 24rpx;
+  text-align: center;
+  line-height: 42rpx;
+}
+.order-icon.type1{
+  background: #ff7f7f;
+}
+.order-icon.type2{
+  background: #ffb27f;
+}

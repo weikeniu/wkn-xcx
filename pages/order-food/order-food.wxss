@@ -1,0 +1,349 @@
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+}
+
+.textStyle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.textContainer {
+  margin-top: 200px;
+}
+.tab-nav.type1>.cur{
+  border-bottom:3rpx solid #12b7f5;
+}
+.tab-nav.type1>view{
+  height: 84rpx;
+  line-height: 84rpx;
+}
+.tab-inner>view{
+  display: none;
+}
+.tab-inner>.cur{
+  display: block;
+}
+.slide-image{
+  width: 100%;
+  height: 100%;
+}
+.swiper-txt-bar{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 80rpx;
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  line-height: 80rpx;
+  text-indent: 1em;
+  font-size: 30rpx;
+}
+.swiper-num{
+  width: 93rpx;
+  height: 60rpx;
+  background: rgba(0,0,0,0.5);
+  line-height: 60rpx;
+  text-align: center;
+  color: #fff;
+  font-size: 24rpx;
+  position: absolute;
+  right: 0;
+  top: 28rpx;
+  border-top-left-radius: 30rpx;
+  border-bottom-left-radius: 30rpx;
+  
+}
+.tab-nav.type2{
+  color: #666;
+}
+.tab-nav.type2>.cur text{
+  color: #12b7f5;
+  border-bottom:3rpx solid #12b7f5;
+}
+.l-scroll{
+  background: #f3f3f3;
+   width: 170rpx;
+   height: calc(100vh - 630rpx);
+}
+.l-scroll .li{
+  width: 170rpx;
+  height: 100rpx;
+  border-bottom: 1rpx solid #e7e7e7;
+  justify-content: center;
+  font-size: 24rpx;
+}
+.l-scroll .cur{
+  border-left: 5rpx solid #12b7f5;
+  background: #fff;
+}
+.food-list .dt{
+  height: 60rpx;
+  border-left: 5rpx solid #eee;
+  background: #f7f7f7;
+  font-size: 24rpx;
+  line-height: 60rpx;
+  text-indent: 1em;
+}
+.r-scroll{
+   height: calc(100vh - 630rpx);  
+}
+.r-scroll>view:last-child{
+  padding-bottom: calc(100vh - 630rpx);
+}
+.food-img{
+  width: 124rpx;
+  height: 123rpx;
+}
+.ar-ico{
+  font-size: 40rpx;
+  width: 50rpx;
+  height: 50rpx;
+  box-sizing: border-box;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50rpx;
+}
+.ar-ico.reduce{
+  border:2rpx solid #e3e3e3;
+  color: #12b7f5;
+  display: none;
+}
+.ar-ico.reduce.cur{
+  display: block;
+}
+.ar-ico.add{
+  background: #12b7f5;
+  color: #fff;
+}
+.food-num{
+  min-width: 48rpx;
+  font-size: 34rpx;
+  line-height: 50rpx;
+  text-align: center;
+  display: none;
+}
+.food-num.cur{
+  display: block;
+}
+.copyico{
+  width:28rpx;
+  height: 28rpx;
+  color: #fff;
+  font-size: 18rpx;
+  text-align: center;
+  line-height: 28rpx;
+  border-radius: 50%;
+}
+.copyico.type1{
+  background: #ff7070;
+}
+.copyico.type2{
+  background: #70bc46;
+}
+.photo-link{
+  border: 1rpx solid #f3f3f3;
+  border-radius: 5rpx;
+  padding: 10rpx;
+  box-sizing: border-box;
+  width: 330rpx;
+  float: left;
+}
+.photo-link image{
+  width: 310rpx;
+  height: 270rpx;
+}
+.photo-link:nth-child(odd){
+  margin-right: 10rpx;
+  margin-left: 40rpx;
+}
+.photo-link:nth-child(even){
+  margin-left: 10rpx;
+}
+.mask{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0.5);
+  font-family: microsoft yahei,simhei;
+  display:none;
+}
+.mask.cur{
+  display: table;
+}
+.mask-middle{
+
+  display:table-cell;
+vertical-align:middle;
+}
+.alert-box {
+  width: 615rpx !important;
+  margin: 0 auto;
+  border-radius: 16rpx;
+  overflow: hidden;
+  position: static !important;
+
+}
+.alert-box swiper{
+  width:615rpx;
+  height:615rpx;
+}
+.alert-box-inner1{
+  width: 615rpx;
+  box-sizing: border-box;
+}
+.peppery-lv{
+  height: 32rpx;
+  margin-right: 15rpx;
+}
+.peppery-lv>view:nth-child(1){
+  background: #ccc;
+  border-top-left-radius: 2rpx;
+  border-bottom-left-radius: 2rpx;
+  width: 28rpx;
+  height: 34rpx;
+  text-align: center;
+  line-height: 34rpx;
+  font-size: 24rpx;
+  color: #fff;
+}
+.peppery-lv>view:nth-child(2){
+  border: 1rpx solid #ccc;
+  border-top-right-radius: 2rpx;
+  border-bottom-right-radius: 2rpx;
+  width: 60rpx;
+  font-size: 22rpx;
+  text-align: center;
+  line-height: 30rpx;
+  border-left: 0;
+}
+.lv1.cur>view:nth-child(1){
+  background: #f90;
+}
+.lv1.cur>view:nth-child(2){
+  color: #f90;
+}
+.lv2.cur>view:nth-child(1){
+  background: #f60;
+}
+.lv2.cur>view:nth-child(2){
+  color: #f60;
+}
+.lv3.cur>view:nth-child(1){
+  background: #f40;
+}
+.lv3.cur>view:nth-child(2){
+  color: #f40;
+}
+.ar .icon-jianhao{
+  display: none;
+}
+.ar .icon-jianhao.cur{
+  display: block;
+}
+.fix-bottom{
+  width: 100%;
+  height: 100rpx;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
+.fix-bottom-show{
+  width: 100%;
+  height: 100rpx;
+  border-top: 1rpx solid #f3f3f3;
+  background: #fff;
+  box-sizing: border-box;
+}
+.fix-bottom-btn{
+  width: 240rpx;
+  height: 100rpx;
+  border: 0;
+  color: #fff;
+  background: #f40;
+  border-radius: 0;
+}
+.fix-bottom .mask{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 100rpx);
+  background: rgba(0,0,0,0.5);
+  display: none;
+}
+.fix-bottom .mask.cur{
+  display: block;
+}
+.mask-inner{
+  background: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.fix-bottom .icon-jianhao,.fix-bottom .food-num{
+  display: block
+}
+.tip-ico{
+  width: 20rpx;
+  height: 20rpx;
+  border:1rpx solid #999;
+  color: #999;
+  text-align: center;
+  line-height: 20rpx;
+  font-size: 14rpx;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 10rpx;
+  position: relative;
+  top: -5rpx;
+}
+.gwc{
+  border: 6rpx solid #e7e7e7;
+  border-radius: 50%;
+  width: 72rpx;
+  height: 72rpx;
+  background: #12b7f5;
+  text-align: center;
+  line-height: 72rpx;
+  color: #fff;
+  font-size: 36rpx;
+  position: relative;
+}
+.gwc-num{
+  width: 30rpx;
+  height: 30rpx;
+  text-align: center;
+  line-height: 30rpx;
+  color: #fff;
+  font-size: 20rpx;
+  background: #f60;
+  border-radius: 50%;
+  position: absolute;
+  top: -10rpx;
+  right: 0rpx;
+}
+.zy-ico{
+  background: #f40;
+  color: #fff;
+  font-size: 26rpx;
+  display: inline-block;
+  padding: 0 5rpx;
+  border-radius: 5rpx;
+  margin-left:10rpx;
+}
+.food-details-box{
+  max-height: 200rpx;
+  overflow-y:scroll; 
+  margin-bottom: 20rpx;
+}

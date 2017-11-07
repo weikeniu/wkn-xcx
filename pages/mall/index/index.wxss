@@ -1,0 +1,78 @@
+/* pages/mall/index/index.wxss */
+
+/* …… 商城页(by hison 20170711) {{{ …… */
+page{background: #f3f3f3;}
+
+/* __ 轮播图区域 */
+.sec__swiper{position: relative;}
+/*顶部搜索区域*/
+.sec__hd-search{height: 80rpx; width: 100%; position: absolute; left: 0; top: 0; z-index:11;}
+.sec__hd-search .location{padding-left: 20rpx;}
+.sec__hd-search .location .iconfont{font-size: 12px;}
+.sec__hd-search .location text{font-size: 26rpx;}
+.sec__hd-search .sear-box{padding: 0 20rpx;}
+.sec__hd-search .sear-box .inner{background: rgba(255,255,255,.8); box-sizing: border-box; border-radius: 50rpx; padding: 0 20rpx; height: 60rpx; width: 100%;}
+.sec__hd-search .sear-box .inner .iconfont{margin: 0 10rpx;}
+.sec__hd-search .sear-box .inner .ipt-text{background: none; border: 0; outline: none; font-size: 24rpx; height: 60rpx;}
+/*轮播图设置*/
+.sec__swiper swiper{height: 400rpx;}
+.sec__swiper .slide-image{
+  display: block; height: 100%; width: 100%;
+}
+.sec__swiper .wx-swiper-dots.wx-swiper-dots-horizontal{
+  margin-bottom: 30rpx;
+}
+/*浮动框*/
+.sec__swiper .intro__floatbox{border: 1rpx solid rgba(255,255,255,.3); padding: 5rpx; min-height: 200rpx;width:310rpx; position: absolute; top: 80rpx; right: 20rpx; z-index: 11;}
+.intro__floatbox .inner{background: rgba(255,255,255,.3); padding: 30rpx 20rpx; height: 100%;}
+.intro__floatbox .tit{font-size: 36rpx;}
+.intro__floatbox .intro{font-size: 24rpx;}
+.intro__floatbox .dotline{padding: 10rpx 0;}
+.intro__floatbox .dotline .line{background: rgba(0,0,0,.3);height: 2rpx; width: 50%;}
+.intro__floatbox .dotline .dot{background: rgba(0,0,0,.3);border-radius:50%; margin: 0 5rpx; height: 6rpx; width:6rpx;}
+.intro__floatbox .btn-buying{background: red; border-radius: 30rpx; color: #fff; display: inline-block; font-size: 24rpx; margin-top: 10rpx; padding: 0 15rpx; height: 34rpx;line-height: 34rpx;}
+.intro__floatbox .btn-buying .arr{border-color: transparent transparent transparent #fff; border-style: solid; border-width: 8rpx; font-size: 0; overflow: hidden; margin-left: 5rpx; vertical-align: top; height: 0; width: 0;}
+/*标题*/
+.sec__swiper .swiper__text-mask{
+  background:linear-gradient(bottom, rgba(0,0,0,.4) 30%, transparent);background:-webkit-linear-gradient(bottom, rgba(0,0,0,.4) 30%, transparent);
+  box-sizing: border-box; display: flex; align-items: center; justify-content: space-between; padding: 0 20rpx; height: 60rpx; width: 100%;
+  position: absolute; left: 0; bottom: 0;
+}
+.sec__swiper .swiper__text-mask .text{color: #fff; font-size: 26rpx;}
+
+/* __ 水平导航区域 */
+.sec__nav-horizontal{background: #fff;}
+.sec__nav-horizontal .scroll-view_H{white-space: nowrap;}
+.sec__nav-horizontal .scroll-view_H .scroll-view-item_H{display: inline-block; text-align: center; padding: 20rpx 0; width: 20%;}
+.sec__nav-horizontal .scroll-view_H navigator.navigator-hover{
+  background-color: rgba(0, 0, 0, 0); opacity: 0.7;
+}
+.sec__nav-horizontal .scroll-view_H label{background: #12b7f5; border-radius: 50%; color: #fff; display: block; font-size: 24rpx; margin: 0 auto; text-align: center; height: 50rpx; line-height: 50rpx; width: 50rpx;}
+.sec__nav-horizontal .scroll-view_H text{display:block; font-size: 24rpx; margin-top: 5rpx;}
+
+/* __ 景点列表 */
+.sec__product-list{box-sizing: border-box; display: flex; flex-wrap: wrap; justify-content: space-between; padding: 10rpx; width: 750rpx;}
+.sec__product-list .pro-item{background: #fff; margin-top: 10rpx; width: 362rpx;}
+.sec__product-list .pro-item:nth-child(1){margin-top: 0;}
+.sec__product-list .pro-item:nth-child(2){margin-top: 0;}
+.pro-item .pro-cover{height: 362rpx; width: 362rpx; overflow: hidden; position: relative;}
+.pro-cover .pro-cover-img{height: 100%; width: 100%;}
+.pro-cover .fix-tag{
+  background: #f40; color: #fff; font-size: 22rpx; text-align: center; padding-top: 5rpx; width: 54rpx;
+  position: absolute; left: 0; top: 0;
+}
+.pro-cover .fix-tag:before{content: ""; border-color: #f40 transparent transparent #f40; border-style: solid; border-width: 6rpx 27rpx; position: absolute; left: 0; bottom: -8rpx;}
+.pro-cover .fix-tag:after{content: ""; border-color: #f40 #f40 transparent transparent; border-style: solid; border-width: 6rpx 27rpx; position: absolute; right: 0; bottom: -8rpx;}
+.pro-cover .fix-addr{background: rgba(0,0,0,.4); border-radius: 30rpx; color: #fff; font-size: 24rpx; padding: 0 20rpx; line-height: 38rpx; position: absolute; right: 10rpx; top: 15rpx;}
+.pro-cover .fix-desc{
+  background:linear-gradient(bottom, rgba(0,0,0,.4) 30%, transparent);background:-webkit-linear-gradient(bottom, rgba(0,0,0,.4) 30%, transparent);
+  box-sizing: border-box; display: flex; align-items: center; justify-content: space-between; color: #fff; font-size: 24rpx; padding: 0 20rpx; height: 40rpx; width: 100%; position: absolute; left: 0; bottom: 0;
+}
+.pro-item .pro-intro{padding: 10rpx 20rpx 20rpx;}
+.pro-intro .title{font-size: 24rpx; margin-bottom: 10rpx; line-height: 34rpx;}
+.pro-intro .tag{border: 1rpx solid #12b7f5; border-radius: 3rpx; color: #12b7f5; font-size: 22rpx; margin-right: 10rpx; padding: 0 10rpx; height: 32rpx; line-height: 32rpx;}
+.pro-intro .tag.nobor{border: 0; padding: 0;}
+.pro-intro .price{color: #f40; font-size: 20rpx;}
+.pro-intro .price text{font-size: 28rpx; font-family: arial;}
+/* }}} */
+

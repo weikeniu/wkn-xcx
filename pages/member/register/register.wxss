@@ -1,0 +1,12 @@
+/* pages/member/register/register.wxss */
+@import "../member-info/member-info.wxss";
+
+page{background: #f3f3f3;}
+/* __ 注册 */
+.mem-info .text{color: #333; font-size: 28rpx;}
+.mem-info .btn-getCode{color: #12b7f5; border:1rpx solid #12b7f5; border-radius: 10rpx; font-size: 28rpx;margin-right: 20rpx; padding: 10rpx;}
+
+/* __ 没有数据 */
+.red__packets-nodata{text-align: center; padding: 150rpx 0 50rpx;}
+.red__packets-nodata image{height: 180rpx; width: 180rpx;}
+.red__packets-nodata .txt{color:#666; font-size: 30rpx;}

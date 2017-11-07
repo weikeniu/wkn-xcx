@@ -1,0 +1,8 @@
+/* pages/mall/ticket/ticket-near/ticket-near.wxss */
+@import "../ticket.wxss";
+
+/* …… 门票页-附近(by hison 20170713) {{{ …… */
+/* __ 顶部附近位置区域 */
+.sec__hd-position{background: #fff; border-bottom: 1rpx solid rgba(50,50,50,.15); padding: 0 20rpx; height: 100rpx;}
+.sec__hd-position .currentPos{font-size: 28rpx;}
+/* }}} */

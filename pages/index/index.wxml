@@ -1,0 +1,41 @@
+<!--index.wxml-->
+<view class="body">
+  <image src="/images/icon__wei-bg.jpg" mode="" style="height:100%;width:100%;"></image>
+  <view class="fix-bottom">
+    <swiper indicator-dots="{{indicatorDots}}" indicator-color="rgba(255,255,255,.5)" indicator-active-color="#fff" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" class="swiper-nav">
+      <block wx:for="{{navRow}}" wx:for-index="index">
+        <swiper-item class="y-grid y-cw y-textc">
+          <navigator wx:for="{{item}}" wx:key="{{index}}" class="y-flex1" data-url="{{item[3]}}" data-type="{{item[4]}}" bindtap="bindNavUrl">
+            <view class="iconfont {{item[0]}} y-f44 c-bg {{item[2]}}"></view>
+            <text class="y-f26">{{item[1]}}</text>
+          </navigator>
+        </swiper-item>
+      </block>
+    </swiper>
+    <!--四个导航-->
+    <view class="nav-normal">
+      <view class="nav-item">
+        <navigator class="li" url="#">
+          <view class="iconfont icon-dingfang1 y-f44 link type1"></view>
+          <text class="y-f26">订房</text>
+        </navigator>
+        <navigator class="li" url="#">
+          <view class="iconfont icon-dingdan1 y-f44 link type2"></view>
+          <text class="y-f26">订单</text>
+        </navigator>
+        <navigator class="li" url="#">
+          <view class="iconfont icon-ditu1 y-f44 link type3"></view>
+          <text class="y-f26">地图</text>
+        </navigator>
+        <navigator class="li" url="#">
+          <view class="iconfont icon-huiyuan y-f44 link type4"></view>
+          <text class="y-f26">会员</text>
+        </navigator>
+      </view>
+    </view>
+  </view>
+</view>
+<!--
+<import src="../../utils/component/tabbar/tabbar-tmpl.wxml" />
+<template is="tabBar" data="{{tabBar}}" />
+-->

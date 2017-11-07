@@ -1,0 +1,93 @@
+/* pages/order-pay/order-pay.wxss */
+
+/* …… 订单支付页面(by hison 20170715) {{{ …… */
+/* __ 订单支付信息 */
+.order-payInfo{background: #fff; border-bottom: 1rpx solid #ddd;}
+.order-payInfo .part01{border-bottom: 1rpx solid #e3e3e3;}
+.order-payInfo .part01 .hd-orderInfo .status{font-size: 40rpx;}
+.order-payInfo .part01 .hd-orderInfo .desc{font-size: 28rpx;}
+.order-payInfo .part01 .pay-num{padding: 30rpx 20rpx;}
+.order-payInfo .part01 .pay-num .total text{font-size: 40rpx;}
+.order-payInfo .part01 .pay-num .detail{padding-right: 40rpx;}
+.order-payInfo .part01 .pay-num .detail.y-arr::after{height: 15rpx;width:15rpx; right: 8rpx; transform: rotate(135deg); transform-origin: center;}
+.order-payInfo .part01 .pay-num .detail.y-arr.cur::after{
+   transform: rotate(-45deg); transform-origin: center;
+}
+.order-payInfo .part02 .item{display: flex; margin-top: 15rpx; align-items: center;}
+.order-payInfo .part02 .item:nth-child(1){margin-top: 0;}
+.order-payInfo .part02 .item image{margin-right: 10rpx; vertical-align: middle;}
+.order-payInfo .part02 .item .h2{font-size: 28rpx; margin-right: 30rpx;}
+.order-payInfo .part03{border-top: 1rpx solid #e3e3e3;}
+.order-payInfo .part03 .btn-toPay{border-radius: 10rpx; color: #fff; font-size: 30rpx; text-align: center; height: 80rpx; line-height: 80rpx; width: 220rpx;}
+.order-payInfo .part03 .btn-cancelOrder{background: #fff; border: 1rpx solid #e3e3e3; border-radius: 10rpx; color: #999; font-size: 30rpx; text-align: center; height: 80rpx; line-height: 80rpx; width: 220rpx;}
+
+/* __ 费用明细 */
+.cost-details{border-bottom:1rpx solid #ddd; display: none;}
+.cost-details.cur{display: block;}
+.cost-details .scroll-view-item{display: flex; align-items: center; height: 80rpx;}
+.cost-details .scroll-view-item .ico{opacity: 0; visibility: hidden; text-align: right; padding-right: 20rpx; width: 100rpx;}
+.cost-details .scroll-view-item.cur .ico{opacity: 1; visibility: visible;}
+.cost-details .scroll-view-item .bor{border-top: 1px solid #e3e3e3; margin-top: -1rpx; height: 100%;}
+.cost-details .scroll-view-item .no-bor{border-top: 0; margin-top: -1rpx; height: 100%;}
+.cost-details .scroll-view-item .cnt{display: flex; align-items: center; overflow: hidden; padding: 0 20rpx; height: 100%;}
+.cost-details .scroll-view-item .cnt .dashed{overflow: hidden; padding: 0 10rpx; height: 100%; line-height: 100rpx;}
+.cost-details .scroll-view-item .time{color: #000; font-size: 30rpx; font-family: helvetica;}
+.cost-details .scroll-view-item.cur .time{color: #12b7f5!important;}
+.cost-details .scroll-view-item .text{color: #000; font-size: 30rpx; font-family: helvetica;}
+.cost-details .scroll-view-item.cur .text{color: #12b7f5!important;}
+.cost-details .scroll-view-item .coupon .price{font-size: 26rpx; margin-right: 20rpx;}
+.cost-details .scroll-view-item .coupon .price text{font-size: 50rpx;}
+.cost-details .scroll-view-item .coupon .term text{display: block; font-size: 26rpx; font-family: helvetica;}
+.cost-details .scroll-view-item.cur .coupon{color: #12b7f5!important;}
+.cost-details .scroll-view-item .order{font-size: 28rpx; font-family: Verdana; padding-right: 60rpx;}
+
+
+
+/* __ 遇到问题(联系客服) */
+.sec-problems{background: #fff; border-top: 1rpx solid #ddd; border-bottom: 1rpx solid #ddd;}
+.sec-problems .problems-list .tit{font-size: 32rpx; padding: 10rpx 0 30rpx;}
+.sec-problems .problems-list .list text{border: 1rpx solid #e3e3e3; border-radius: 30rpx; color: #12b7f5; display: inline-block; font-size: 28rpx; margin-bottom: 20rpx; margin-right: 20rpx; padding: 0 30rpx; line-height: 54rpx;}
+.sec-problems .ft-btns{border-top: 1rpx solid #e3e3e3; color: #666; font-size: 30rpx; text-align: center; height: 120rpx;}
+.sec-problems .ft-btns view{border-left: 1rpx solid #e3e3e3; padding: 10rpx 0;}
+.sec-problems .ft-btns view:nth-child(1){border-left: 0;} 
+.sec-problems .ft-btns text{color: #999; display: block; font-size: 26rpx;}
+
+/* __ 订房信息 */
+.order-roomInfo{background: #fff; border-top: 1rpx solid #ddd; border-bottom: 1rpx solid #ddd;}
+.order-roomInfo .hotel .name{font-size: 30rpx;}
+.order-roomInfo .hotel .addr{border-bottom: 1rpx solid #e3e3e3; font-size: 26rpx; padding: 10rpx 0 20rpx;}
+.order-roomInfo .room-info{padding-top: 0; position: relative;}
+.order-roomInfo .room-info .name{font-size: 30rpx; margin-bottom: 10rpx;}
+.order-roomInfo .room-info .info{font-size: 26rpx;}
+.order-roomInfo .room-info .info view{margin-bottom: 10rpx;}
+.order-roomInfo .room-info .btn-copyInfo{border: 1rpx solid #e3e3e3; border-radius: 30rpx; color: #12b7f5; display: inline-block; font-size: 28rpx; padding: 0 30rpx; line-height: 54rpx; position: absolute; bottom: 30rpx; right: 20rpx;}
+.order-roomInfo .ft-btns{border-top: 1rpx solid #e3e3e3; color: #666; font-size: 30rpx; text-align: center; height: 120rpx;}
+.order-roomInfo .ft-btns view{border-left: 1rpx solid #e3e3e3; padding: 25rpx 0;}
+.order-roomInfo .ft-btns view:nth-child(1){border-left: 0;}
+.order-roomInfo .ft-btns .iconfont{font-size: 28rpx;}
+.order-roomInfo .ft-btns text{color: #666; display: inline-block; margin: 0 5rpx;}
+
+/* __ 订单信息 */
+.order-info{background: #fff; border-top: 1rpx solid #ddd; border-bottom: 1rpx solid #ddd; padding: 20rpx;}
+.order-info .name{font-size: 30rpx; padding-bottom: 20rpx;}
+.order-info .info{border-top: 1rpx solid #e3e3e3; font-size: 26rpx; padding-top: 10rpx;}
+.order-info .info view{margin-top: 12rpx;}
+
+
+/* __ 底部弹窗模板------ */
+.popup__modal-panel{position: relative; z-index: 1009;}
+.popup__modal-mask {
+  background: rgba(0,0,0,.5); pointer-events: auto; height: 100%; width: 100%; position: fixed; top: 0; left: 0;
+}
+.popup__panel-main{display: table; pointer-events: none; height: 100%; width: 100%; position: fixed; left: 0; top: 0;}
+.popup__panel-main .popup-mdsection{display: table-cell; vertical-align: middle; text-align: center;}
+.popup__panel-main .popup-cont{background: #fff; border-radius: 10rpx; display: inline-block; pointer-events: auto; text-align: left; max-width: 640rpx; position: relative;}
+
+/*.popup__modal-panel { border: 1px solid red;
+  background: #fff; border-radius: 20rpx; overflow: hidden;
+  margin-left: -320rpx; width: 640rpx; position: fixed; top: 20%; left: 50%; z-index: 1002;
+}*/
+.popup__modal-panel .popup-cont{padding: 40rpx 30rpx; }
+.popup__modal-panel .popup-cont .item{font-size: 28rpx;}
+/* }}} */
+

@@ -1,0 +1,28 @@
+<!--pages/member/member-info/member-info.wxml-->
+<!-- 【会员中心-用户信息】页面 -->
+
+<view class="body">
+
+  <!-- <>用户信息修改 -->
+  <view class="mem-info">
+    <view class="hdTxt">填写信息</view>
+    <view class="form bg--fff">
+      <view class="ipt-box flexbox flex-alignc">
+        <label class="lbl">真实姓名</label>
+        <view class="bor flex1"><input class="ipt-text" type="text" name="username" placeholder="请输入姓名" placeholder-style='color: #aaa;' /></view>
+      </view>
+      <view class="ipt-box flexbox flex-alignc">
+        <label class="lbl"></label>
+        <view class="sex flex1"><block wx:for="{{sexList}}"><text class="{{item.selected ? 'cur' : ''}}" bindtap="bindSex" data-index="{{index}}">{{item.sex}}</text></block></view>
+      </view>
+      <view class="ipt-box flexbox flex-alignc">
+        <label class="lbl">电子邮箱</label>
+        <view class="flex1"><input class="ipt-text" type="text" name="email" placeholder="推荐填写QQ邮箱" placeholder-style='color: #aaa;' /></view>
+      </view>
+    </view>
+
+    <view class="btn"><button type="default" hover-class="button-hover">保存</button></view>
+
+  </view>
+
+</view>

@@ -1,0 +1,74 @@
+<!--pages/mall/hotelService/hotelService.wxml-->
+<!-- 【设施服务】页面 -->
+
+<view class="body">
+  <!-- <>设施服务 -->
+  <view class="sec__hotel-service bg--fff">
+    <!-- //酒店服务-->
+    <view class="wrap-item">
+      <view class="tit">酒店服务</view>
+      <view class="cnt clearfix">
+        <text>免费停车场</text>
+        <text>免费接机</text>
+        <text>礼宾服务</text>
+        <text>檫鞋服务</text>
+        <text>贵重物保险柜</text>
+        <text>无线wifi上网</text>
+      </view>
+    </view>
+    <view class="bbor"></view>
+
+    <!-- //客房设施-->
+    <view class="wrap-item">
+      <view class="tit">客房设施</view>
+      <view class="cnt clearfix">
+        <text>电视</text>
+        <text>宽带</text>
+        <text>空调</text>
+        <text>免费市内电话</text>
+        <text>免费洗漱用品</text>
+        <text>淋浴</text>
+      </view>
+    </view>
+    <view class="bbor"></view>
+
+    <!-- //餐饮接待-->
+    <view class="wrap-item">
+      <view class="tit">餐饮接待</view>
+      <view class="cnt clearfix">
+        <text>送餐服务</text>
+        <text>中餐厅</text>
+        <text>西餐厅</text>
+        <text>咖啡厅</text>
+        <text>会议厅</text>
+        <text>大堂吧</text>
+      </view>
+      <view class="intro">
+        <view class="text"><text class="bold">大堂吧：</text>大堂吧装修风格极具现代特色，让您在舒缓高雅的音乐小调中品味香浓咖 啡和珍馐佳肴，是朋友小聚、洽谈的理想处所。</view>
+        <view class="row"><image class="max__img" src="../../../images/swiper__mall-img01.jpg" mode="widthFix"></image></view>
+      </view>
+    </view>
+    <view class="bbor"></view>
+
+    <!-- //康体娱乐-->
+    <view class="wrap-item">
+      <view class="tit">康体娱乐</view>
+      <view class="cnt clearfix">
+        <text>棋牌室</text>
+        <text>健身房</text>
+        <text>网球场</text>
+        <text>游泳池</text>
+        <text>高尔夫球场</text>
+      </view>
+      <view class="intro">
+        <view class="text"><text class="bold">健身房：</text>酒店拥有完善的康体娱乐场所，让您体验运动健身的乐趣，为崭新的一天积蓄更充沛的能量！</view>
+        <view class="row"><image class="max__img" src="../../../images/swiper__mall-img01.jpg" mode="widthFix"></image></view>
+        <view class="row"><image class="max__img" src="../../../images/swiper__mall-img01.jpg" mode="widthFix"></image></view>
+      </view>
+    </view>
+
+    <view class="ft-tips c--12b7f5">此功能由微可牛酒店直销平台提供</view>
+    
+  </view>
+
+</view>

@@ -1,0 +1,28 @@
+<!--pages/member/edit-paypwd/edit-paypwd.wxml-->
+<!-- 【会员中心-修改支付密码】页面 -->
+
+<view class="body">
+
+  <!-- <>支付密码修改 -->
+  <view class="mem-info">
+    <view class="hdTxt">修改支付密码</view>
+    <view class="form bg--fff">
+      <view class="ipt-box flexbox flex-alignc">
+        <label class="lbl">原密码</label>
+        <view class="bor flex1"><input class="ipt-text" password type="text" name="oldPwd" placeholder="请输入原支付密码" placeholder-style='color: #aaa;' /></view>
+      </view>
+      <view class="ipt-box flexbox flex-alignc">
+        <label class="lbl">新密码</label>
+        <view class="flex1"><input class="ipt-text" password type="text" name="newPwd" placeholder="请输入新支付密码" placeholder-style='color: #aaa;' /></view>
+      </view>
+      <view class="ipt-box flexbox flex-alignc">
+        <label class="lbl">确认新密码</label>
+        <view class="flex1"><input class="ipt-text" password type="text" name="repeatPwd" placeholder="请再次输入新支付密码" placeholder-style='color: #aaa;' /></view>
+      </view>
+    </view>
+    <view class="forgetpwd"><navigator url="../forget-paypwd/forget-paypwd">忘记密码？</navigator></view>
+    <view class="btn"><button type="default" hover-class="button-hover">保存</button></view>
+
+  </view>
+
+</view>

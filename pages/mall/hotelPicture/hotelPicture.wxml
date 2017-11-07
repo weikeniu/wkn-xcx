@@ -1,0 +1,19 @@
+<!--pages/mall/hotelPicture/hotelInfo.wxml-->
+<!-- 【酒店图片】页面 -->
+
+<view class="body">
+  <view class="sec__hotel-picture bg--fff">
+    <block wx:for="{{imgList}}" wx:for-index="idx">
+      <view class="wrap-item">
+        <view class="hdtxt">{{item.title}}</view>
+        <view class="imglist flexbox">
+          <block wx:for="{{item.picture}}" wx:for-item="pic">
+            <view class="li"><image src="{{pic}}" data-src="{{pic}}" data-index="{{idx}}" bindtap="previewImage" mode="aspectFill"></image></view>
+          </block>
+        </view>
+      </view>
+    </block>
+  </view>
+
+</view>
+

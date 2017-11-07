@@ -1,0 +1,97 @@
+<!--pages/mall/pro-details/pro-details.wxml-->
+<!-- 【旅行社-景点商品详情】页面 -->
+
+<view class="body">
+  <!-- <>轮播图区域 -->
+  <view class="sec__swiper w100">
+    <swiper indicator-dots="{{indicatorDots}}" indicator-color="rgba(255,255,255,.5)" indicator-active-color="#fff" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}">
+      <block wx:for="{{imgUrls}}">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+  <view class="pro-title pad20 bg--fff">
+    <view class="flexbox flex-alignb">
+      <view class="name flex1">别墅套票-超值礼包【微可牛酒店-翠屏雅苑两卧 三卧+自助早餐+魔术表演（逢周二停演）】</view>
+      <label class="num c--999">已售2</label>
+    </view>
+  </view>
+
+  <view class="pro-subinfo mt20 pad20 bg--fff">
+    <view class="flexbox flex-alingc">
+      <view class="item"><label class="ico-hotel i1" style="background-image: url(../../../images/icons-hotel.png);"></label><text>使用快递</text></view>
+      <view class="item"><label class="ico-hotel i1" style="background-image: url(../../../images/icons-hotel.png);"></label><text>到店自提</text></view>
+      <!--蓝色图标
+      <view class="col"><label class="ico i1 i1-1" style="background-image: url(../../../images/icons-hotel.png);"></label><text>到店自提</text></view>
+      -->
+    </view>
+  </view>
+  <view class="pro-subinfo mt20 pad20 bg--fff">
+    <view class="flexbox flex-alingc">
+      <view class="item"><label class="ico-hotel i2" style="background-image: url(../../../images/icons-hotel.png);"></label><text>此商品由微可牛酒店提供</text></view>
+    </view>
+  </view>
+
+  <!-- <>订购须知 -->
+  <view class="pro-simliar mt20 pad20 bg--fff">
+    <view class="tit">订购须知</view>
+    <view class="cnt">
+      <view class="row">1、购买成功后联系微信客服或拨打400-0346-999</view>
+      <view class="row">2、预订成功与否以客服回复为准，不接受未预约直接到店消费</view>
+      <view class="row">3、套餐有效期为2017年4月7日-8月31日/4月29日-5月1日两卧需补差价600元/套/晚，三卧需补差价900元/套/晚，购买时选择劳动节价格即可</view>
+      <view class="row">4、购买成功后不可退，请合理安排出行时间</view>
+    </view>
+  </view>
+
+  <!-- <>图文详情 -->
+  <view class="pro-simliar mt20 pad20 bg--fff">
+    <view class="tit">图文详情</view>
+    <view class="cnt">
+      <view class="row">别墅套票-翠屏雅苑两卧/三卧+自助早餐+魔术表演（逢周二停演）+4成人次日自助早餐</view>
+      <view class="row">别墅套票-翠屏雅苑两卧/三卧+自助早餐+魔术表演（逢周二停演）+4成人次日自助早餐</view>
+      <view class="row">4.29-5.1：两卧加价600元/套，三卧加价900元/套</view>
+      <view class="row"><image class="max__img" src="../../../images/114.png" mode="widthFix"></image></view>
+      <view class="row"><image class="max__img" src="../../../images/hotel__img-detail.jpg" mode="widthFix"></image></view>
+      <view class="row"><image class="max__img" src="../../../images/swiper__mall-img01.jpg" mode="widthFix"></image></view>
+    </view>
+  </view>
+
+  <!-- <>详细地址 -->
+  <view class="pro-address mt20 pad20 bg--fff">
+    <view class="flexbox flex-alignc">
+      <view class="addr clamp1 flex1">详细地址：广东省广州市越秀区东湖寺右新马路  广东省广州市越秀区东湖寺右新马路</view>
+      <label class="ico-hotel i3" style="background-image: url(../../../images/icons-hotel.png);"></label>
+    </view>
+  </view>
+
+  <!-- <>底部固定按钮 -->
+  <view class="pro-footinfo">
+    <view class="bottomfixed">
+      <view class="inner flexbox flex-alignc">
+        <!--<view class="col"><label class="ico-hotel i4" style="background-image: url(../../../images/icons-hotel.png);"></label></view>
+        <view class="col ml10"><label class="ico-hotel i5" style="background-image: url(../../../images/icons-hotel.png);"></label></view>
+        -->
+
+        <!--//黑色-->
+        <view class="col"><image class="ftico" src="../../../images/icon__hotel-ft02.png"></image></view>
+        <view class="col ml10"><image class="ftico" src="../../../images/icon__hotel-ft01.png"></image></view>
+
+        <!--//蓝色-->
+        <!-- <view class="col"><image class="ftico" src="../../../images/icon__hotel-ft02-2.png"></image></view>
+        <view class="col ml10"><image class="ftico" src="../../../images/icon__hotel-ft01-1.png"></image></view> -->
+
+
+        <view class="jifen ml20"><text class="txt">用1658积分兑换</text></view>
+        <!--蓝色：<view class="jifen ml20"><text class="txt txt2">用1658积分兑换</text></view>-->
+
+        <!--积分不够：<view class="jifen ml20"><text class="txt disabled">差100积分可兑换</text></view>-->
+
+        <view class="btn-buy ml20 flex1"><text class="txt">￥1658.00立即购买</text></view>
+      </view>
+    </view>
+  </view>
+  
+</view>

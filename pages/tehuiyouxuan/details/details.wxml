@@ -1,0 +1,289 @@
+<view class="body">
+  <view class="y-bgw y-bmar20">
+    <view class="th-text-bar2">
+      <view>会员福利</view>
+      <view>
+        分享该产品，当您的朋友成功
+        <text class="yu-fc0">购买</text>
+        ，您将获得
+        <text class="yu-fc0">9元</text>
+        现金奖励。次日微信红包发送。
+      </view>
+    </view>
+    <view class="y-pad20 y-f38">
+      欢乐亲子时间【欢乐君澜3天2晚】套餐原 价2688元，火爆促销仅需1658元！立即 抢购! 
+    </view>
+    <view class="y-grid y-lrpad20 y-bgw y-bmar15 y-flex-w-w">
+      <view class="th-mark2 type1">周末通用</view>
+      <view class="th-mark2 type2">超长有效期</view>
+      <view class="th-mark2 type3">官网独家</view>
+      <view class="th-mark2 type4">爆款返场</view>
+       <view class="th-mark2 type1">周末通用</view>
+      <view class="th-mark2 type2">超长有效期</view>
+      <view class="th-mark2 type3">官网独家</view>
+      <view class="th-mark2 type4">爆款返场</view>
+    </view>
+    <view class="y-f24 y-c57 y-lpad20 y-bmar15">君澜三亚湾迎宾馆直销</view>
+    <view class="show-header">
+      <view class="inner y-h360">
+        <image src="../../../images/hotel-banner02.jpg"></image>
+        <view class="txt-bar y-grid y-alignc">
+          <view class="y-flex1 y-f30 y-textr y-rpad20">有效期至2017-09-29</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+
+  <view class="y-bgw y-bmar20">
+    <view class="y-h100 y-lpad20 y-bor bbor y-l100 y-f30">套餐详细</view>
+    <view class="y-lrpad20 y-tbpad40 y-f26 y-c66">
+      <view>1.尊享豪华园景亲子套房3天2晚；</view>
+      <view>2.尊享2大1小中西式自助早餐每天；</view>
+      <view>3.亲子主题房布置（需提前一天预约）；</view>
+      <view>4.首日欢迎水果一份；</view>
+      <view>5.2位成人及1位1.4m以下儿童的海南黎家特色BBQ&自助海鲜火锅晚餐一次；</view>
+      <view>6.三亚机场定时定点班车接送（需提前一天16:30前与酒店礼 宾部预约）;</view>
+      <view>7.儿童娱乐活动免费使用。</view>
+    </view>
+  </view>
+
+
+  <view class="y-bgw y-bmar20">
+    <view class="y-h100 y-lpad20 y-bor bbor y-l100 y-f30">产品图片</view>
+    <view class="cp-pic-list {{watchNum==0?'':'cur'}}">
+      <image src="../../../images/hotel-banner01.jpg" class="y-bmar20"></image>
+      <image src="../../../images/hotel-banner01.jpg" class="y-bmar20"></image>
+      <image src="../../../images/hotel-banner01.jpg" class="y-bmar20"></image>
+      <image src="../../../images/hotel-banner01.jpg" class="y-bmar20"></image>
+      <image src="../../../images/hotel-banner01.jpg" class="y-bmar20"></image>
+      <image src="../../../images/hotel-banner01.jpg" class="y-bmar20"></image>
+     </view>
+   </view>
+   <view class="watch-more-pic" bindtap="watchMore"> {{watchNum==0?'查看更多图片':'收起'}}</view>
+
+   <view class="y-bgw y-bmar20">
+    <view class="y-h100 y-lpad20 y-bor bbor y-l100 y-f30">购买需知</view>
+    <view class="xz-dl y-f26 y-lrpad20 y-c66 y-tbpad40">
+      <view class="dt">有效期</view>
+      <view class="dd">
+        <view class="l-style-p">2017-03-23 至 2017-09-29</view>
+      </view>
+      <view class="dt">使用规则</view>
+     <view class="dd">
+        <view class="l-style-p">购买后凭收到的电子券号提前至少1天预约。</view>
+      </view>
+      <view class="dt">温馨提示</view>
+     <view class="dd">
+        <view class="l-style-p">抢购时间：抢购还有170天6小时30分28秒结束。</view>
+        <view class="l-style-p">购买后不可退款。</view>
+        <view class="l-style-p">本产品为特价产品，不提供发票。</view>   
+     </view>
+    </view>
+   </view>
+
+
+
+   <view class="y-bgw y-bmar20">
+    <view class="y-h100 y-lpad20 y-bor bbor y-l100 y-f30">联系我们</view>
+    <view class="y-tbpad40 y-grid y-alignc y-lrpad20 y-bor bor">
+      <view class="y-flex1 y-bor rbor y-rpad45">
+        <view class="y-f28 y-bmar10">君澜三亚湾迎宾馆</view>
+        <view class="yu-c66 y-f26 y-bmar10">电话：020-87318888</view>
+        <view class="y-grid y-c66 y-bmar10 y-f26">
+          <view class="iconfont icon-dingwei y-f26"></view>
+          <view class="y-flex1">三亚 三亚湾海坡开发区 三亚湾路217号 ，近凤凰机场。 【 三亚湾 】</view>
+        </view>
+      </view>
+      <view class="y-w155 iconfont icon-lianxidianhua y-textc y-blue y-f74"></view>
+    </view>
+
+    <view class="y-grid y-tbpad40 y-lrpad20">
+      <view class="ewm"><image src="../../../images/ewm.jpg"></image></view>
+      <view class="y-flex1">
+        <view class="y-grid y-alignc y-bmar25">
+          <image src="../../../images/p.jpg" class="p-pic"></image>
+          <view class="y-f36 y-c66">长按识别二维码</view>
+        </view>
+        <view class="y-f26">
+          <view class="y-blue">关注酒店官方公众号：</view>
+          <view class="y-c99">可查看已购预售卷、提前进行消费预定，可获知最新会员优惠。</view>
+        </view>
+      </view>
+    </view>
+
+   </view>
+
+   <view class="y-bgw">
+    <view class="y-h100 y-lpad20 y-bor bbor y-l100 y-f30">用户评价</view>
+     <view class="y-lpad20">
+       <view class="y-bor bbor y-tbpad35 y-rpad20">
+         <view class="y-f24 y-c66 y-bmar10">
+           <text class="y-rmar20">2022独角星空 </text>
+           <text>2017-03-05</text>
+         </view>
+         <view class="y-f26">
+            这个套餐还挺划算的，都买了3套住6天了
+         </view>
+       </view>
+       <view class="y-bor bbor y-tbpad35 y-rpad20">
+         <view class="y-f24 y-c66 y-bmar10">
+           <text class="y-rmar20">2022独角星空 </text>
+           <text>2017-03-05</text>
+         </view>
+         <view class="y-f26">
+            这个套餐还挺划算的，都买了3套住6天了
+         </view>
+       </view>
+       <view class="y-bor bbor y-tbpad35 y-rpad20">
+         <view class="y-f24 y-c66 y-bmar10">
+           <text class="y-rmar20">2022独角星空 </text>
+           <text>2017-03-05</text>
+         </view>
+         <view class="y-f26">
+            这个套餐还挺划算的，都买了3套住6天了
+         </view>
+       </view>
+     </view>
+   </view>
+
+   <!--三种状态底栏-->
+   <!--抢购已开始-->
+   <view class="fix-bottom">
+     <view class="lasttime-bar">抢购还有<text>{{dl}}</text>天<text>{{hl}}</text>小时<text>{{ml}}</text>分<text>{{sl}}</text>秒</view>
+     <view class="y-h120 y-bgw y-grid y-alignc y-bor tbor y-lpad20 box-s1">
+       <view class="y-flex1">
+         <view class="y-f34">门市价<text class="y-l-t">￥</text><text class="y-l-t">22232</text></view>
+         <view class="y-c40 y-f24 y-lmar40">(最后50份)</view>
+       </view>
+       <button class="y-btn5" bindtap="showMask">￥2200立即抢购</button>
+     </view>
+   </view>
+
+   <!--抢购未开始-->
+   <view class="fix-bottom" style="display: none">
+     <view class="lasttime-bar">还有<text>{{dl}}</text>天<text>{{hl}}</text>小时<text>{{ml}}</text>分<text>{{sl}}</text>秒开始抢购</view>
+     <view class="y-h120 y-bgw y-grid y-alignc y-bor tbor y-lpad20 box-s1">
+       <view class="y-flex1">
+         <view class="y-f34">门市价<text class="y-l-t">￥</text><text class="y-l-t">22232</text></view>
+         <view class="y-c40 y-f24 y-lmar40">(最后50份)</view>
+       </view>
+       <button class="y-btn5 sp" >￥2200即将开始</button>
+     </view>
+   </view>
+
+   <!--抢购已结束-->
+   <view class="fix-bottom" style="display: none">
+     <view class="y-h120 y-bgw y-grid y-alignc y-bor tbor y-lpad20 box-s1">
+       <view class="y-flex1">
+         <view class="y-f34">门市价<text class="y-l-t">￥</text><text class="y-l-t">22232</text></view>
+         <view class="y-c40 y-f24 y-lmar40">(最后50份)</view>
+       </view>
+       <button class="y-btn5 sp">已售罄</button>
+     </view>
+   </view>
+</view>
+
+<view class="mask" wx:if="{{mask}}">
+  <view class="mask-bottom-inner shin-slide-up y-bgw">
+
+    <view class="y-lrpad20 y-bor bbor y-bpad50 y-grid ">
+      <view class="full-img1 y-rmar10"><image src="../../../images/cp.jpg"></image></view>
+      <view class="y-w390 y-tpad25 y-pos-r">
+        <view class="y-f28">欢乐亲子时间【欢乐君澜3天2晚】套餐原 价2688元，火爆促销仅需1658元！立即 抢购!</view>
+        <view class="y-c40 y-f24 tc-price">￥<text class="y-f36">2888</text></view>
+      </view>
+      <view class="close-ico" style="background: url(../../../images/xxx.jpg) no-repeat;background-size:100%" bindtap="closeMask"></view>
+    </view>
+    
+
+    <scroll-view scroll-y="true" class="p-and-d">
+      <view class="y-lrpad20 y-bpad20 y-bor bbor y-tpad40">
+        <view class="y-f30 y-bmar40">套餐类型</view>
+        <view class="select-li tc-list">
+          <view class="{{tcList==1?'cur':''}}" data-id="1" bindtap="tcSelect">上海/杭州-克拉玛提</view>
+          <view class="dis">上海/杭州-克拉玛提</view>
+          <view class="{{tcList==2?'cur':''}}"  data-id="2" bindtap="tcSelect">克拉玛提 4沙</view>
+          <view class="{{tcList==3?'cur':''}}"  data-id="3" bindtap="tcSelect">南京周一/长沙周五</view>
+          <view class="{{tcList==4?'cur':''}}"  data-id="4" bindtap="tcSelect">成都周三/重庆周一</view>
+          <view class="{{tcList==5?'cur':''}}"  data-id="5" bindtap="tcSelect">香港三流/广州周日</view>
+        </view>
+      </view>
+
+
+      <view class="y-bpad20 y-bor bbor y-tpad40">
+        <view class="y-f30 y-bmar40 y-lrpad20 ">出发日期</view>
+        <!--此处是日历-->
+        <view class="calendar">
+          <view class="cal-inner">
+            <!--<view class="thead y-grid y-textc">
+              <view class="y-flex1">周日</view>
+              <view class="y-flex1">周一</view>
+              <view class="y-flex1">周二</view>
+              <view class="y-flex1">周三</view>
+              <view class="y-flex1">周四</view>
+              <view class="y-flex1">周五</view>
+              <view class="y-flex1">周六</view>
+            </view>-->
+            <scroll-view class="cal-scroll" scroll-y >
+            <view class="cal-box" wx:for="{{calNum}}"  wx:for-index="calIdx">
+                <view class="mth y-grid y-lrpad20">
+                  <!-- <view bindtap="prevM">上月</view> -->
+                  <view class="y-flex1">{{y[calIdx]}}年{{m[calIdx]}}月</view>
+                  <!-- <view bindtap="nextM">下月</view> -->
+                </view>
+                <view class="thead y-grid y-textc">
+                  <view class="y-flex1">周日</view>
+                  <view class="y-flex1">周一</view>
+                  <view class="y-flex1">周二</view>
+                  <view class="y-flex1">周三</view>
+                  <view class="y-flex1">周四</view>
+                  <view class="y-flex1">周五</view>
+                  <view class="y-flex1">周六</view>
+                </view>
+                <view class="dtd">
+                    <!--月头空格-->
+                    <view  wx:for="{{day[calIdx]}}" class="td fl"> </view>
+                    <!--真正的日历-->
+                    <view wx:for="{{daycount[m[calIdx]-1]}}" wx:for-index="dIdx" class="td fl {{dTure>dIdx+1&&mTure==m[calIdx]&&yTure==y[calIdx]?'dis':''}} {{dCur==dIdx+1&&mCur==m[calIdx]&&yCur==y[calIdx]?'in':''}}" bindtap="dateTap" data-d="{{y[calIdx]+'-'+m[calIdx]+'-'+(dIdx+1)}}">
+                      <!--<view>{{dCur==dIdx+1&&mCur==m[calIdx]&&yCur==y[calIdx]?'5件':''}}</view>                                 -->
+                      <view>{{dTure>dIdx+1&&mTure==m[calIdx]&&yTure==y[calIdx]?'':'5件'}}</view>
+                      <view>{{dIdx+1}}</view>
+                      <!--<view>{{dCur==dIdx+1&&mCur==m[calIdx]&&yCur==y[calIdx]?'￥100':''}}</view>-->
+                      <view>{{dTure>dIdx+1&&mTure==m[calIdx]&&yTure==y[calIdx]?'':'￥100'}}</view>
+                      
+                      <!--<view>{{dNext==dIdx+1&&mCur2==m[calIdx]&&yCur==y[calIdx]?'离店':''}}</view>-->
+                    </view>
+                </view>
+              </view>
+
+            </scroll-view>
+          </view>
+        </view>
+
+
+      </view>
+
+      
+
+
+    </scroll-view>
+    <view class="y-h20 y-bgf4"></view>
+    
+
+    <view class="y-h120 y-grid y-alignc y-lrpad20">
+					<view class="y-flex1 y-f28">购买数量</view>
+					<view class="y-f24 y-c99 y-rmar15">剩余:<text>569</text></view>
+					<view class="ar y-grid">
+						<view class="reduce ico type3" bindtap="reduce">-</view>
+            <view class="food-num type3">{{cpNum}}</view>
+						<view class="add ico type3" bindtap="add">+</view>
+					</view>
+				</view>
+
+  
+  <view class="y-h120 y-l120 y-textc y-f36 y-cff y-sub3 {{tcList==0?'':'cur'}}" bindtap="submit">确定</view>
+
+
+  </view>
+</view>

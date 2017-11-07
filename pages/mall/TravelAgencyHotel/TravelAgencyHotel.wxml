@@ -1,0 +1,136 @@
+<!--pages/mall/TravelAgencyHotel/TravelAgencyHotel.wxml-->
+<!-- 【旅行社-酒店】页面 -->
+
+<view class="body">
+  <!-- <>轮播图(酒店) -->
+  <view class="sec__swiper w100">
+    <swiper indicator-dots="{{indicatorDots}}" indicator-color="rgba(255,255,255,.5)" indicator-active-color="#fff" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}">
+      <block wx:for="{{imgUrls}}">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+  <!-- <>酒店预订 -->
+  <view class="sec__hotel-index bg--fff">
+    <!-- //地址-->
+    <view class="wrap-item wrap-addr">
+      <label class="iconLbl iconfont icon-dingwei"></label>
+      <view class="flex1 bor">
+        <view class="item">
+          <navigator class="flex1" url="../../switchCity/switchCity">
+            <view class="flexbox flex-alignc">
+              <text class="flex1">广州</text>
+              <label class="iconfont icon-youx c--999"></label>
+            </view>
+          </navigator>
+          <navigator class="flex1" url="../TravelAgencyHotelList/TravelAgencyHotelList">
+            <view class="flexbox flex-alignc" style="padding-left:70rpx;">
+              <label class="iconfont icon-jiudian mr20"></label><text class="flex1">附近酒店</text>
+              <label class="iconfont icon-youx c--999"></label>
+            </view>
+          </navigator>
+        </view>
+      </view>
+    </view>
+    <!-- //日历-->
+    <view class="wrap-item wrap-calendar">
+      <label class="iconLbl iconfont icon-rili"></label>
+      <view class="flex1 bor">
+        <navigator class="item" url="#">
+          <view class="flex1 weekday">
+            <view class="checkin"><text class="day ff-ar">09月19日</text><text class="week">周二</text><text class="status">入住</text></view>
+            <view class="checkout"><text class="day ff-ar">09月23日</text><text class="week">周六</text><text class="status">离店</text></view>
+          </view>
+          <view class="night"><text>共1晚</text><label class="iconfont icon-youx c--999 ml20"></label></view>
+        </navigator>
+      </view>
+    </view>
+    <!-- //关键字-->
+    <view class="wrap-item wrap-keyword">
+      <label class="iconLbl iconfont icon-soushuo"></label>
+      <view class="flex1 bor">
+        <navigator class="item" url="#">
+          <view class="flex1 placeholder c--999">
+            <text class="fl">关键字</text><text class="fr">位置、品牌、酒店</text>
+          </view>
+          <label class="iconfont icon-youx c--999 ml20"></label>
+        </navigator>
+      </view>
+    </view>
+    <!-- //价格/星级-->
+    <view class="wrap-item wrap-filter" bindtap="showBottomModal" data-modal-index="001">
+      <label class="iconLbl iconfont icon-xingji2"></label>
+      <view class="flex1 bor">
+        <view class="item">
+          <view class="flex1 placeholder c--999">
+            <text>价格/星级</text>
+          </view>
+          <label class="iconfont icon-youx c--999 ml20"></label>
+        </view>
+      </view>
+    </view>
+
+    <view class="wrap-sear"><view class="btn-sear">查询</view></view>
+    
+  </view>
+
+
+  <!-- <>底部弹窗模板.Start -->
+  <!-- //弹窗1(价格/星级) -->
+  <block wx:if="{{modalIndex == 001}}">
+    <view class="bottom__modal-mask" bindtap="hideBottomModal" wx:if="{{showModalStatus}}"></view>
+    <view animation="{{animationData}}" class="bottom__modal-panel" wx:if="{{showModalStatus}}">
+      <!--内容区-->
+      <view class="select-panel specialRequire">
+        <view class="head">
+          <view class="btn cancel" bindtap="hideBottomModal">取消</view>
+          <text class="text flex1"> </text>
+          <view class="btn ok c--12b7f5" bindtap="bindCompleteRequire">完成</view>
+        </view>
+        <view class="cont">
+          <scroll-view scroll-y style="max-height: 600rpx;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+            <view class="scroll-view-item-filter">
+              <!--价格筛选-->
+              <view class="f_tit c--999 mt30">价格筛选(￥)</view>
+              <view class="f_list clearfix">
+                <block wx:for="{{singleFilterList}}">
+                  <view class="col {{item.selected ? 'cur' : ''}}" bindtap="bindSingleFilter" data-index="{{item.index}}"><text>{{item.text}}</text></view>
+                </block>
+
+                <!--<view class="col cur" bindtap="bindSingleFilter" data-index="0"><text>不限</text></view>
+                <view class="col"><text>0-150</text></view>
+                <view class="col"><text>150-300</text></view>
+                <view class="col"><text>300-600</text></view>
+                <view class="col"><text>600-1000</text></view>
+                <view class="col"><text>1000+</text></view>-->
+              </view>
+              <!--类别筛选-->
+              <view class="f_tit c--999 mt30">类别筛选(复选)</view>
+              <view class="f_list clearfix">
+                <block wx:for="{{multiFilterList}}">
+                  <view class="col {{item.selected ? 'cur' : ''}}" bindtap="bindMultiFilter" data-index="{{item.index}}"><text>{{item.text}}</text></view>
+                </block>
+
+                <!--<view class="col cur" bindtap="bindMultiFilter" data-index="0"><text>不限</text></view>
+                <view class="col"><text>地址公园</text></view>
+                <view class="col"><text>博物馆</text></view>
+                <view class="col"><text>海洋公园</text></view>
+                <view class="col"><text>亲子</text></view>
+                <view class="col"><text>湿地公园</text></view>
+                <view class="col"><text>水乡古镇</text></view>
+                <view class="col"><text>老友记</text></view>
+                <view class="col"><text>动植物园</text></view>-->
+              </view>
+            </view>
+          </scroll-view>
+        </view>
+      </view>
+    </view>
+  </block>
+  <!-- <>底部弹窗模板.End -->
+
+</view>
+
