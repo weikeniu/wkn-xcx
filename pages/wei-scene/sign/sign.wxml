@@ -1,0 +1,41 @@
+<!--pages/wei-scene/sign.wxml-->
+<!-- 【微现场-签到】页面 -->
+
+<view class="body">
+  <!-- <>签到页面 -->
+  <view class="wei__scene-panel clearfix">
+    <!-- <view class="ws__mask"></view> -->
+    <!-- <view class="ws__sidebar"></view> -->
+
+    <!--//顶部-->
+    <view class="ws__header fixed">
+      <view class="inner">
+        <view class="cate J__sideToggle"><image src="../../../images/wei-scene/icon-cat.png"></image></view>
+        <view class="hdTxt">嗨翻现场，就是这么任性！</view>
+      </view>
+    </view>
+    <!--//签到页面-->
+    <view class="ws__pg-sign">
+      <!--表单-->
+      <view class="wrap__sign-form">
+        <view class="forms">
+          <view class="row"><image src="../../../images/wei-scene/icon__sign-user.png"></image><input class="ipt-text flex1" type="text" placeholder="真实姓名" /></view>
+          <view class="row"><image src="../../../images/wei-scene/icon__sign-tel.png"></image><input class="ipt-text flex1" type="text" placeholder="手机号码" /></view>
+          <view class="row"><image src="../../../images/wei-scene/icon__sign-home.png"></image><input class="ipt-text flex1" type="text" placeholder="公司名称" /></view>
+        </view>
+        <view class="btns">
+          <button class="btn-sign">签到</button>
+        </view>
+      </view>
+
+      <!--签到成功-->
+      <view class="wrap__sign-status success" style="display:none;">
+        <view class="timeout">
+          <view class="inner">跳转<text class="time">3s</text></view>
+        </view>
+        <view class="img"><image src="../../../images/wei-scene/icon__sign-success.png"></image></view>
+        <view class="txt">签到成功!<text>恭喜您，签到成功，快去消息墙聊天吧！</text></view>
+      </view>
+    </view>
+  </view>
+</view>
