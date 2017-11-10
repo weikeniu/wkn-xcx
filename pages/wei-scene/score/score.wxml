@@ -30,6 +30,7 @@
           <button class="btn-score">节目打分</button>
         </view>
       </view>
+      <view class="wrap__score-tips">打分说明：满分100分，请根据舞台整体效果、个人表现、团队合作等进行评分。</view>
     </view>
   </view>
 </view>

@@ -68,5 +68,6 @@ navigator.navigator-hover{background-color: rgba(0, 0, 0, 0); opacity: 0.7;}
 .ws__score-box .wrap__score .btns .btn-score{
 	background:#12b7f5; border-radius: 50rpx; color: #fff; display: block; font-size: 34rpx; text-align: center; line-height: 80rpx; width: 250rpx;
 }
+.ws__score-box .wrap__score-tips{color:#999; font-size: 26rpx; font-family: 宋体; margin-top: 50rpx;}
 
 /* }}} */
