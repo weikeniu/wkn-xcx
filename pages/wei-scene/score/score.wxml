@@ -1,0 +1,39 @@
+<!--pages/wei-scene/score/score.wxml-->
+<!-- 【微现场-打分】页面 -->
+
+<view class="body">
+  <view class="wei__scene-panel clearfix">
+    <!-- <view class="ws__mask"></view> -->
+    <!-- <view class="ws__sidebar"></view> -->
+
+    <!--//顶部-->
+    <view class="ws__header fixed">
+      <view class="inner">
+        <view class="cate J__sideToggle"><image src="../../../images/wei-scene/icon-cat.png"></image></view>
+        <view class="hdTxt">嗨翻现场，就是这么任性！</view>
+      </view>
+    </view>
+    <view class="ws__navigator bg flexbox">
+      <navigator class="iconfont icon-zuox c--fff" url="#" open-type="navigateBack"></navigator> 
+      <view class="tit flex1 c--fff">表演打分</view>
+    </view>
+    
+    <!--//打分、得分、统计-->
+    <view class="ws__score-box">
+      <view class="wrap__score result">
+        <view class="row title" style="padding-top:50rpx;">NO.12 舞蹈剧《妈妈不在家》</view>
+        <view class="row"><text>　表演者：</text><text class="flex1">Manford、Lulu、Yuffie、Cassiel、Hison、Arou、Flower</text></view>
+        <view class="row"><text>表演部门：</text><text class="flex1">《设计推广部》</text></view>
+
+        <view class="iptbox"><input class="ipt-text flex1" type="number" placeholder="请输入分数" placeholder-style="color:rgba(18,183,245,.5);" /></view>
+        <view class="btns">
+          <button class="btn-score">节目打分</button>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+
+
+

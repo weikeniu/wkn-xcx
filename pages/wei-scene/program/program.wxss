@@ -1,0 +1,15 @@
+/* pages/wei-scene/program/program.wxss */
+@import "../sign/sign.wxss";
+
+/* …… 微现场页面(by hison 20171107) {{{ …… */
+/* __ 节目列表页面 */
+.ws__program-list .item{padding: 0 20rpx;}
+.ws__program-list .item .inner{border-bottom: 1rpx solid rgba(50,50,50,.1); display: flex; align-items: center; height: 80rpx;}
+.ws__program-list .item .title{color:#333;font-size: 28rpx; font-family: 宋体;}
+.ws__program-list .item .score{color:#12b7f5;font-size: 28rpx; font-family: 宋体;}
+.ws__program-list .item .icon-youx{font-size: 14px; margin-right: -5rpx;}
+/*结束*/
+.ws__program-list .item.off .title{color:#999;}
+.ws__program-list .item.off .score{color:#999;}
+
+/* }}} */

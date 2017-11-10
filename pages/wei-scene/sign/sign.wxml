@@ -2,7 +2,6 @@
 <!-- 【微现场-签到】页面 -->
 
 <view class="body">
-  <!-- <>签到页面 -->
   <view class="wei__scene-panel clearfix">
     <!-- <view class="ws__mask"></view> -->
     <!-- <view class="ws__sidebar"></view> -->
@@ -14,6 +13,7 @@
         <view class="hdTxt">嗨翻现场，就是这么任性！</view>
       </view>
     </view>
+    
     <!--//签到页面-->
     <view class="ws__pg-sign">
       <!--表单-->
@@ -27,7 +27,7 @@
           <button class="btn-sign">签到</button>
         </view>
       </view>
-
+      
       <!--签到成功-->
       <view class="wrap__sign-status success" style="display:none;">
         <view class="timeout">

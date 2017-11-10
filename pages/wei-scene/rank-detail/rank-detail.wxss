@@ -1,0 +1,10 @@
+/* pages/wei-scene/rank-detail/rank-detail.wxss */
+@import "../sign/sign.wxss";
+@import "../rank/rank.wxss";
+
+/* …… 微现场页面(by hison 20171107) {{{ …… */
+/* __ 排名统计详情 */
+/*progress进度条*/
+.ws__rank-list .item .progress{border-bottom: 0; padding-bottom: 0;}
+
+/* }}} */

@@ -1,0 +1,50 @@
+<!--pages/wei-scene/rank-detail/rank-detail.wxml-->
+<!-- 【微现场-排名统计详情】页面 -->
+
+<view class="body">
+  <view class="wei__scene-panel clearfix">
+    <!-- <view class="ws__mask"></view> -->
+    <!-- <view class="ws__sidebar"></view> -->
+
+    <!--//顶部-->
+    <view class="ws__header fixed">
+      <view class="inner">
+        <view class="cate J__sideToggle"><image src="../../../images/wei-scene/icon-cat.png"></image></view>
+        <view class="hdTxt">嗨翻现场，就是这么任性！</view>
+      </view>
+    </view>
+    <view class="ws__navigator flexbox flex-alignc">
+      <navigator class="iconfont icon-zuox c--333" url="#" open-type="navigateBack"></navigator> 
+      <view class="tit flex1">统计详情</view>
+    </view>
+
+    <!--//排名统计得分-->
+    <view class="ws__rank-list">
+      <!--列表.start-->
+      <view class="item top01">
+        <view class="inner">
+          <view class="flex1">
+            <text class="title fl">舞狮《雄狮贺岁耀喜玩》</text><text class="score fr">97分</text>
+          </view>
+        </view>
+        <view class="progress">
+          <progress percent="97" color="#12b7f5" stroke-width="15" active />
+        </view>
+      </view>
+    </view>
+    
+    <!--//打分、得分、统计-->
+    <view class="ws__score-box">
+      <view class="wrap__score">
+        <view class="row"><text>　表演者：</text><text class="flex1">Manford、Lulu、Yuffie、Cassiel、Hison、Arou、Flower</text></view>
+        <view class="row"><text>表演部门：</text><text class="flex1">《设计推广部》</text></view>
+        <view class="row"><text>打分记录：</text><text class="flex1">88、90、100、88、86、90、96、88、85、70、95</text></view>
+        <view class="row"><text>最高分为：</text><text class="flex1">100</text></view>
+        <view class="row"><text>最低分为：</text><text class="flex1">70</text></view>
+        <view class="row result"><text>最后平均得分为：</text><text class="flex1">97</text></view>
+      </view>
+    </view>
+  </view>
+</view>
+
+

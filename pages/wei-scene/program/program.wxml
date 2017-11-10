@@ -1,0 +1,139 @@
+<!--pages/wei-scene/program/program.wxml-->
+<!-- 【微现场-节目列表】页面 -->
+
+<view class="body">
+  <view class="wei__scene-panel clearfix">
+    <!-- <view class="ws__mask"></view> -->
+    <!-- <view class="ws__sidebar"></view> -->
+
+    <!--//顶部-->
+    <view class="ws__header fixed">
+      <view class="inner">
+        <view class="cate J__sideToggle"><image src="../../../images/wei-scene/icon-cat.png"></image></view>
+        <view class="hdTxt">嗨翻现场，就是这么任性！</view>
+      </view>
+    </view>
+    <view class="ws__navigator flexbox flex-alignc">
+      <!-- <navigator class="iconfont icon-zuox c--333" url="#" open-type="navigateBack"></navigator> -->
+      <view class="tit flex1">演出节目</view>
+      <navigator class="score-record" url="../rank/rank" open-type="navigate"><image src="../../../images/wei-scene/icon__score-record.png"></image></navigator>
+    </view>
+
+    <!--//演出节目列表-->
+    <view class="ws__program-list pb30">
+      <!--列表.start-->
+      <navigator class="item" url="#">
+        <view class="inner">
+          <view class="flex1">
+            <text class="title fl">NO.01 舞狮《雄狮贺岁耀喜玩》</text><text class="score fr">90分</text>
+          </view>
+          <label class="iconfont icon-youx c--999 ml10"></label>
+        </view>
+      </navigator>
+      <navigator class="item" url="#">
+        <view class="inner">
+          <view class="flex1">
+            <text class="title fl">NO.02 《十年别走，我们聊聊》</text><text class="score fr">82分</text>
+          </view>
+          <label class="iconfont icon-youx c--999 ml10"></label>
+        </view>
+      </navigator>
+      <navigator class="item" url="#">
+        <view class="inner">
+          <view class="flex1">
+            <text class="title fl">NO.03 古筝弹唱《青花瓷》</text><text class="score fr">88分</text>
+          </view>
+          <label class="iconfont icon-youx c--999 ml10"></label>
+        </view>
+      </navigator>
+      <navigator class="item" url="#">
+        <view class="inner">
+          <view class="flex1">
+            <text class="title fl">NO.04 舞台剧《动漫大乱斗》</text><text class="score fr">86分</text>
+          </view>
+          <label class="iconfont icon-youx c--999 ml10"></label>
+        </view>
+      </navigator>
+      <navigator class="item" url="#">
+        <view class="inner">
+          <view class="flex1">
+            <text class="title fl">NO.05 合唱《给我一首歌的时间》</text><text class="score fr">80分</text>
+          </view>
+          <label class="iconfont icon-youx c--999 ml10"></label>
+        </view>
+      </navigator>
+      <navigator class="item" url="../score/score">
+        <view class="inner">
+          <view class="flex1">
+            <text class="title fl">NO.06 舞蹈《Panama》</text><text class="score fr c--ff6600">去打分</text>
+          </view>
+          <label class="iconfont icon-youx c--999 ml10"></label>
+        </view>
+      </navigator>
+      <navigator class="item" url="../score-over/score-over">
+        <view class="inner">
+          <view class="flex1">
+            <text class="title fl">NO.07 魔术表演</text><text class="score fr c--333">打分结束</text>
+          </view>
+          <label class="iconfont icon-youx c--999 ml10"></label>
+        </view>
+      </navigator>
+      <navigator class="item off" url="#">
+        <view class="inner">
+          <view class="flex1">
+            <text class="title fl">NO.08 舞蹈《free style》</text><text class="score fr"></text>
+          </view>
+          <!-- <label class="iconfont icon-youx c--999 ml10"></label> -->
+        </view>
+      </navigator>
+      <navigator class="item off" url="#">
+        <view class="inner">
+          <view class="flex1">
+            <text class="title fl">NO.09 手语舞蹈《我相信》</text><text class="score fr"></text>
+          </view>
+          <!-- <label class="iconfont icon-youx c--999 ml10"></label> -->
+        </view>
+      </navigator>
+      <navigator class="item off" url="#">
+        <view class="inner">
+          <view class="flex1">
+            <text class="title fl">NO.10 时装秀《show》</text><text class="score fr"></text>
+          </view>
+          <!-- <label class="iconfont icon-youx c--999 ml10"></label> -->
+        </view>
+      </navigator>
+      <navigator class="item off" url="#">
+        <view class="inner">
+          <view class="flex1">
+            <text class="title fl">NO.11 男女合唱《虹》</text><text class="score fr"></text>
+          </view>
+          <!-- <label class="iconfont icon-youx c--999 ml10"></label> -->
+        </view>
+      </navigator>
+      <navigator class="item off" url="#">
+        <view class="inner">
+          <view class="flex1">
+            <text class="title fl">NO.12 舞蹈剧《妈妈不在家》</text><text class="score fr"></text>
+          </view>
+          <!-- <label class="iconfont icon-youx c--999 ml10"></label> -->
+        </view>
+      </navigator>
+      <navigator class="item off" url="#">
+        <view class="inner">
+          <view class="flex1">
+            <text class="title fl">NO.13 创意混合舞蹈</text><text class="score fr"></text>
+          </view>
+          <!-- <label class="iconfont icon-youx c--999 ml10"></label> -->
+        </view>
+      </navigator>
+      <navigator class="item off" url="#">
+        <view class="inner">
+          <view class="flex1">
+            <text class="title fl">NO.14 双人合唱《十年》</text><text class="score fr"></text>
+          </view>
+          <!-- <label class="iconfont icon-youx c--999 ml10"></label> -->
+        </view>
+      </navigator>
+    </view>
+  </view>
+</view>

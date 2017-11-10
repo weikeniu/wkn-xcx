@@ -1,0 +1,8 @@
+/* pages/wei-scene/score/score.wxss */
+@import "../sign/sign.wxss";
+@import "../rank/rank.wxss";
+
+/* …… 微现场页面(by hison 20171107) {{{ …… */
+/* __ 节目打分 */
+
+/* }}} */

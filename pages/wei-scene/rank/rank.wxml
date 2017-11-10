@@ -1,0 +1,181 @@
+<!--pages/wei-scene/rank/rank.wxml-->
+<!-- 【微现场-排名统计】页面 -->
+
+<view class="body">
+  <view class="wei__scene-panel clearfix">
+    <!-- <view class="ws__mask"></view> -->
+    <!-- <view class="ws__sidebar"></view> -->
+
+    <!--//顶部-->
+    <view class="ws__header fixed">
+      <view class="inner">
+        <view class="cate J__sideToggle"><image src="../../../images/wei-scene/icon-cat.png"></image></view>
+        <view class="hdTxt">嗨翻现场，就是这么任性！</view>
+      </view>
+    </view>
+    <view class="ws__navigator flexbox flex-alignc">
+      <navigator class="iconfont icon-zuox c--333" url="#" open-type="navigateBack"></navigator> 
+      <view class="tit flex1">排名统计</view>
+    </view>
+
+    <!--//排名统计列表-->
+    <view class="ws__rank-list pb30">
+      <!--列表.start-->
+      <navigator class="item top01" url="../rank-detail/rank-detail">
+        <view class="inner">
+          <view class="flex1">
+            <text class="title fl">舞狮《雄狮贺岁耀喜玩》</text><text class="score fr">97分</text>
+          </view>
+          <label class="iconfont icon-youx c--999 ml10"></label>
+        </view>
+        <view class="progress">
+          <progress percent="97" color="#12b7f5" stroke-width="15" active />
+        </view>
+      </navigator>
+      <navigator class="item top02" url="../rank-detail/rank-detail">
+        <view class="inner">
+          <view class="flex1">
+            <text class="title fl">古筝弹唱《青花瓷》</text><text class="score fr">95分</text>
+          </view>
+          <label class="iconfont icon-youx c--999 ml10"></label>
+        </view>
+        <view class="progress">
+          <progress percent="95" color="#12b7f5" stroke-width="15" active />
+        </view>
+      </navigator>
+      <navigator class="item top03" url="../rank-detail/rank-detail">
+        <view class="inner">
+          <view class="flex1">
+            <text class="title fl">时装秀《show》</text><text class="score fr">90分</text>
+          </view>
+          <label class="iconfont icon-youx c--999 ml10"></label>
+        </view>
+        <view class="progress">
+          <progress percent="90" color="#12b7f5" stroke-width="15" active />
+        </view>
+      </navigator>
+      <navigator class="item" url="../rank-detail/rank-detail">
+        <view class="inner">
+          <view class="flex1">
+            <text class="title fl">舞蹈《free style》</text><text class="score fr">85分</text>
+          </view>
+          <label class="iconfont icon-youx c--999 ml10"></label>
+        </view>
+        <view class="progress">
+          <progress percent="85" color="#12b7f5" stroke-width="15" active />
+        </view>
+      </navigator>
+      <navigator class="item" url="../rank-detail/rank-detail">
+        <view class="inner">
+          <view class="flex1">
+            <text class="title fl">舞蹈剧《妈妈不在家》</text><text class="score fr">80分</text>
+          </view>
+          <label class="iconfont icon-youx c--999 ml10"></label>
+        </view>
+        <view class="progress">
+          <progress percent="80" color="#12b7f5" stroke-width="15" active />
+        </view>
+      </navigator>
+      <navigator class="item" url="../rank-detail/rank-detail">
+        <view class="inner">
+          <view class="flex1">
+            <text class="title fl">舞蹈《Panama》</text><text class="score fr">75分</text>
+          </view>
+          <label class="iconfont icon-youx c--999 ml10"></label>
+        </view>
+        <view class="progress">
+          <progress percent="75" color="#12b7f5" stroke-width="15" active />
+        </view>
+      </navigator>
+      <navigator class="item" url="../rank-detail/rank-detail">
+        <view class="inner">
+          <view class="flex1">
+            <text class="title fl">魔术表演</text><text class="score fr">72分</text>
+          </view>
+          <label class="iconfont icon-youx c--999 ml10"></label>
+        </view>
+        <view class="progress">
+          <progress percent="72" color="#12b7f5" stroke-width="15" active />
+        </view>
+      </navigator>
+      <navigator class="item" url="../rank-detail/rank-detail">
+        <view class="inner">
+          <view class="flex1">
+            <text class="title fl">舞台剧《动漫大乱斗》</text><text class="score fr">70分</text>
+          </view>
+          <label class="iconfont icon-youx c--999 ml10"></label>
+        </view>
+        <view class="progress">
+          <progress percent="70" color="#12b7f5" stroke-width="15" active />
+        </view>
+      </navigator>
+      <navigator class="item" url="../rank-detail/rank-detail">
+        <view class="inner">
+          <view class="flex1">
+            <text class="title fl">手语舞蹈《我相信》</text><text class="score fr">68分</text>
+          </view>
+          <label class="iconfont icon-youx c--999 ml10"></label>
+        </view>
+        <view class="progress">
+          <progress percent="68" color="#12b7f5" stroke-width="15" active />
+        </view>
+      </navigator>
+      <navigator class="item" url="../rank-detail/rank-detail">
+        <view class="inner">
+          <view class="flex1">
+            <text class="title fl">《十年别走，我们聊聊》</text><text class="score fr">65分</text>
+          </view>
+          <label class="iconfont icon-youx c--999 ml10"></label>
+        </view>
+        <view class="progress">
+          <progress percent="65" color="#12b7f5" stroke-width="15" active />
+        </view>
+      </navigator>
+      <navigator class="item" url="../rank-detail/rank-detail">
+        <view class="inner">
+          <view class="flex1">
+            <text class="title fl">男女合唱《虹》</text><text class="score fr">62分</text>
+          </view>
+          <label class="iconfont icon-youx c--999 ml10"></label>
+        </view>
+        <view class="progress">
+          <progress percent="62" color="#12b7f5" stroke-width="15" active />
+        </view>
+      </navigator>
+      <navigator class="item" url="../rank-detail/rank-detail">
+        <view class="inner">
+          <view class="flex1">
+            <text class="title fl">合唱《给我一首歌的时间》</text><text class="score fr">60分</text>
+          </view>
+          <label class="iconfont icon-youx c--999 ml10"></label>
+        </view>
+        <view class="progress">
+          <progress percent="60" color="#12b7f5" stroke-width="15" active />
+        </view>
+      </navigator>
+      <navigator class="item" url="../rank-detail/rank-detail">
+        <view class="inner">
+          <view class="flex1">
+            <text class="title fl">创意混合舞蹈</text><text class="score fr">55分</text>
+          </view>
+          <label class="iconfont icon-youx c--999 ml10"></label>
+        </view>
+        <view class="progress">
+          <progress percent="55" color="#12b7f5" stroke-width="15" active />
+        </view>
+      </navigator>
+      <navigator class="item" url="../rank-detail/rank-detail">
+        <view class="inner">
+          <view class="flex1">
+            <text class="title fl">双人合唱《十年》</text><text class="score fr">50分</text>
+          </view>
+          <label class="iconfont icon-youx c--999 ml10"></label>
+        </view>
+        <view class="progress">
+          <progress percent="50" color="#12b7f5" stroke-width="15" active />
+        </view>
+      </navigator>
+    </view>
+  </view>
+</view>
+
