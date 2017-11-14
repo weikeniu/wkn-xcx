@@ -17,11 +17,22 @@
     <!--//签到页面-->
     <view class="ws__pg-sign">
       <!--表单-->
-      <view class="wrap__sign-form">
+      <view class="wrap__sign-form" style="display:block;">
         <view class="forms">
-          <view class="row"><image src="../../../images/wei-scene/icon__sign-user.png"></image><input class="ipt-text flex1" type="text" placeholder="真实姓名" /></view>
-          <view class="row"><image src="../../../images/wei-scene/icon__sign-tel.png"></image><input class="ipt-text flex1" type="text" placeholder="手机号码" /></view>
-          <view class="row"><image src="../../../images/wei-scene/icon__sign-home.png"></image><input class="ipt-text flex1" type="text" placeholder="公司名称" /></view>
+          <view class="row">
+            <image src="../../../images/wei-scene/icon__sign-home.png"></image>
+            <!-- <input class="ipt-text flex1" type="text" placeholder="部门名称" /> -->
+            <picker class="flex1" bindchange="departmentSelect" value="{{index}}" range="{{array}}" style="padding-bottom:8rpx;">
+              <view class="ipt-text">{{array[index]}}</view>
+            </picker>
+            <label class="iconfont icon-xiax"></label>
+          </view>
+          <view class="row">
+            <image src="../../../images/wei-scene/icon__sign-user.png"></image><input class="ipt-text flex1" type="text" placeholder="真实姓名" />
+          </view>
+          <view class="row">
+            <image src="../../../images/wei-scene/icon__sign-tel.png"></image><input class="ipt-text flex1" type="text" placeholder="手机号码" />
+          </view>
         </view>
         <view class="btns">
           <button class="btn-sign">签到</button>

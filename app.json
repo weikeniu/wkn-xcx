@@ -1,12 +1,13 @@
 {
   "pages": [
+    "pages/wei-scene/sign/sign",
     "pages/wei-scene/program/program",
     "pages/wei-scene/score/score",
     "pages/wei-scene/score-over/score-over",
     "pages/wei-scene/rank-detail/rank-detail",
     "pages/wei-scene/rank/rank",
     
-    "pages/wei-scene/sign/sign",
+    
     "pages/tehuiyouxuan/index/index",
     "pages/order/order",
     "pages/order-food-pay/order-food-pay",
